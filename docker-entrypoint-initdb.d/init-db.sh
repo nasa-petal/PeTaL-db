@@ -9,7 +9,7 @@ EOSQL
 
 psql -v ON_ERROR_STOP=1 --username "petal_admin" --dbname "petal" <<-EOSQL
     CREATE TABLE Label (
-        id INT UNIQUE NOT NULL,
+        id INT PRIMARY KEY,
         label VARCHAR (50) NOT NULL
     );
 
@@ -22,7 +22,7 @@ psql -v ON_ERROR_STOP=1 --username "petal_admin" --dbname "petal" <<-EOSQL
         (5, 'Remove particles from a surface');
 
     CREATE TABLE Wikipedia_Article (
-        id INT UNIQUE NOT NULL
+        id INT PRIMARY KEY
     );
 
     INSERT INTO Wikipedia_Article (id)
@@ -55,8 +55,9 @@ psql -v ON_ERROR_STOP=1 --username "petal_admin" --dbname "petal" <<-EOSQL
         (4470304);
 
     CREATE TABLE Wikipedia_Label (
-        label_id INT NOT NULL,
-        article_id INT NOT NULL
+        label_id INT REFERENCES Label,
+        article_id INT REFERENCES Wikipedia_Article
+        PRIMARY KEY (label_id, article_id)
     );
 
     INSERT INTO Wikipedia_Label (label_id, article_id)
