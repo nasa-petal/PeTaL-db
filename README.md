@@ -23,5 +23,6 @@ https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docke
 `psql -h localhost -U postgres`
 `\l`
 `\c petal`
+`select * from wikipedia_label;`
 
 `docker inspect petal-db -f "{{json .NetworkSettings.Networks }}"`
