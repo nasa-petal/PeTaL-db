@@ -56,7 +56,7 @@ psql -v ON_ERROR_STOP=1 --username "petal_admin" --dbname "petal" <<-EOSQL
 
     CREATE TABLE Wikipedia_Label (
         label_id INT REFERENCES Label,
-        article_id INT REFERENCES Wikipedia_Article
+        article_id INT REFERENCES Wikipedia_Article,
         PRIMARY KEY (label_id, article_id)
     );
 
