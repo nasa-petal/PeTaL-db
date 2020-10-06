@@ -16,6 +16,7 @@ https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docke
     -e POSTGRES_PASSWORD=mysecretpassword \
     -d \
     -v ~/Documents/localwrk/git/petal-db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d \
+    -p 5432:5432 \
     postgres```
 
 `docker exec -it petal-db bash`
