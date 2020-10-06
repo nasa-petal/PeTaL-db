@@ -1,4 +1,4 @@
-# PeTaL (Periodic Table of Life)
+# PeTaL (Periodic Table of Life) Database
 
 The Periodic Table of Life (PeTaL, pronounced petal) is a design tool aimed at allowing users to seemlesly move from ideas (from nature or other sources) to design.
 
