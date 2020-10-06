@@ -11,6 +11,12 @@ https://hub.docker.com/_/postgres
 https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docker-c022632f13ea
 
 `docker pull postgres`    
+
+The file 'init-db.sh' may not have the permissions to run and will not initialize the petal database. To fix,  
+`cd docker-entrypoint-initdb.d/`  
+`chmod +x init-db.sh`  
+
+Now, start the container, but you will need to change `-v` to your local path
 ```
 docker run -d \
     --name petal-db \
