@@ -6,25 +6,8 @@ PeTaL is comprised of multiple interconnected services. This repository is for t
 
 ## Getting started
 
-https://hub.docker.com/_/postgres
-
-https://towardsdatascience.com/local-development-set-up-of-postgresql-with-docker-c022632f13ea
-
-`docker pull postgres`    
-```
-docker run -d \
-    --name petal-db \
-    -e POSTGRES_PASSWORD=mysecretpassword \
-    -d \
-    -v /local/path/to/petal-db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d \
-    -p 5432:5432 \
-    postgres
-```
-
-`docker exec -it petal-db bash`    
-`psql -h localhost -U postgres`    
-`\l`    
-`\c petal`    
-`select * from wikipedia_label;`    
-
-`docker inspect petal-db -f "{{json .NetworkSettings.Networks }}"`
+Run cloud formation template (dynamodb-cf-template.yaml) to create PetalLabels dynamodb table
+Open Aws cloudshell
+Upload data.json file
+Run this command to add items to the PetalLabels table:
+aws dynamodb batch-write-item --request-items file://data.json

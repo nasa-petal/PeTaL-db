@@ -1,0 +1,154 @@
+{
+    "PetalLabels": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Attach permanently"
+                    },
+                    "Label3": {
+                        "S": "Attach permanently"
+                    },
+                    "CoreId": {
+                        "S": "196608890"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Attach temporarily"
+                    },
+                    "Label3": {
+                        "S": "Attach temporarily"
+                    },
+                    "CoreId": {
+                        "S": "323251733"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Passive movement"
+                    },
+                    "Label3": {
+                        "S": "Passively move through/on liquids"
+                    },
+                    "CoreId": {
+                        "S": "187720106"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Passive movement"
+                    },
+                    "Label3": {
+                        "S": "Passively move through/on solids"
+                    },
+                    "CoreId": {
+                        "S": "231953176"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Passive movement"
+                    },
+                    "Label3": {
+                        "S": "Passively move through gases"
+                    },
+                    "CoreId": {
+                        "S": "301572723"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Active movement"
+                    },
+                    "Label3": {
+                        "S": "Actively move through/on liquids"
+                    },
+                    "CoreId": {
+                        "S": "301533958"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Active movement"
+                    },
+                    "Label3": {
+                        "S": "Actively move through/on solids"
+                    },
+                    "CoreId": {
+                        "S": "323892863"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Active movement"
+                    },
+                    "Label3": {
+                        "S": "Actively move through gases"
+                    },
+                    "CoreId": {
+                        "S": "223010999"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Protect from living threats"
+                    },
+                    "Label3": {
+                        "S": "Protect from animals"
+                    },
+                    "CoreId": {
+                        "S": "79490492"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Label2": {
+                        "S": "Protect from living threats"
+                    },
+                    "Label3": {
+                        "S": "Protect from plants"
+                    },
+                    "CoreId": {
+                        "S": "323894909"
+                    }
+                }
+            }
+        }
+    ]
+}

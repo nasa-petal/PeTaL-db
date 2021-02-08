@@ -1,0 +1,22 @@
+Resources:
+  myDynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "PetalLabels"
+      AttributeDefinitions:
+        -
+          AttributeName: "Label2"
+          AttributeType: "S"
+        -
+          AttributeName: "Label3"
+          AttributeType: "S"
+      KeySchema:
+        -
+          AttributeName: "Label2"
+          KeyType: "HASH"
+        -
+          AttributeName: "Label3"
+          KeyType: "RANGE"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 25
+        WriteCapacityUnits: 25
