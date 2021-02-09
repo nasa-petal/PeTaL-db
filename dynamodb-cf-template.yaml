@@ -1,3 +1,13 @@
+Parameters:
+  AmazonDynamoDBReadOnlyAccessArn:
+    Type: String
+    Description: ARN for AmazonDynamoDBReadOnlyAccess Policy
+  AmazonAPIGatewayPushToCloudWatchLogsArn:
+    Type: String
+    Description: ARN for AmazonDynamoDBReadOnlyAccess Policy
+  GccTenantOperatorBoundaryArn:
+    Type: String
+    Description: ARN for gcc-tenantOperatorBoundary Policy
 Resources:
   myDynamoDBTable:
     Type: AWS::DynamoDB::Table
@@ -5,18 +15,113 @@ Resources:
       TableName: "PetalLabels"
       AttributeDefinitions:
         -
-          AttributeName: "Label2"
+          AttributeName: "Level2"
           AttributeType: "S"
         -
-          AttributeName: "Label3"
+          AttributeName: "Level3"
           AttributeType: "S"
       KeySchema:
         -
-          AttributeName: "Label2"
+          AttributeName: "Level2"
           KeyType: "HASH"
         -
-          AttributeName: "Label3"
+          AttributeName: "Level3"
           KeyType: "RANGE"
       ProvisionedThroughput:
         ReadCapacityUnits: 25
         WriteCapacityUnits: 25
+  myRole:
+    Type: AWS::IAM::Role
+    Properties: 
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Sid: ''
+          Effect: Allow
+          Principal:
+            Service: apigateway.amazonaws.com
+          Action: sts:AssumeRole
+      Description: Allows API Gateway read data from dynamodb table
+      ManagedPolicyArns: 
+        - !Ref AmazonDynamoDBReadOnlyAccessArn
+        - !Ref AmazonAPIGatewayPushToCloudWatchLogsArn
+      PermissionsBoundary:
+        Ref: GccTenantOperatorBoundaryArn
+      RoleName: petal-api-gateway-dynamodb
+  myRestApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties: 
+      EndpointConfiguration: 
+        Types:
+        - EDGE
+      Name: PetalApi
+  myResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId:
+        Ref: myRestApi
+      ParentId:
+        Fn::GetAtt:
+        - myRestApi
+        - RootResourceId
+      PathPart: getarticles
+  myRequestValidator:
+    Type: AWS::ApiGateway::RequestValidator
+    Properties: 
+      Name: params-only
+      RestApiId:
+        Ref: myRestApi
+      ValidateRequestBody: false
+      ValidateRequestParameters: true
+  myGet:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: GET
+      ResourceId:
+        Ref: myResource
+      RestApiId:
+        Ref: myRestApi
+      RequestParameters:
+        method.request.querystring.level2: true
+        method.request.querystring.level3: false
+      RequestValidatorId:
+        Ref: myRequestValidator
+      Integration:
+        Type: AWS
+        IntegrationHttpMethod: POST
+        Credentials: !GetAtt myRole.Arn
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
+        RequestParameters:
+          integration.request.querystring.level2: method.request.querystring.level2
+          integration.request.querystring.level3: method.request.querystring.level3
+        RequestTemplates:
+          application/json: |
+            #*
+              VTL mapping template for API Gateway integration request
+              https://www.alexdebrie.com/posts/api-gateway-elements/#writing-mapping-templates-with-vtl
+              https://velocity.apache.org/engine/2.1/vtl-reference.html#comments
+            *#
+
+            #set($keyConditionExpression = "Level2 = :v1")
+
+            ## https://stackoverflow.com/a/13629499 **
+            #if("$!input.params('level3')" != "")
+            #set($keyConditionExpression = "$keyConditionExpression AND Level3 = :v2")
+            #end
+
+            {
+              "TableName": "PetalLabels",
+              "KeyConditionExpression": "$keyConditionExpression",
+              "ExpressionAttributeValues": {
+                ":v1": {
+                  "S": "$input.params('level2')"
+                }
+            #if("$!input.params('level3')" != "")
+                ,
+                ":v2": {
+                  "S": "$input.params('level3')"
+                }
+            #end
+              }
+            }
