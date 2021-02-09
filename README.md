@@ -6,8 +6,8 @@ PeTaL is comprised of multiple interconnected services. This repository is for t
 
 ## Getting started
 
-Run cloud formation template (dynamodb-cf-template.yaml) to create PetalLabels dynamodb table and api
-Open Aws cloudshell
-Upload data.json file
-Run this command to add items to the PetalLabels table:
-aws dynamodb batch-write-item --request-items file://data.json
+1. Run cloud formation template (dynamodb-cf-template.yaml) to create PetalLabels dynamodb table and api
+1. Open Aws cloudshell
+1. Upload data.json file
+1. Run this command to add items to the PetalLabels table:    
+`aws dynamodb batch-write-item --request-items file://data.json`
