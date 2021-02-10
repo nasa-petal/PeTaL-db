@@ -129,9 +129,11 @@ Resources:
           application/json: |
             #*
               VTL mapping template for API Gateway integration request
+              Help articles:
               https://www.alexdebrie.com/posts/api-gateway-elements/#writing-mapping-templates-with-vtl
               https://velocity.apache.org/engine/2.1/vtl-reference.html#comments
               https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Query.html
+              https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html
             *#
 
             #set($keyConditionExpression = "Level2 = :v1")
