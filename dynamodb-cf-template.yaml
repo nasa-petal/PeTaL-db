@@ -227,6 +227,8 @@ Resources:
       - ResponseModels:
           application/json: Empty
         StatusCode: 200
+        ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: false
       Integration:
         Type: AWS
         IntegrationHttpMethod: POST
@@ -235,6 +237,8 @@ Resources:
         Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Scan"
         IntegrationResponses:
         - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: "'*'"
         RequestTemplates:
           application/json: |
             ## https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Scan.html **
@@ -249,6 +253,36 @@ Resources:
         Path: /getallarticles
       RestApiId: !Ref myRestApi
       Properties: '{"description": "Retreive a list of all articles."}'
+  myOptions:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      RestApiId:
+        Ref: myRestApi
+      ResourceId:
+        Ref: myResource2
+      HttpMethod: OPTIONS
+      Integration:
+        IntegrationResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+            method.response.header.Access-Control-Allow-Methods: "'GET,OPTIONS'"
+            method.response.header.Access-Control-Allow-Origin: "'*'"
+          ResponseTemplates:
+            application/json: ''
+        PassthroughBehavior: WHEN_NO_MATCH
+        RequestTemplates:
+          application/json: '{"statusCode": 200}'
+        Type: MOCK
+      MethodResponses:
+      - StatusCode: 200
+        ResponseModels:
+          application/json: 'Empty'
+        ResponseParameters:
+            method.response.header.Access-Control-Allow-Headers: false
+            method.response.header.Access-Control-Allow-Methods: false
+            method.response.header.Access-Control-Allow-Origin: false
   myResponseDocumentationPart2:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
