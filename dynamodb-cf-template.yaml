@@ -1,3 +1,4 @@
+Description: PeTal DynamoDB table and REST API
 Parameters:
   AmazonDynamoDBReadOnlyAccessArn:
     Type: String
@@ -8,11 +9,20 @@ Parameters:
   GccTenantOperatorBoundaryArn:
     Type: String
     Description: ARN for gcc-tenantOperatorBoundary Policy
+  APIVersion:
+    Type: String
+    Description: To publish a new version of the API, enter an integer value.
+  Environment:
+    Type: String
+    AllowedValues:
+      - br
+      - test
+    Description: br, test, or empty for prod.
 Resources:
   myDynamoDBTable:
     Type: AWS::DynamoDB::Table
     Properties:
-      TableName: "PetalLabels"
+      TableName: !Sub '${Environment}PetalLabels'
       AttributeDefinitions:
         -
           AttributeName: "Level2"
@@ -47,14 +57,20 @@ Resources:
         - !Ref AmazonAPIGatewayPushToCloudWatchLogsArn
       PermissionsBoundary:
         Ref: GccTenantOperatorBoundaryArn
-      RoleName: petal-api-gateway-dynamodb
   myRestApi:
     Type: AWS::ApiGateway::RestApi
     Properties: 
       EndpointConfiguration: 
         Types:
         - EDGE
-      Name: PetalApi
+      Name: !Sub '${Environment}PetalApi'
+  myRestApiDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: API
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "REST API used by the PeTaL React app, to retreive data from a DynamoDB table."}'
   myResource:
     Type: AWS::ApiGateway::Resource
     Properties:
@@ -65,10 +81,17 @@ Resources:
         - myRestApi
         - RootResourceId
       PathPart: getarticles
+  myResourceDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: RESOURCE
+        Path: /getarticles
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "/getarticles resource"}'
   myRequestValidator:
     Type: AWS::ApiGateway::RequestValidator
     Properties: 
-      Name: params-only
       RestApiId:
         Ref: myRestApi
       ValidateRequestBody: false
@@ -95,6 +118,7 @@ Resources:
         Type: AWS
         IntegrationHttpMethod: POST
         Credentials: !GetAtt myRole.Arn
+        PassthroughBehavior: WHEN_NO_TEMPLATES
         Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
         RequestParameters:
           integration.request.querystring.level2: method.request.querystring.level2
@@ -131,3 +155,61 @@ Resources:
             #end
               }
             }
+  myGetDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: METHOD
+        Path: /getarticles
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "Retreive a list of articles matching the level2 and level3 labels supplied."}'
+  myQPDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getarticles
+        Method: GET
+        Name: level2
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "The second level label to retreive articles for."}'
+  myQP2DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getarticles
+        Method: GET
+        Name: level3
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "The third level label to retreive articles for."}'
+  myResponseDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: RESPONSE
+        Path: /getarticles
+        Method: GET
+        StatusCode: 200
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "Returns a list of articles matching the level2 and level3 labels supplied."}'
+  myRestApiDocumentationVersion:
+    Type: AWS::ApiGateway::DocumentationVersion
+    Properties:
+      DocumentationVersion: !Ref APIVersion
+      RestApiId: !Ref myRestApi
+    DependsOn: myRestApiDocumentationPart
+  myRestApiDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref myRestApi
+      Description: My deployment
+    DependsOn: myGet
+  myRestApiStage:
+    Type: AWS::ApiGateway::Stage
+    Properties: 
+      DeploymentId: !Ref myRestApiDeployment
+      DocumentationVersion: !Ref APIVersion
+      RestApiId: !Ref myRestApi
+      StageName: !Sub 'v${APIVersion}'
+    DependsOn: myRestApiDocumentationVersion
