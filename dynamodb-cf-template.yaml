@@ -60,6 +60,7 @@ Resources:
   myRestApi:
     Type: AWS::ApiGateway::RestApi
     Properties: 
+      MinimumCompressionSize: 860
       EndpointConfiguration: 
         Types:
         - EDGE
@@ -136,10 +137,12 @@ Resources:
               https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html
             *#
 
+            #set($sanitizedLevel2 = $util.escapeJavaScript($input.params('level2')))
+            #set($sanitizedLevel3 = $util.escapeJavaScript($input.params('level3')))
             #set($keyConditionExpression = "Level2 = :v1")
 
             ## https://stackoverflow.com/a/13629499 **
-            #if("$!input.params('level3')" != "")
+            #if("$!sanitizedLevel3" != "")
             #set($keyConditionExpression = "$keyConditionExpression AND Level3 = :v2")
             #end
 
@@ -148,12 +151,12 @@ Resources:
               "KeyConditionExpression": "$keyConditionExpression",
               "ExpressionAttributeValues": {
                 ":v1": {
-                  "S": "$input.params('level2')"
+                  "S": "$sanitizedLevel2"
                 }
             #if("$!input.params('level3')" != "")
                 ,
                 ":v2": {
-                  "S": "$input.params('level3')"
+                  "S": "$sanitizedLevel3"
                 }
             #end
               }
