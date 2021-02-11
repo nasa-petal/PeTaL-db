@@ -1,0 +1,53 @@
+openapi: "3.0.1"
+info:
+  title: "brPetalApi"
+  version: "2021-02-11T21:19:47Z"
+servers:
+- url: "https://unbqm6hov8.execute-api.us-east-2.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "/v1"
+paths:
+  /getarticles:
+    get:
+      description: "Retreive a list of articles matching the level2 and level3 labels\
+        \ supplied."
+      parameters:
+      - name: "level3"
+        in: "query"
+        description: "The third level label to retreive articles for."
+        schema:
+          type: "string"
+      - name: "level2"
+        in: "query"
+        description: "The second level label to retreive articles for."
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "Returns a list of articles matching the level2 and level3\
+            \ labels supplied."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+  /getallarticles:
+    get:
+      description: "Retreive a list of all articles."
+      responses:
+        "200":
+          description: "Returns a list of all articles."
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+components:
+  schemas:
+    Empty:
+      title: "Empty Schema"
+      type: "object"
