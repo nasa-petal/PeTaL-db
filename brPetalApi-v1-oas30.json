@@ -1,87 +1,79 @@
 {
-  "openapi": "3.0.1",
+  "swagger": "2.0",
   "info": {
-    "title": "brPetalApi",
-    "version": "2021-02-10T21:22:17Z"
+    "version": "2021-02-11T21:19:47Z",
+    "title": "brPetalApi"
   },
-  "servers": [
-    {
-      "url": "https://unbqm6hov8.execute-api.us-east-2.amazonaws.com/{basePath}",
-      "variables": {
-        "basePath": {
-          "default": "v1"
-        }
-      }
-    }
+  "host": "unbqm6hov8.execute-api.us-east-2.amazonaws.com",
+  "basePath": "/v1",
+  "schemes": [
+    "https"
   ],
   "paths": {
-    "/getarticles": {
+    "/getallarticles": {
       "get": {
-        "description": "Retreive a list of articles matching the level2 and level3 labels supplied.",
-        "parameters": [
-          {
-            "name": "level3",
-            "in": "query",
-            "description": "The third level label to retreive articles for.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "level2",
-            "in": "query",
-            "description": "The second level label to retreive articles for.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
+        "description": "Retreive a list of all articles.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
         ],
         "responses": {
           "200": {
-            "description": "Returns a list of articles matching the level2 and level3 labels supplied.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Empty"
-                }
+            "description": "Returns a list of all articles.",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "type": "string"
               }
             }
           }
         }
       }
     },
-    "/getallarticles": {
+    "/getarticles": {
       "get": {
-        "description": "Retreive a list of all articles.",
+        "description": "Retreive a list of articles matching the level2 and level3 labels supplied.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "level3",
+            "in": "query",
+            "description": "The third level label to retreive articles for.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "level2",
+            "in": "query",
+            "description": "The second level label to retreive articles for.",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Returns a list of all articles.",
-            "headers": {
-              "Access-Control-Allow-Origin": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            },
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Empty"
-                }
-              }
+            "description": "Returns a list of articles matching the level2 and level3 labels supplied.",
+            "schema": {
+              "$ref": "#/definitions/Empty"
             }
           }
         }
       }
     }
   },
-  "components": {
-    "schemas": {
-      "Empty": {
-        "title": "Empty Schema",
-        "type": "object"
-      }
+  "definitions": {
+    "Empty": {
+      "type": "object",
+      "title": "Empty Schema"
     }
   }
 }
