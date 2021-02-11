@@ -9,7 +9,7 @@
       "url": "https://unbqm6hov8.execute-api.us-east-2.amazonaws.com/{basePath}",
       "variables": {
         "basePath": {
-          "default": "/v1"
+          "default": "v1"
         }
       }
     }
