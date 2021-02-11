@@ -256,36 +256,6 @@ Resources:
         Path: /getallarticles
       RestApiId: !Ref myRestApi
       Properties: '{"description": "Retreive a list of all articles."}'
-  myOptions:
-    Type: AWS::ApiGateway::Method
-    Properties:
-      AuthorizationType: NONE
-      RestApiId:
-        Ref: myRestApi
-      ResourceId:
-        Ref: myResource2
-      HttpMethod: OPTIONS
-      Integration:
-        IntegrationResponses:
-        - StatusCode: 200
-          ResponseParameters:
-            method.response.header.Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
-            method.response.header.Access-Control-Allow-Methods: "'GET,OPTIONS'"
-            method.response.header.Access-Control-Allow-Origin: "'*'"
-          ResponseTemplates:
-            application/json: ''
-        PassthroughBehavior: WHEN_NO_MATCH
-        RequestTemplates:
-          application/json: '{"statusCode": 200}'
-        Type: MOCK
-      MethodResponses:
-      - StatusCode: 200
-        ResponseModels:
-          application/json: 'Empty'
-        ResponseParameters:
-            method.response.header.Access-Control-Allow-Headers: false
-            method.response.header.Access-Control-Allow-Methods: false
-            method.response.header.Access-Control-Allow-Origin: false
   myResponseDocumentationPart2:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
@@ -308,6 +278,7 @@ Resources:
       RestApiId: !Ref myRestApi
       Description: My deployment
     DependsOn: myGet
+    DeletionPolicy: Retain
   myRestApiStage:
     Type: AWS::ApiGateway::Stage
     Properties: 
