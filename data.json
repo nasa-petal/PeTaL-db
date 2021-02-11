@@ -9,8 +9,8 @@
                     "Level3": {
                         "S": "Attach permanently"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics2030017"
+                    "CoreId": {
+                        "S": "196608890"
                     }
                 }
             }
@@ -24,8 +24,8 @@
                     "Level3": {
                         "S": "Attach temporarily"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics3030014"
+                    "CoreId": {
+                        "S": "323251733"
                     }
                 }
             }
@@ -39,8 +39,8 @@
                     "Level3": {
                         "S": "Passively move through/on liquids"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics3040029"
+                    "CoreId": {
+                        "S": "231953176"
                     }
                 }
             }
@@ -54,8 +54,8 @@
                     "Level3": {
                         "S": "Passively move through/on solids"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics5010010"
+                    "CoreId": {
+                        "S": "301572723"
                     }
                 }
             }
@@ -69,8 +69,8 @@
                     "Level3": {
                         "S": "Passively move through gases"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics4010007"
+                    "CoreId": {
+                        "S": "301533958"
                     }
                 }
             }
@@ -84,8 +84,8 @@
                     "Level3": {
                         "S": "Actively move through/on liquids"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics2040019"
+                    "CoreId": {
+                        "S": "323892863"
                     }
                 }
             }
@@ -99,8 +99,8 @@
                     "Level3": {
                         "S": "Actively move through/on solids"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics2020006"
+                    "CoreId": {
+                        "S": "223010999"
                     }
                 }
             }
@@ -114,8 +114,8 @@
                     "Level3": {
                         "S": "Actively move through gases"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics2010003"
+                    "CoreId": {
+                        "S": "79490492"
                     }
                 }
             }
@@ -129,8 +129,8 @@
                     "Level3": {
                         "S": "Protect from animals"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics1010005"
+                    "CoreId": {
+                        "S": "323894909"
                     }
                 }
             }
@@ -144,8 +144,8 @@
                     "Level3": {
                         "S": "Protect from plants"
                     },
-                    "DOI": {
-                        "S": "10.3390/biomimetics1010007"
+                    "CoreId": {
+                        "S": "187720106"
                     }
                 }
             }
