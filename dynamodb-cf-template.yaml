@@ -13,12 +13,12 @@ Parameters:
     Type: Number
     MinValue: 1
     Default: 1
-    Description: To publish a new version of the API to a separate stage, enter the next integer value.
+    Description: (For Change Sets) To publish a new version of the API to a separate stage, add 1 to the integer below.
   APIDocVersion:
     Type: Number
     MinValue: 1
     Default: 1
-    Description: To publish a new version of the API documentation, enter the next integer value.
+    Description: (For Change Sets) To publish a new version of the API documentation, add 1 to the integer below.
   Environment:
     Type: String
     AllowedValues:
