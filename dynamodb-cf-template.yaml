@@ -266,7 +266,7 @@ Resources:
       DocumentationVersion: !Ref APIDocVersion
       RestApiId: !Ref myRestApi
     DependsOn: myRestApiDocumentationPart
-  myRestApiDeployment:
+  myRestApiDeployment: #to create a new API deployment in the same stage, change the resource id to something unique ex. "myRestApiDeployment2", and update the !Ref to match the new id in the stage definition below.
     Type: 'AWS::ApiGateway::Deployment'
     Properties:
       RestApiId: !Ref myRestApi
@@ -276,7 +276,7 @@ Resources:
   myRestApiStage:
     Type: AWS::ApiGateway::Stage
     Properties: 
-      DeploymentId: !Ref myRestApiDeployment
+      DeploymentId: !Ref myRestApiDeployment #make sure this matches the resourceID of the deployment above.
       DocumentationVersion: !Ref APIDocVersion
       RestApiId: !Ref myRestApi
       StageName: !Sub 'v${APIVersion}'
