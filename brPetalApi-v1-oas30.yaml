@@ -10,10 +10,10 @@ servers:
 paths:
   /getarticles:
     get:
+      tags:
+      - "API methods"
       description: "Retreive a list of articles matching the level2 and level3 labels\
         \ supplied."
-      tags: 
-        - API methods
       parameters:
       - name: "level3"
         in: "query"
@@ -36,9 +36,9 @@ paths:
                 $ref: "#/components/schemas/Empty"
   /getallarticles:
     get:
+      tags:
+      - "API methods"
       description: "Retreive a list of all articles."
-      tags: 
-        - API methods
       responses:
         "200":
           description: "Returns a list of all articles."
