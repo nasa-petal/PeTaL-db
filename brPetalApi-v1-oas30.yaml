@@ -38,7 +38,7 @@ paths:
     get:
       tags:
       - "API methods"
-      description: "Retreive a list of all articles."
+      summary: "Get all articles"
       responses:
         "200":
           description: "Returns a list of all articles."
