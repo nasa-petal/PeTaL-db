@@ -168,7 +168,7 @@ Resources:
         Type: METHOD
         Path: /getarticles
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "Retreive a list of articles matching the level2 and level3 labels supplied.","tags":["API methods"]}'
+      Properties: '{"summary": "Finds articles by label","description": "Find articles with the level2 and level3 labels supplied.","tags":["API methods"]}'
   myQPDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
@@ -198,7 +198,7 @@ Resources:
         Method: GET
         StatusCode: 200
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "Returns a list of articles matching the level2 and level3 labels supplied."}'
+      Properties: '{"description": "successful operation"}'
   myResource2:
     Type: AWS::ApiGateway::Resource
     Properties:
@@ -255,7 +255,7 @@ Resources:
         Type: METHOD
         Path: /getallarticles
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "Retreive a list of all articles.","tags":["API methods"]}'
+      Properties: '{"summary": "Get all articles","tags":["API methods"]}'
   myResponseDocumentationPart2:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
@@ -265,7 +265,7 @@ Resources:
         Method: GET
         StatusCode: 200
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "Returns a list of all articles."}'
+      Properties: '{"description": "successful operation"}'
   myRestApiDocumentationVersion:
     Type: AWS::ApiGateway::DocumentationVersion
     Properties:
