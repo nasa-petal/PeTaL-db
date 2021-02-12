@@ -1,7 +1,7 @@
 openapi: "3.0.1"
 info:
-  title: "PeTaL API"
-  version: "6"
+  title: "PeTaL API Documentation"
+  version: "v6"
 servers:
 - url: "https://unbqm6hov8.execute-api.us-east-2.amazonaws.com/{basePath}"
   variables:
