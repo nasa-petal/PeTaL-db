@@ -168,7 +168,7 @@ Resources:
         Type: METHOD
         Path: /getarticles
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "Retreive a list of articles matching the level2 and level3 labels supplied."}'
+      Properties: '{"description": "Retreive a list of articles matching the level2 and level3 labels supplied.","tags":["API methods"]}'
   myQPDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
@@ -255,7 +255,7 @@ Resources:
         Type: METHOD
         Path: /getallarticles
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "Retreive a list of all articles."}'
+      Properties: '{"description": "Retreive a list of all articles.","tags":["API methods"]}'
   myResponseDocumentationPart2:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
