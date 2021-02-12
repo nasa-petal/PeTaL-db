@@ -12,8 +12,8 @@ paths:
     get:
       tags:
       - "API methods"
-      description: "Retreive a list of articles matching the level2 and level3 labels\
-        \ supplied."
+      summary: "Finds articles by label"
+      description: "Find articles with the level2 and level3 labels supplied."
       parameters:
       - name: "level3"
         in: "query"
@@ -28,8 +28,7 @@ paths:
           type: "string"
       responses:
         "200":
-          description: "Returns a list of articles matching the level2 and level3\
-            \ labels supplied."
+          description: "successful operation"
           content:
             application/json:
               schema:
@@ -41,7 +40,7 @@ paths:
       summary: "Get all articles"
       responses:
         "200":
-          description: "Returns a list of all articles."
+          description: "successful operation"
           headers:
             Access-Control-Allow-Origin:
               schema:
