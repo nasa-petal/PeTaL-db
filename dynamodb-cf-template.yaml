@@ -78,6 +78,9 @@ Resources:
       Location:
         Type: API
       RestApiId: !Ref myRestApi
+      # Currently these values are overwritten when exporting the Swagger or OpenAPI spec from API Gateway.
+      # They need to be updated manually in the exported yaml file.
+      # Also remove the slash in servers:variables:basePath:default in the yaml file.
       Properties: !Sub '{"info": {"title":"PeTaL API Documentation","version":"v${APIDocVersion}"}}'
   myResource:
     Type: AWS::ApiGateway::Resource
