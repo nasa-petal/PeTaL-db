@@ -78,7 +78,7 @@ Resources:
       Location:
         Type: API
       RestApiId: !Ref myRestApi
-      Properties: !Sub '{"info": {"title":"PeTaL API","version":"${APIDocVersion}"}}'
+      Properties: !Sub '{"info": {"title":"PeTaL API Documentation","version":"v${APIDocVersion}"}}'
   myResource:
     Type: AWS::ApiGateway::Resource
     Properties:
