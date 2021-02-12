@@ -10,8 +10,15 @@ Parameters:
     Type: String
     Description: ARN for gcc-tenantOperatorBoundary Policy
   APIVersion:
-    Type: String
-    Description: To publish a new version of the API, enter an integer value.
+    Type: Number
+    MinValue: 1
+    Default: 1
+    Description: To publish a new version of the API to a separate stage, enter the next integer value.
+  APIDocVersion:
+    Type: Number
+    MinValue: 1
+    Default: 1
+    Description: To publish a new version of the API documentation, enter the next integer value.
   Environment:
     Type: String
     AllowedValues:
@@ -71,7 +78,7 @@ Resources:
       Location:
         Type: API
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "REST API used by the PeTaL React app, to retreive data from a DynamoDB table."}'
+      Properties: !Sub '{"info": {"title":"PeTaL API","version":"${APIDocVersion}"}}'
   myResource:
     Type: AWS::ApiGateway::Resource
     Properties:
@@ -82,14 +89,6 @@ Resources:
         - myRestApi
         - RootResourceId
       PathPart: getarticles
-  myResourceDocumentationPart:
-    Type: AWS::ApiGateway::DocumentationPart
-    Properties:
-      Location:
-        Type: RESOURCE
-        Path: /getarticles
-      RestApiId: !Ref myRestApi
-      Properties: '{"description": "/getarticles resource"}'
   myRequestValidator:
     Type: AWS::ApiGateway::RequestValidator
     Properties: 
@@ -209,14 +208,6 @@ Resources:
         - myRestApi
         - RootResourceId
       PathPart: getallarticles
-  myResource2DocumentationPart:
-    Type: AWS::ApiGateway::DocumentationPart
-    Properties:
-      Location:
-        Type: RESOURCE
-        Path: /getallarticles
-      RestApiId: !Ref myRestApi
-      Properties: '{"description": "/getallarticles resource"}'
   myGet2:
     Type: AWS::ApiGateway::Method
     Properties:
@@ -269,7 +260,7 @@ Resources:
   myRestApiDocumentationVersion:
     Type: AWS::ApiGateway::DocumentationVersion
     Properties:
-      DocumentationVersion: !Ref APIVersion
+      DocumentationVersion: !Ref APIDocVersion
       RestApiId: !Ref myRestApi
     DependsOn: myRestApiDocumentationPart
   myRestApiDeployment:
@@ -283,7 +274,7 @@ Resources:
     Type: AWS::ApiGateway::Stage
     Properties: 
       DeploymentId: !Ref myRestApiDeployment
-      DocumentationVersion: !Ref APIVersion
+      DocumentationVersion: !Ref APIDocVersion
       RestApiId: !Ref myRestApi
       StageName: !Sub 'v${APIVersion}'
     DependsOn: myRestApiDocumentationVersion
