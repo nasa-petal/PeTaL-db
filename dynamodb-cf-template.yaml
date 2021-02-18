@@ -1,11 +1,9 @@
+# Consider adopting resource naming conventions like these: 
+#
+#https://confluence.huit.harvard.edu/display/CLA/Cloud+Resource+Naming+Conventions?desktop=true&macroName=livesearch
+
 Description: PeTal DynamoDB table and REST API
 Parameters:
-  AmazonDynamoDBReadOnlyAccessArn:
-    Type: String
-    Description: ARN for AmazonDynamoDBReadOnlyAccess Policy
-  AmazonAPIGatewayPushToCloudWatchLogsArn:
-    Type: String
-    Description: ARN for AmazonDynamoDBReadOnlyAccess Policy
   GccTenantOperatorBoundaryArn:
     Type: String
     Description: ARN for gcc-tenantOperatorBoundary Policy
@@ -26,6 +24,11 @@ Parameters:
       - test
     Description: br, test, or empty for prod.
 Resources:
+
+  ##############
+  #  DynamoDB  #
+  ##############
+
   myDynamoDBTable:
     Type: AWS::DynamoDB::Table
     Properties:
@@ -47,6 +50,11 @@ Resources:
       ProvisionedThroughput:
         ReadCapacityUnits: 25
         WriteCapacityUnits: 25
+
+  #################
+  #  API Gateway  #
+  #################
+
   myRole:
     Type: AWS::IAM::Role
     Properties: 
@@ -59,9 +67,9 @@ Resources:
             Service: apigateway.amazonaws.com
           Action: sts:AssumeRole
       Description: Allows API Gateway read data from dynamodb table
-      ManagedPolicyArns: 
-        - !Ref AmazonDynamoDBReadOnlyAccessArn
-        - !Ref AmazonAPIGatewayPushToCloudWatchLogsArn
+      ManagedPolicyArns:
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonDynamoDBReadOnlyAccess"
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
       PermissionsBoundary:
         Ref: GccTenantOperatorBoundaryArn
   myRestApi:
@@ -281,3 +289,109 @@ Resources:
       RestApiId: !Ref myRestApi
       StageName: !Sub 'v${APIVersion}'
     DependsOn: myRestApiDocumentationVersion
+
+  ############
+  #  Lambda  #
+  ############
+
+  myLambdaPolicy:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      ManagedPolicyName: petal-lambda-dynamodb
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'dynamodb:BatchWriteItem'
+              - 'dynamodb:PutItem'
+              - 'dynamodb:Scan'
+              - 'dynamodb:Query'
+              - 'dynamodb:UpdateItem'
+            Resource: !GetAtt myDynamoDBTable.Arn
+  myLambdaRole:
+    Type: AWS::IAM::Role
+    Properties: 
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: lambda.amazonaws.com
+          Action: sts:AssumeRole
+      Description: Allows Lambda functions to call AWS services on your behalf.
+      ManagedPolicyArns:
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+        - !Ref myLambdaPolicy
+      PermissionsBoundary:
+        Ref: GccTenantOperatorBoundaryArn
+  labelCOREArticles:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: python3.8
+      Code:
+        ZipFile: |
+          import boto3
+
+          #functions: check for new articles, deploy endpoint, batch predictions, store predictions
+          # https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.04.html
+          # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html#DynamoDB.Client.scan
+          # https://www.fernandomc.com/posts/ten-examples-of-getting-data-from-dynamodb-with-python-and-boto3/
+
+          def connectToDBTable():
+              dynamodb = boto3.resource('dynamodb', region_name="us-east-2")
+              return dynamodb.Table('PetalLabels')
+              
+          def storeLabelledArticles(labelledArticles, dbTable):
+              # https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html#batch-writing
+              with dbTable.batch_writer() as batch:
+                  for article in labelledArticles:
+                      batch.delete_item(Key={'Level2': article['Level2'], 'Level3': article['Level3']})
+              with dbTable.batch_writer() as batch:
+                  for article in labelledArticles:
+                      batch.put_item(
+                          Item={
+                              'Level2': article['Level2'],
+                              'Level3': article['Level3'],
+                              'CoreId': article['CoreId']
+                          }
+                      )
+
+          def handler(event, context):
+              dbTable = connectToDBTable()
+              #endpoint = deployEndpoint()
+              #labelledArticles = batchPredictions(newArticles, endpoint)
+              labelledArticles = [{'Level2': 'Protect from living threats', 'Level3': 'Protect from fungi', 'CoreId': '74791'}, {'Level2': 'Protect from living threats', 'Level3': 'Protect from microbes', 'CoreId': '15626437'}]
+              storeLabelledArticles(labelledArticles, dbTable)
+      Description: 'Takes unprocessed CORE articles, labels them with biomimetic functions using a deployed SageMaker endpoint, and saves the labelled articles to DynamoDB.'
+      Role: !GetAtt myLambdaRole.Arn
+
+  ################################################
+  #  Run Lambda on a schedule using EventBridge  #
+  ################################################
+
+  # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html#aws-resource-events-rule--examples
+  ScheduledRule: 
+    Type: AWS::Events::Rule
+    Properties: 
+      Description: "Runs the PeTaL labeller Lambda function on a schedule"
+      ScheduleExpression: "rate(30 days)"
+      State: "DISABLED"
+      Targets: 
+        - 
+          Arn: 
+            Fn::GetAtt: 
+              - "labelCOREArticles"
+              - "Arn"
+          Id: "TargetFunctionV1"
+  PermissionForEventsToInvokeLambda: 
+    Type: AWS::Lambda::Permission
+    Properties: 
+      FunctionName: !Ref "labelCOREArticles"
+      Action: "lambda:InvokeFunction"
+      Principal: "events.amazonaws.com"
+      SourceArn: 
+        Fn::GetAtt: 
+          - "ScheduledRule"
+          - "Arn"
