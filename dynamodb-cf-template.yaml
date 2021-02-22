@@ -308,7 +308,8 @@ Resources:
               - 'dynamodb:Scan'
               - 'dynamodb:Query'
               - 'dynamodb:UpdateItem'
-            Resource: !GetAtt myDynamoDBTable.Arn
+            Resource:
+              - !GetAtt myDynamoDBTable.Arn
   myLambdaRole:
     Type: AWS::IAM::Role
     Properties: 
@@ -322,48 +323,119 @@ Resources:
       Description: Allows Lambda functions to call AWS services on your behalf.
       ManagedPolicyArns:
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
         - !Ref myLambdaPolicy
       PermissionsBoundary:
         Ref: GccTenantOperatorBoundaryArn
+  mySageMakerRole:
+    Type: AWS::IAM::Role
+    Properties: 
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: sagemaker.amazonaws.com
+          Action: sts:AssumeRole
+      Description: Allows Sagemaker to access AWS services.
+      ManagedPolicyArns:
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonS3ReadOnlyAccess"
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
+      PermissionsBoundary:
+        Ref: GccTenantOperatorBoundaryArn  
   labelCOREArticles:
     Type: 'AWS::Lambda::Function'
     Properties:
       Handler: index.handler
       Runtime: python3.8
       Code:
-        ZipFile: |
-          import boto3
+        ZipFile: !Sub
+          - |
+            import boto3
 
-          #functions: check for new articles, deploy endpoint, batch predictions, store predictions
-          # https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.04.html
-          # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html#DynamoDB.Client.scan
-          # https://www.fernandomc.com/posts/ten-examples-of-getting-data-from-dynamodb-with-python-and-boto3/
+            client = boto3.client('sagemaker')
+            role = "${mySageMakerRole}"
+            prefix = 'testPyTorch'
+            modelName = prefix + 'Model'
+            endpointName = prefix + 'Endpoint'
+            endpointConfigName = endpointName + 'Config'
 
-          def connectToDBTable():
-              dynamodb = boto3.resource('dynamodb', region_name="us-east-2")
-              return dynamodb.Table('PetalLabels')
-              
-          def storeLabelledArticles(labelledArticles, dbTable):
-              # https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html#batch-writing
-              with dbTable.batch_writer() as batch:
-                  for article in labelledArticles:
-                      batch.delete_item(Key={'Level2': article['Level2'], 'Level3': article['Level3']})
-              with dbTable.batch_writer() as batch:
-                  for article in labelledArticles:
-                      batch.put_item(
-                          Item={
-                              'Level2': article['Level2'],
-                              'Level3': article['Level3'],
-                              'CoreId': article['CoreId']
-                          }
-                      )
+            def connectToDBTable():
+                dynamodb = boto3.resource('dynamodb', region_name="us-east-2")
+                return dynamodb.Table('PetalLabels')
 
-          def handler(event, context):
-              dbTable = connectToDBTable()
-              #endpoint = deployEndpoint()
-              #labelledArticles = batchPredictions(newArticles, endpoint)
-              labelledArticles = [{'Level2': 'Protect from living threats', 'Level3': 'Protect from fungi', 'CoreId': '74791'}, {'Level2': 'Protect from living threats', 'Level3': 'Protect from microbes', 'CoreId': '15626437'}]
-              storeLabelledArticles(labelledArticles, dbTable)
+            def getNewArticlesFromCORE():
+                return
+
+            def createModel():
+                try: #1
+                    client.create_model(
+                        ModelName=modelName,
+                        PrimaryContainer={
+                            'Image': '763104351884.dkr.ecr.us-east-2.amazonaws.com/pytorch-inference-eia:1.5.1-cpu-py36-ubuntu16.04',
+                            'ModelDataUrl': 's3://petal-bucket/linear-regression.tar.gz'
+                        },
+                        ExecutionRoleArn=role
+                    )
+                except Exception as e:
+                    print(e)
+                    print('Unable to create model.')
+                    raise(e)
+
+            def createEndpointConfig():
+                try:
+                    client.create_endpoint_config(
+                        EndpointConfigName=endpointConfigName,
+                        ProductionVariants=[
+                            {
+                                'VariantName': 'prod',
+                                'ModelName': modelName,
+                                'InitialInstanceCount': 1,
+                                'InstanceType': 'ml.t2.medium'
+                            }
+                        ]
+                    )
+                except Exception as e:
+                    print(e)
+                    print('Unable to create endpoint configuration.')
+                    raise(e)
+
+            def createEndpoint():
+                try:
+                    client.create_endpoint(
+                        EndpointName=endpointName,
+                        EndpointConfigName=endpointConfigName
+                    )
+                except Exception as e:
+                    print(e)
+                    print('Unable to create endpoint.')
+                    raise(e)
+
+            def batchPredictions(newArticles):#, endpoint):
+                # randomly assign labels to articles.
+                # 
+                return
+
+            def storeLabelledArticles(labelledArticles, dbTable):
+                #2
+                with dbTable.batch_writer() as batch:
+                    for article in labelledArticles:
+                        batch.delete_item(Key={'Level2': article['Level2'], 'Level3': article['Level3']})
+                with dbTable.batch_writer() as batch:
+                    for article in labelledArticles:
+                        batch.put_item(
+                            Item={
+                                'Level2': article['Level2'],
+                                'Level3': article['Level3'],
+                                'CoreId': article['CoreId']
+                            }
+                        )
+
+            def handler(event, context):
+                createModel()
+                createEndpointConfig()
+                createEndpoint()
+          - { mySageMakerRole: !GetAtt mySageMakerRole.Arn }
       Description: 'Takes unprocessed CORE articles, labels them with biomimetic functions using a deployed SageMaker endpoint, and saves the labelled articles to DynamoDB.'
       Role: !GetAtt myLambdaRole.Arn
 
