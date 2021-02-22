@@ -149,6 +149,1371 @@
                     }
                 }
             }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from fungi"
+                    },
+                    "CoreId": {
+                        "S": "304670686"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from microbes"
+                    },
+                    "CoreId": {
+                        "S": "304670647"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from solids"
+                    },
+                    "CoreId": {
+                        "S": "322444883"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from excess liquids"
+                    },
+                    "CoreId": {
+                        "S": "189233621"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from loss of liquids"
+                    },
+                    "CoreId": {
+                        "S": "196222483"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from gases"
+                    },
+                    "CoreId": {
+                        "S": "161529691"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from wind"
+                    },
+                    "CoreId": {
+                        "S": "80774602"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from temperature"
+                    },
+                    "CoreId": {
+                        "S": "80773904"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from temperature"
+                    },
+                    "CoreId": {
+                        "S": "80773904"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from fire"
+                    },
+                    "CoreId": {
+                        "S": "162990853"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from ice"
+                    },
+                    "CoreId": {
+                        "S": "131170667"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from light"
+                    },
+                    "CoreId": {
+                        "S": "303789284"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from chemicals"
+                    },
+                    "CoreId": {
+                        "S": "79607927"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Protect from non-living threats"
+                    },
+                    "Level3": {
+                        "S": "Protect from radiation"
+                    },
+                    "CoreId": {
+                        "S": "304169842"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Prevent structural failure"
+                    },
+                    "Level3": {
+                        "S": "Prevent buckling"
+                    },
+                    "CoreId": {
+                        "S": "217250887"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Prevent structural failure"
+                    },
+                    "Level3": {
+                        "S": "Prevent deformation"
+                    },
+                    "CoreId": {
+                        "S": "61636712"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Prevent structural failure"
+                    },
+                    "Level3": {
+                        "S": "Prevent fatigue"
+                    },
+                    "CoreId": {
+                        "S": "301298530"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Prevent structural failure"
+                    },
+                    "Level3": {
+                        "S": "Prevent fracture/rupture"
+                    },
+                    "CoreId": {
+                        "S": "33611318"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Prevent structural failure"
+                    },
+                    "Level3": {
+                        "S": "Control erosion"
+                    },
+                    "CoreId": {
+                        "S": "79498369"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage shear"
+                    },
+                    "CoreId": {
+                        "S": "250166394"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage stress/strain"
+                    },
+                    "CoreId": {
+                        "S": "211520421"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage impact"
+                    },
+                    "CoreId": {
+                        "S": "222931106"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage drag/turbulence"
+                    },
+                    "CoreId": {
+                        "S": "334945781"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage wear"
+                    },
+                    "CoreId": {
+                        "S": "212851517"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Individual benefit"
+                    },
+                    "Level3": {
+                        "S": "Regulate reproduction or growth"
+                    },
+                    "CoreId": {
+                        "S": "196558164"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Individual benefit"
+                    },
+                    "Level3": {
+                        "S": "Self-replicate"
+                    },
+                    "CoreId": {
+                        "S": "222840430"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Coordinate by self-organization"
+                    },
+                    "CoreId": {
+                        "S": "188775979"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Cooperate within or between species"
+                    },
+                    "CoreId": {
+                        "S": "293604914"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Compete within or between species"
+                    },
+                    "CoreId": {
+                        "S": "199376438"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Manage environmental disturbance in a community"
+                    },
+                    "CoreId": {
+                        "S": "199375836"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Manage populations/pests/diseases"
+                    },
+                    "CoreId": {
+                        "S": "82391874"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Maintain biodiversity"
+                    },
+                    "CoreId": {
+                        "S": "61763438"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Chemically assemble"
+                    },
+                    "Level3": {
+                        "S": "Chemically assemble inorganic compounds"
+                    },
+                    "CoreId": {
+                        "S": "84280285"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Chemically assemble"
+                    },
+                    "Level3": {
+                        "S": "Chemically assemble organic compounds"
+                    },
+                    "CoreId": {
+                        "S": "250167103"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Chemically assemble"
+                    },
+                    "Level3": {
+                        "S": "Self-assemble"
+                    },
+                    "CoreId": {
+                        "S": "232593536"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Chemically break down"
+                    },
+                    "Level3": {
+                        "S": "Chemically break down inorganic compounds"
+                    },
+                    "CoreId": {
+                        "S": "286140152"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Chemically break down"
+                    },
+                    "Level3": {
+                        "S": "Chemically break down organic compounds"
+                    },
+                    "CoreId": {
+                        "S": "42546161"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert electrical energy"
+                    },
+                    "CoreId": {
+                        "S": "159149940"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert magnetic energy"
+                    },
+                    "CoreId": {
+                        "S": "159152658"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert chemical energy"
+                    },
+                    "CoreId": {
+                        "S": "161784233"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert mechanical energy"
+                    },
+                    "CoreId": {
+                        "S": "42947535"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert thermal energy"
+                    },
+                    "CoreId": {
+                        "S": "328875868"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert light energy"
+                    },
+                    "CoreId": {
+                        "S": "328875656"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Physically assemble structure"
+                    },
+                    "Level3": {
+                        "S": "Physically assemble structure"
+                    },
+                    "CoreId": {
+                        "S": "248197756"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Break down structure"
+                    },
+                    "Level3": {
+                        "S": "Break down structure"
+                    },
+                    "CoreId": {
+                        "S": "145186772"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Optimize shape/materials"
+                    },
+                    "Level3": {
+                        "S": "Optimize shape/materials"
+                    },
+                    "CoreId": {
+                        "S": "42594416"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Send signals"
+                    },
+                    "Level3": {
+                        "S": "Send light signals in the visible spectrum"
+                    },
+                    "CoreId": {
+                        "S": "366642657"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Send signals"
+                    },
+                    "Level3": {
+                        "S": "Send light signals in the non-visible spectrum"
+                    },
+                    "CoreId": {
+                        "S": "145186746"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Send signals"
+                    },
+                    "Level3": {
+                        "S": "Send sound signals"
+                    },
+                    "CoreId": {
+                        "S": "148364429"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Send signals"
+                    },
+                    "Level3": {
+                        "S": "Send tactile signals"
+                    },
+                    "CoreId": {
+                        "S": "148358003"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Send signals"
+                    },
+                    "Level3": {
+                        "S": "Send chemical signals"
+                    },
+                    "CoreId": {
+                        "S": "145186753"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Send signals"
+                    },
+                    "Level3": {
+                        "S": "Send vibratory signals"
+                    },
+                    "CoreId": {
+                        "S": "215289696"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Send signals"
+                    },
+                    "Level3": {
+                        "S": "Send electrical/magnetic signals"
+                    },
+                    "CoreId": {
+                        "S": "35279759"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Process signals"
+                    },
+                    "Level3": {
+                        "S": "Differentiate signal from noise"
+                    },
+                    "CoreId": {
+                        "S": "237088204"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Process signals"
+                    },
+                    "Level3": {
+                        "S": "Convert signals"
+                    },
+                    "CoreId": {
+                        "S": "293049628"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Process signals"
+                    },
+                    "Level3": {
+                        "S": "Respond to signals"
+                    },
+                    "CoreId": {
+                        "S": "46580203"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense light in the visible spectrum"
+                    },
+                    "CoreId": {
+                        "S": "9554236"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense light in the non-visible spectrum"
+                    },
+                    "CoreId": {
+                        "S": "78838010"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense electricity/magnetism"
+                    },
+                    "CoreId": {
+                        "S": "151169961"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense disease in a living system"
+                    },
+                    "CoreId": {
+                        "S": "293060861"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense touch and mechanical forces"
+                    },
+                    "CoreId": {
+                        "S": "296158778"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense chemicals"
+                    },
+                    "CoreId": {
+                        "S": "29516386"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense atmospheric conditions"
+                    },
+                    "CoreId": {
+                        "S": "141531548"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense sound/vibrations"
+                    },
+                    "CoreId": {
+                        "S": "144149497"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense temperature cues"
+                    },
+                    "CoreId": {
+                        "S": "29553725"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense motion"
+                    },
+                    "CoreId": {
+                        "S": "51295519"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense spatial awareness/balance/orientation"
+                    },
+                    "CoreId": {
+                        "S": "81681278"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense shape and/or pattern"
+                    },
+                    "CoreId": {
+                        "S": "162911231"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Capture resources"
+                    },
+                    "Level3": {
+                        "S": "Capture solids"
+                    },
+                    "CoreId": {
+                        "S": "324141500"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Capture resources"
+                    },
+                    "Level3": {
+                        "S": "Capture liquids"
+                    },
+                    "CoreId": {
+                        "S": "286777325"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Capture resources"
+                    },
+                    "Level3": {
+                        "S": "Capture gases"
+                    },
+                    "CoreId": {
+                        "S": "77977816"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Capture resources"
+                    },
+                    "Level3": {
+                        "S": "Capture energy"
+                    },
+                    "CoreId": {
+                        "S": "128979220"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Absorb and/or filter resources"
+                    },
+                    "Level3": {
+                        "S": "Absorb and/or filter solids"
+                    },
+                    "CoreId": {
+                        "S": "226761713"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Absorb and/or filter resources"
+                    },
+                    "Level3": {
+                        "S": "Absorb and/or filter liquids"
+                    },
+                    "CoreId": {
+                        "S": "328792428"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Absorb and/or filter resources"
+                    },
+                    "Level3": {
+                        "S": "Absorb and/or filter gases"
+                    },
+                    "CoreId": {
+                        "S": "232600398"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Store resources"
+                    },
+                    "Level3": {
+                        "S": "Store solids"
+                    },
+                    "CoreId": {
+                        "S": "215380955"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Store resources"
+                    },
+                    "Level3": {
+                        "S": "Store liquids"
+                    },
+                    "CoreId": {
+                        "S": "80168131"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Store resources"
+                    },
+                    "Level3": {
+                        "S": "Store gases"
+                    },
+                    "CoreId": {
+                        "S": "224399417"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Store resources"
+                    },
+                    "Level3": {
+                        "S": "Store energy"
+                    },
+                    "CoreId": {
+                        "S": "324161399"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Distribute resources"
+                    },
+                    "Level3": {
+                        "S": "Distribute solids"
+                    },
+                    "CoreId": {
+                        "S": "74233535"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Distribute resources"
+                    },
+                    "Level3": {
+                        "S": "Distribute liquids"
+                    },
+                    "CoreId": {
+                        "S": "303767911"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Distribute resources"
+                    },
+                    "Level3": {
+                        "S": "Distribute gases"
+                    },
+                    "CoreId": {
+                        "S": "372704220"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Distribute resources"
+                    },
+                    "Level3": {
+                        "S": "Distribute energy"
+                    },
+                    "CoreId": {
+                        "S": "286436045"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Expel resources"
+                    },
+                    "Level3": {
+                        "S": "Expel solids"
+                    },
+                    "CoreId": {
+                        "S": "230937793"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Expel resources"
+                    },
+                    "Level3": {
+                        "S": "Expel liquids"
+                    },
+                    "CoreId": {
+                        "S": "226120065"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Expel resources"
+                    },
+                    "Level3": {
+                        "S": "Expel gases"
+                    },
+                    "CoreId": {
+                        "S": "235698098"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Detox/purify"
+                    },
+                    "Level3": {
+                        "S": "Detox/purify"
+                    },
+                    "CoreId": {
+                        "S": "41994066"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Modify color"
+                    },
+                    "Level3": {
+                        "S": "Change structural color"
+                    },
+                    "CoreId": {
+                        "S": "344750471"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Modify color"
+                    },
+                    "Level3": {
+                        "S": "Change chemical color/pigmentation"
+                    },
+                    "CoreId": {
+                        "S": "234661829"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Modify color"
+                    },
+                    "Level3": {
+                        "S": "Camouflage/mimicry"
+                    },
+                    "CoreId": {
+                        "S": "35469664"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Level2": {
+                        "S": "Change size/shape"
+                    },
+                    "Level3": {
+                        "S": "Change size/shape"
+                    },
+                    "CoreId": {
+                        "S": "152454546"
+                    }
+                }
+            }
         }
     ]
 }
