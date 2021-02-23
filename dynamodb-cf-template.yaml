@@ -368,9 +368,9 @@ Resources:
         ZipFile: !Sub
           - |
             import boto3
+            from botocore.exceptions import ClientError
 
             client = boto3.client('sagemaker')
-            runtime= boto3.client('runtime.sagemaker')
             role = "${mySageMakerRole}"
             prefix = 'testPyTorch'
             modelName = prefix + 'Model'
@@ -387,7 +387,11 @@ Resources:
                         },
                         ExecutionRoleArn=role
                     )
-                except Exception as e:
+                except ClientError as e:
+                  if "Cannot create already existing" in e.response['Error']['Message']:
+                    print(e)
+                    print('Looks like Model already exists, so ignore error and continue.')
+                  else:
                     print(e)
                     print('Unable to create model.')
                     raise(e)
@@ -405,7 +409,11 @@ Resources:
                             }
                         ]
                     )
-                except Exception as e:
+                except ClientError as e:
+                  if "Cannot create already existing" in e.response['Error']['Message']:
+                    print(e)
+                    print('Looks like EndpointConfig already exists, so ignore error and continue.')
+                  else:
                     print(e)
                     print('Unable to create endpoint configuration.')
                     raise(e)
@@ -416,7 +424,11 @@ Resources:
                         EndpointName=endpointName,
                         EndpointConfigName=endpointConfigName
                     )
-                except Exception as e:
+                except ClientError as e:
+                  if "Cannot create already existing" in e.response['Error']['Message']:
+                    print(e)
+                    print('Looks like Endpoint already exists, so ignore error and continue.')
+                  else:
                     print(e)
                     print('Unable to create endpoint.')
                     raise(e)
@@ -492,6 +504,7 @@ Resources:
 
           # grab static variables
           client = boto3.client('sagemaker')
+          runtime= boto3.client('runtime.sagemaker')
           prefix = 'testPyTorch'
           endpointName = prefix + 'Endpoint'
 
@@ -534,7 +547,7 @@ Resources:
               batchPredictions()
               event['status'] = 'Processed records'
               # Deleting Endpoint
-              client.delete_endpoint(EndpointName=ENDPOINT_NAME)
+              client.delete_endpoint(EndpointName=endpointName)
               return event
       Description: 'Takes unprocessed CORE articles, labels them with biomimetic functions using a deployed SageMaker endpoint, and saves the labelled articles to DynamoDB.'
       Role: !GetAtt myLambdaPredictRole.Arn
