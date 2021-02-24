@@ -35,17 +35,17 @@ Resources:
       TableName: PetalLabels
       AttributeDefinitions:
         -
-          AttributeName: "Level2"
+          AttributeName: "PartitionKey"
           AttributeType: "S"
         -
-          AttributeName: "Level3"
+          AttributeName: "SortKey"
           AttributeType: "S"
       KeySchema:
         -
-          AttributeName: "Level2"
+          AttributeName: "PartitionKey"
           KeyType: "HASH"
         -
-          AttributeName: "Level3"
+          AttributeName: "SortKey"
           KeyType: "RANGE"
       ProvisionedThroughput:
         ReadCapacityUnits: 25

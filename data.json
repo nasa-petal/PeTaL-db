@@ -3,14 +3,89 @@
         {
             "PutRequest": {
                 "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-attach_permanently"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-attach_permanently"
+                    },
                     "Level2": {
                         "S": "Attach permanently"
                     },
                     "Level3": {
                         "S": "Attach permanently"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-attach_temporarily"
                     },
-                    "CoreId": {
-                        "S": "196608890"
+                    "SortKey": {
+                        "S": "LABEL-attach_temporarily"
+                    },
+                    "Level2": {
+                        "S": "Attach temporarily"
+                    },
+                    "Level3": {
+                        "S": "Attach temporarily"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-passively_move_through/on_liquids"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-passively_move_through/on_liquids"
+                    },
+                    "Level2": {
+                        "S": "Passive movement"
+                    },
+                    "Level3": {
+                        "S": "Passively move through/on liquids"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-attach_permanently"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-196608890"
+                    },
+                    "Title": {
+                        "S": "Straining Flow Spinning of Artificial Silk Fibers: A Review"
+                    },
+                    "Abstract": {
+                        "S": "This work summarizes the main principles and some of the most significant results of straining flow spinning (SFS), a technology developed originally by the authors of this work. The principles on which the technology is based, inspired by the natural spinning system of silkworms and spiders, are presented, as well as some of the main achievements of the technique. Among these achievements, spinning under environmentally friendly conditions, obtaining high-performance fibers, and imparting the fibers with emerging properties such as supercontraction are discussed. Consequently, SFS appears as an efficient process that may represent one of the first realizations of a biomimetic technology with a significant impact at the production level.Ministerio de Economía y Competitividad MAT2016-75544-C2-1-RMinisterio de Economía y Competitividad MAT2016-79832-RMinisterio de Economía y Competitividad CPI2016-78887-C3-1-RComunidad de Madrid NEUROCENTRO-B2017Comunidad de Madrid BMD-376"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics3040029"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/196608890.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-10-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Pérez-Rigueiro, José, Madurga, Rodrigo, Gañán-Calvo, Alfonso M.,Plaza, Gustavo R., Elices, Manuel, López, Patricia A., Daza, Rafael, González-Nieto, Daniel, Guinea, Gustavo V"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "99.9"
                     }
                 }
             }
