@@ -277,21 +277,6 @@
                         "S": "Protect from non-living threats"
                     },
                     "Level3": {
-                        "S": "Protect from temperature"
-                    },
-                    "CoreId": {
-                        "S": "80773904"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
                         "S": "Protect from fire"
                     },
                     "CoreId": {
