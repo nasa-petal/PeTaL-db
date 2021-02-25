@@ -173,7 +173,7 @@ Resources:
         Method: GET
         Name: level3
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "Label supplied should be all lowercase, with spaces converted to underscores."}'
+      Properties: '{"description": "Label supplied should be all lowercase, with spaces converted to underscores. For example, attach_permanently, will return articles with the label, Attach permanently"}'
   myResponseDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
