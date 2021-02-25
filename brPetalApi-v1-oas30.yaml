@@ -1,7 +1,7 @@
 openapi: "3.0.1"
 info:
   title: "PeTaL API Documentation"
-  version: "v6"
+  version: "v1"
 servers:
 - url: "https://unbqm6hov8.execute-api.us-east-2.amazonaws.com/{basePath}"
   variables:
@@ -13,16 +13,12 @@ paths:
       tags:
       - "API methods"
       summary: "Finds articles by label"
-      description: "Find articles with the level2 and level3 labels supplied."
+      description: "Find articles with the level3 label supplied. Label supplied should\
+        \ be all lowercase, with spaces converted to underscores."
       parameters:
       - name: "level3"
         in: "query"
         description: "The third level label to retreive articles for."
-        schema:
-          type: "string"
-      - name: "level2"
-        in: "query"
-        description: "The second level label to retreive articles for."
         required: true
         schema:
           type: "string"
@@ -33,11 +29,11 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Empty"
-  /getallarticles:
+  /getalllabels:
     get:
       tags:
       - "API methods"
-      summary: "Get all articles"
+      summary: "Get all labels"
       responses:
         "200":
           description: "successful operation"
