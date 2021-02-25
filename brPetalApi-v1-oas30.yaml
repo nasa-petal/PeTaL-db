@@ -1,7 +1,7 @@
 openapi: "3.0.1"
 info:
   title: "PeTaL API Documentation"
-  version: "v1"
+  version: "v7"
 servers:
 - url: "https://unbqm6hov8.execute-api.us-east-2.amazonaws.com/{basePath}"
   variables:
@@ -13,18 +13,22 @@ paths:
       tags:
       - "API methods"
       summary: "Finds articles by label"
-      description: "Find articles with the level3 label supplied. Label supplied should\
-        \ be all lowercase, with spaces converted to underscores."
+      description: "Find articles with the level3 label supplied."
       parameters:
       - name: "level3"
         in: "query"
-        description: "The third level label to retreive articles for."
+        description: "Label supplied should be all lowercase, with spaces converted\
+          \ to underscores."
         required: true
         schema:
           type: "string"
       responses:
         "200":
           description: "successful operation"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
           content:
             application/json:
               schema:
