@@ -1,7 +1,7 @@
 openapi: "3.0.1"
 info:
   title: "PeTaL API Documentation"
-  version: "v7"
+  version: "v12"
 servers:
 - url: "https://unbqm6hov8.execute-api.us-east-2.amazonaws.com/{basePath}"
   variables:
@@ -18,7 +18,8 @@ paths:
       - name: "level3"
         in: "query"
         description: "Label supplied should be all lowercase, with spaces converted\
-          \ to underscores."
+          \ to underscores. For example, attach_permanently, will return articles\
+          \ with the label, Attach permanently"
         required: true
         schema:
           type: "string"
