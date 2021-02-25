@@ -163,7 +163,7 @@ Resources:
         Type: METHOD
         Path: /getarticles
       RestApiId: !Ref myRestApi
-      Properties: '{"summary": "Finds articles by label","description": "Find articles with the level3 label supplied. Label supplied should be all lowercase, with spaces converted to underscores.","tags":["API methods"]}'
+      Properties: '{"summary": "Finds articles by label","description": "Find articles with the level3 label supplied.","tags":["API methods"]}'
   myQPDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
@@ -173,7 +173,7 @@ Resources:
         Method: GET
         Name: level3
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "The third level label to retreive articles for."}'
+      Properties: '{"description": "Label supplied should be all lowercase, with spaces converted to underscores."}'
   myResponseDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
