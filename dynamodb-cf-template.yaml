@@ -7,11 +7,6 @@ Parameters:
   GccTenantOperatorBoundaryArn:
     Type: String
     Description: ARN for gcc-tenantOperatorBoundary Policy
-  APIVersion:
-    Type: Number
-    MinValue: 1
-    Default: 1
-    Description: (For Change Sets) To publish a new version of the API to a separate stage, add 1 to the integer below.
   APIDocVersion:
     Type: Number
     MinValue: 1
@@ -257,21 +252,6 @@ Resources:
       DocumentationVersion: !Ref APIDocVersion
       RestApiId: !Ref myRestApi
     DependsOn: myRestApiDocumentationPart
-  myRestApiDeployment: #to create a new API deployment in the same stage, change the resource id to something unique ex. "myRestApiDeployment2", and update the !Ref to match the new id in the stage definition below.
-    Type: 'AWS::ApiGateway::Deployment'
-    Properties:
-      RestApiId: !Ref myRestApi
-      Description: My deployment
-    DependsOn: myGet
-    DeletionPolicy: Retain
-  myRestApiStage:
-    Type: AWS::ApiGateway::Stage
-    Properties: 
-      DeploymentId: !Ref myRestApiDeployment #make sure this matches the resourceID of the deployment above.
-      DocumentationVersion: !Ref APIDocVersion
-      RestApiId: !Ref myRestApi
-      StageName: !Sub 'v${APIVersion}'
-    DependsOn: myRestApiDocumentationVersion
 
   #############
   #  Lambdas  #
