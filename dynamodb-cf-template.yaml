@@ -114,6 +114,8 @@ Resources:
       - ResponseModels:
           application/json: Empty
         StatusCode: 200
+        ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: false
       RequestParameters:
         method.request.querystring.level3: true
       RequestValidatorId:
@@ -128,6 +130,8 @@ Resources:
           integration.request.querystring.level3: method.request.querystring.level3
         IntegrationResponses:
         - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: "'*'"
         RequestTemplates:
           application/json: !Sub
             - |
