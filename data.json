@@ -1,10 +1,10 @@
 {
-    "PetalLabels": [
+    "petal-stack-myDynamoDBTable-LFB4NGLY82L9": [
         {
             "PutRequest": {
                 "Item": {
                     "PartitionKey": {
-                        "S": "LABEL-attach_permanently"
+                        "S": "LABEL"
                     },
                     "SortKey": {
                         "S": "LABEL-attach_permanently"
@@ -22,7 +22,7 @@
             "PutRequest": {
                 "Item": {
                     "PartitionKey": {
-                        "S": "LABEL-attach_temporarily"
+                        "S": "LABEL"
                     },
                     "SortKey": {
                         "S": "LABEL-attach_temporarily"
@@ -40,7 +40,7 @@
             "PutRequest": {
                 "Item": {
                     "PartitionKey": {
-                        "S": "LABEL-passively_move_through/on_liquids"
+                        "S": "LABEL"
                     },
                     "SortKey": {
                         "S": "LABEL-passively_move_through/on_liquids"

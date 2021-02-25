@@ -32,7 +32,6 @@ Resources:
   myDynamoDBTable:
     Type: AWS::DynamoDB::Table
     Properties:
-      TableName: PetalLabels
       AttributeDefinitions:
         -
           AttributeName: "PartitionKey"
@@ -121,8 +120,7 @@ Resources:
           application/json: Empty
         StatusCode: 200
       RequestParameters:
-        method.request.querystring.level2: true
-        method.request.querystring.level3: false
+        method.request.querystring.level3: true
       RequestValidatorId:
         Ref: myRequestValidator
       Integration:
@@ -132,45 +130,33 @@ Resources:
         PassthroughBehavior: WHEN_NO_TEMPLATES
         Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
         RequestParameters:
-          integration.request.querystring.level2: method.request.querystring.level2
           integration.request.querystring.level3: method.request.querystring.level3
         IntegrationResponses:
         - StatusCode: 200
         RequestTemplates:
-          application/json: |
-            #*
-              VTL mapping template for API Gateway integration request
-              Help articles:
-              https://www.alexdebrie.com/posts/api-gateway-elements/#writing-mapping-templates-with-vtl
-              https://velocity.apache.org/engine/2.1/vtl-reference.html#comments
-              https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Query.html
-              https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html
-            *#
+          application/json: !Sub
+            - |
+              #*
+                VTL mapping template for API Gateway integration request
+                Help articles:
+                https://www.alexdebrie.com/posts/api-gateway-elements/#writing-mapping-templates-with-vtl
+                https://velocity.apache.org/engine/2.1/vtl-reference.html#comments
+                https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Query.html
+                https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html
+              *#
 
-            #set($sanitizedLevel2 = $util.escapeJavaScript($input.params('level2')))
-            #set($sanitizedLevel3 = $util.escapeJavaScript($input.params('level3')))
-            #set($keyConditionExpression = "Level2 = :v1")
+              #set($sanitizedLevel3 = $util.escapeJavaScript($input.params('level3')))
 
-            ## https://stackoverflow.com/a/13629499 **
-            #if("$!sanitizedLevel3" != "")
-            #set($keyConditionExpression = "$keyConditionExpression AND Level3 = :v2")
-            #end
-
-            {
-              "TableName": "PetalLabels",
-              "KeyConditionExpression": "$keyConditionExpression",
-              "ExpressionAttributeValues": {
-                ":v1": {
-                  "S": "$sanitizedLevel2"
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1",
+                "ExpressionAttributeValues": {
+                  ":v1": {
+                    "S": "LABEL-$sanitizedLevel3"
+                  }
                 }
-            #if("$!input.params('level3')" != "")
-                ,
-                ":v2": {
-                  "S": "$sanitizedLevel3"
-                }
-            #end
               }
-            }
+            - { myDynamoDBTable: !Ref myDynamoDBTable }
   myGetDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
@@ -178,18 +164,8 @@ Resources:
         Type: METHOD
         Path: /getarticles
       RestApiId: !Ref myRestApi
-      Properties: '{"summary": "Finds articles by label","description": "Find articles with the level2 and level3 labels supplied.","tags":["API methods"]}'
+      Properties: '{"summary": "Finds articles by label","description": "Find articles with the level3 label supplied. Label supplied should be all lowercase, with spaces converted to underscores.","tags":["API methods"]}'
   myQPDocumentationPart:
-    Type: AWS::ApiGateway::DocumentationPart
-    Properties:
-      Location:
-        Type: QUERY_PARAMETER
-        Path: /getarticles
-        Method: GET
-        Name: level2
-      RestApiId: !Ref myRestApi
-      Properties: '{"description": "The second level label to retreive articles for."}'
-  myQP2DocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
       Location:
@@ -218,7 +194,7 @@ Resources:
         Fn::GetAtt:
         - myRestApi
         - RootResourceId
-      PathPart: getallarticles
+      PathPart: getalllabels
   myGet2:
     Type: AWS::ApiGateway::Method
     Properties:
@@ -239,31 +215,38 @@ Resources:
         IntegrationHttpMethod: POST
         Credentials: !GetAtt myRole.Arn
         PassthroughBehavior: WHEN_NO_TEMPLATES
-        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Scan"
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
         IntegrationResponses:
         - StatusCode: 200
           ResponseParameters:
             method.response.header.Access-Control-Allow-Origin: "'*'"
         RequestTemplates:
-          application/json: |
-            ## https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Scan.html **
-            {
-              "TableName": "PetalLabels"
-            }
+          application/json: !Sub
+            - |
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1 AND begins_with( SortKey, :v1 )",
+                "ExpressionAttributeValues": {
+                  ":v1": {
+                    "S": "LABEL"
+                  }
+                }
+              }
+            - { myDynamoDBTable: !Ref myDynamoDBTable }
   myGet2DocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
       Location:
         Type: METHOD
-        Path: /getallarticles
+        Path: /getalllabels
       RestApiId: !Ref myRestApi
-      Properties: '{"summary": "Get all articles","tags":["API methods"]}'
+      Properties: '{"summary": "Get all labels","tags":["API methods"]}'
   myResponseDocumentationPart2:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
       Location:
         Type: RESPONSE
-        Path: /getallarticles
+        Path: /getalllabels
         Method: GET
         StatusCode: 200
       RestApiId: !Ref myRestApi
@@ -498,57 +481,59 @@ Resources:
       #Timeout: 900
       #MemorySize: 1024
       Code:
-        ZipFile: |
-          import boto3
-          import json
+        ZipFile: !Sub
+          - |
+            import boto3
+            import json
 
-          # grab static variables
-          client = boto3.client('sagemaker')
-          runtime= boto3.client('runtime.sagemaker')
-          prefix = 'testPyTorch'
-          endpointName = prefix + 'Endpoint'
+            # grab static variables
+            client = boto3.client('sagemaker')
+            runtime= boto3.client('runtime.sagemaker')
+            prefix = 'testPyTorch'
+            endpointName = prefix + 'Endpoint'
 
-          def getNewArticlesFromCORE():
-              return
+            def getNewArticlesFromCORE():
+                return
 
-          def batchPredictions():#newArticles):#, endpoint):
-              # randomly assign labels to articles.
-              # 
-              data = {"xvalue": 1}
-              response = runtime.invoke_endpoint(EndpointName=endpointName,
-                                                        ContentType='application/json',
-                                                        Body=json.dumps(data))
-              response_body = response['Body'] 
-              print(response_body.read())
-              #result = json.loads(response['Body'].read().decode())
-              #print(result)
-              return
+            def batchPredictions():#newArticles):#, endpoint):
+                # randomly assign labels to articles.
+                # 
+                data = {"xvalue": 1}
+                response = runtime.invoke_endpoint(EndpointName=endpointName,
+                                                          ContentType='application/json',
+                                                          Body=json.dumps(data))
+                response_body = response['Body'] 
+                print(response_body.read())
+                #result = json.loads(response['Body'].read().decode())
+                #print(result)
+                return
 
-          def connectToDBTable():
-              dynamodb = boto3.resource('dynamodb', region_name="us-east-2")
-              return dynamodb.Table('PetalLabels')
+            def connectToDBTable():
+                dynamodb = boto3.resource('dynamodb', region_name="us-east-2")
+                return dynamodb.Table('${myDynamoDBTable}')
 
-          def storeLabelledArticles(labelledArticles, dbTable):
-              #2
-              with dbTable.batch_writer() as batch:
-                  for article in labelledArticles:
-                      batch.delete_item(Key={'Level2': article['Level2'], 'Level3': article['Level3']})
-              with dbTable.batch_writer() as batch:
-                  for article in labelledArticles:
-                      batch.put_item(
-                          Item={
-                              'Level2': article['Level2'],
-                              'Level3': article['Level3'],
-                              'CoreId': article['CoreId']
-                          }
-                      )
+            def storeLabelledArticles(labelledArticles, dbTable):
+                #2
+                with dbTable.batch_writer() as batch:
+                    for article in labelledArticles:
+                        batch.delete_item(Key={'Level2': article['Level2'], 'Level3': article['Level3']})
+                with dbTable.batch_writer() as batch:
+                    for article in labelledArticles:
+                        batch.put_item(
+                            Item={
+                                'Level2': article['Level2'],
+                                'Level3': article['Level3'],
+                                'CoreId': article['CoreId']
+                            }
+                        )
 
-          def handler(event, context):
-              batchPredictions()
-              event['status'] = 'Processed records'
-              # Deleting Endpoint
-              client.delete_endpoint(EndpointName=endpointName)
-              return event
+            def handler(event, context):
+                batchPredictions()
+                event['status'] = 'Processed records'
+                # Deleting Endpoint
+                client.delete_endpoint(EndpointName=endpointName)
+                return event
+          - { myDynamoDBTable: !Ref myDynamoDBTable }
       Description: 'Takes unprocessed CORE articles, labels them with biomimetic functions using a deployed SageMaker endpoint, and saves the labelled articles to DynamoDB.'
       Role: !GetAtt myLambdaPredictRole.Arn
 
