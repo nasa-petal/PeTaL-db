@@ -7,427 +7,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-attach_permanently"
-                    },
-                    "Level2": {
-                        "S": "Attach permanently"
-                    },
-                    "Level3": {
-                        "S": "Attach permanently"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-attach_temporarily"
-                    },
-                    "Level2": {
-                        "S": "Attach temporarily"
-                    },
-                    "Level3": {
-                        "S": "Attach temporarily"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-passively_move_through/on_liquids"
-                    },
-                    "Level2": {
-                        "S": "Passive movement"
-                    },
-                    "Level3": {
-                        "S": "Passively move through/on liquids"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-passively_move_through/on_solids"
-                    },
-                    "Level2": {
-                        "S": "Passive movement"
-                    },
-                    "Level3": {
-                        "S": "Passively move through/on liquids"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-passively_move_through_gases"
-                    },
-                    "Level2": {
-                        "S": "Passive movement"
-                    },
-                    "Level3": {
-                        "S": "Passively move through gases"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                   "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-actively_move_through/on_liquids"
-                    },
-                    "Level2": {
-                        "S": "Active movement"
-                    },
-                    "Level3": {
-                        "S": "Actively move through/on liquids"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-actively_move_through/on_solids"
-                    },
-                    "Level2": {
-                        "S": "Active movement"
-                    },
-                    "Level3": {
-                        "S": "Actively move through/on solids"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-actively_move_through_gases"
-                    },
-                    "Level2": {
-                        "S": "Active movement"
-                    },
-                    "Level3": {
-                        "S": "Actively move through gases"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_animals"
-                    },
-                    "Level2": {
-                        "S": "Protect from living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from animals"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_plants"
-                    },
-                    "Level2": {
-                        "S": "Protect from living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from plants"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_fungi"
-                    },
-                    "Level2": {
-                        "S": "Protect from living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from fungi"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_microbes"
-                    },
-                    "Level2": {
-                        "S": "Protect from living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from microbes"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_solids"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from solids"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_excess_liquids"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from excess liquids"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_loss_of_liquids"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from loss of liquids"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_gases"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from gases"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_wind"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from wind"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_temperature"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from temperature"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_fire"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from fire"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_ice"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from ice"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_light"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from light"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_chemicals"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from chemicals"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-protect_from_radiation"
-                    },
-                    "Level2": {
-                        "S": "Protect from non-living threats"
-                    },
-                    "Level3": {
-                        "S": "Protect from radiation"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                    "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-prevent_buckling"
+                        "S": "LABEL-prevent_fatigue"
                     },
                     "Level2": {
                         "S": "Prevent structural failure"
                     },
                     "Level3": {
-                        "S": "Prevent buckling"
+                        "S": "Prevent fatigue"
                     }
                 }
             }
@@ -439,13 +25,427 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-prevent_deformation"
+                        "S": "LABEL-prevent_fracture/rupture"
                     },
                     "Level2": {
                         "S": "Prevent structural failure"
                     },
                     "Level3": {
-                        "S": "Prevent deformation"
+                        "S": "Prevent fracture/rupture"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-control_erosion"
+                    },
+                    "Level2": {
+                        "S": "Prevent structural failure"
+                    },
+                    "Level3": {
+                        "S": "Control erosion"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-manage_shear"
+                    },
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage shear"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-manage_stress/strain"
+                    },
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage stress/strain"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-manage_impact"
+                    },
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage impact"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-manage_drag/turbulence"
+                    },
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage drag/turbulence"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-manage_wear"
+                    },
+                    "Level2": {
+                        "S": "Manage structural forces"
+                    },
+                    "Level3": {
+                        "S": "Manage wear"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-regulate_reproduction_or_growth"
+                    },
+                    "Level2": {
+                        "S": "Individual benefit"
+                    },
+                    "Level3": {
+                        "S": "Regulate reproduction or growth"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-self-replicate"
+                    },
+                    "Level2": {
+                        "S": "Individual benefit"
+                    },
+                    "Level3": {
+                        "S": "Self-replicate"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-coordinate_by_self-organization"
+                    },
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Coordinate by self-organization"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-cooperate_within_or_between_species"
+                    },
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Cooperate within or between species"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-compete_within_or_between_species"
+                    },
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Compete within or between species"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-manage_environmental_disturbance_in_a_community"
+                    },
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Manage environmental disturbance in a community"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-manage_populations/pests/diseases"
+                    },
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Manage populations/pests/diseases"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-maintain_biodiversity"
+                    },
+                    "Level2": {
+                        "S": "Group benefit"
+                    },
+                    "Level3": {
+                        "S": "Maintain biodiversity"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-chemically_assemble_inorganic_compounds"
+                    },
+                    "Level2": {
+                        "S": "Chemically assemble"
+                    },
+                    "Level3": {
+                        "S": "Chemically assemble inorganic compounds"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-chemically_assemble_organic_compounds"
+                    },
+                    "Level2": {
+                        "S": "Chemically assemble"
+                    },
+                    "Level3": {
+                        "S": "Chemically assemble organic compounds"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-self-assemble"
+                    },
+                    "Level2": {
+                        "S": "Chemically assemble"
+                    },
+                    "Level3": {
+                        "S": "Self-assemble"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-chemically_break_down_inorganic_compounds"
+                    },
+                    "Level2": {
+                        "S": "Chemically break down"
+                    },
+                    "Level3": {
+                        "S": "Chemically break down inorganic compounds"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-chemically_break_down_organic_compounds"
+                    },
+                    "Level2": {
+                        "S": "Chemically break down"
+                    },
+                    "Level3": {
+                        "S": "Chemically break down organic compounds"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-modify/convert_electrical_energy"
+                    },
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert electrical energy"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-modify/convert_magnetic_energy"
+                    },
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert magnetic energy"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-modify/convert_chemical_energy"
+                    },
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert chemical energy"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-modify/convert_mechanical_energy"
+                    },
+                    "Level2": {
+                        "S": "Change energy state"
+                    },
+                    "Level3": {
+                        "S": "Modify/convert mechanical energy"
                     }
                 }
             }

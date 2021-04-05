@@ -1,0 +1,904 @@
+{
+    "petal-stack-myDynamoDBTable-LFB4NGLY82L9": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-modify/convert_thermal_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-227106975"
+                    },
+                    "Title": {
+                        "S": "A London Residential Retrofit Case Study: Evaluating passive mitigation methods of reducing risk to overheating through the use of solar shading combined with night-time ventilation."
+                    },
+                    "Abstract": {
+                        "S": "Overheating in the indoor environment, specifically in domestic homes, schools and healthcare settings has become of great concern to us in the UK. This is due to frequent hot weather events as a result of the continually rising global average temperatures. Overheating is a result of the heat gains associated with occupancy and solar heat gains trapped in the internal environment. The continuing rise in global average temperatures and improved insulation standards necessary to mitigate heat losses during the winter, in conjunction with poorly planned ventilation strategies, are exacerbating overheating during warmer weather conditions. In the last decade there has been a considerable improvement in reducing heat gains associated with occupancy (from lighting and equipment) thus making solar heat gains more prominent in contributing to overheating. With the rise in the number of buildings that overheat and the rise in the number of associated deaths these contribute to, it is now crucial that passive measures are utilised appropriately, and for building occupants to be educated in how to safeguard their homes against overheating. This research is centered around a real-world monitoring case study and investigates how the proposed passive measures can mitigate overheating risk. These measures include the use of different internal and external solar shading devices combined with a night-time natural ventilation strategy. This study was conducted in a south-west facing, single aspect retrofit apartment building in London between August and October 2016 and 10-minute interval data was collected during the daytime over twenty days. Throughout the monitoring period, a controlled window opening strategy was applied in rooms where differing shading strategies were implemented. In the absence of nighttime measurements, the rooms were evaluated according to CIBSE TM52 Overheating Criteria to assess the frequency and the severity of overheating and mitigation methods were statistically compared to analyse the difference in internal operative temperature increase according to the type of passive mitigation scenario implemented. The combination of opening windows at night and the closure of shading devices during the day can provide a significant thermal benefit to occupants. The inter-relationship between glazing, shading, ventilation amongst other variables need to be collectively evaluated at the building design stage to ensure the appropriate design of an effective façade management strategy"
+                    },
+                    "DOI": {
+                        "S": "10.1177/0143624419840768"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/227106975.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "De Grussa, Z, Andrews, D, Lowry, G, Newton, EJ, Yiakoumeti, k, Chalk, A, Bush, D, De Grussa, Z, Andrews, D, Lowry, G, Newton, EJ, Yiakoumeti, k, Chalk, A, Bush, D"
+                    },
+                    "Publisher": {
+                        "S": "SAGE Publications"
+                    },
+                    "Probability": {
+                        "N": "55.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-modify/convert_light_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-286353103"
+                    },
+                    "Title": {
+                        "S": "The significance of occupancy profiles in determining post retrofit indoor thermal comfort, overheating risk and building energy performance"
+                    },
+                    "Abstract": {
+                        "S": "Recently, retrofit of tower blocks has gained momentum particularly in the UK social housing sector due to the increasing rate of fuel poverty coupled with deteriorating indoor living conditions. However, the process of making improvements to the thermal performance of building envelopes can significantly impact on occupants’ thermal comfort, increasing overheating risks with the changing climate and associated heat waves. The first phase of the study evaluated the building energy performance of a 1960s social housing tower block prototype in London, pre-retrofit, where the building simulation model was created and calibrated with monitored indoor data and occupants’ interviews. The second research phase, the subject of this paper, uses the model to further investigate the impact of improved thermal insulation of the building envelope, based on U-values prescribed by the UK Building Regulations (Part L1B), on the potential risk of overheating. The study investigates the impact of retrofitting on occupants’ thermal comfort and building energy performance in the current and future climate scenarios (2030, 2050 and 2080). Results confirm that improving the U-value of external walls will significantly reduce the heating energy use by 70% under future climate scenarios while the Tₒ increases by 15-17% with U-value of 0.5 W/m²K and 0.3 W/m²K in comparison to the base case. The overall results indicate that the different occupancy patterns adopted in the simulation model have a significant impact on the predicted duration of overheating which will, in turn, have an impact on determining appropriate retrofit strategies to reduce overheating risks"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.buildenv.2020.106676"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/286353103.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2020-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Elsharkawy, H., Zahiri, S., Elsharkawy, H., Zahiri, S."
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "34.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-physically_assemble_structure"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-248197756"
+                    },
+                    "Title": {
+                        "S": "Nothofagus pumilio forest affected by recent tephra deposition in northern patagonia. I-environmental traits influencing seedling growth"
+                    },
+                    "Abstract": {
+                        "S": "The 2011 Puyehue-Cordón Caulle volcanic eruption left vast areas of Nothofagus pumilio forests covered by high volumes of tephra, which buried the understory. This event offered a unique opportunity to analyse the impact of recent tephra deposition and the main environmental factors affecting the growth of N. pumilio seedlings. To this end, three study sites were selected and sampled three years after the eruption, two with a thick tephra layer (50 cm) but with different tree conditions: i) most trees alive or ii) most trees dead, and a third site, iii) with minimal tephra deposition. From each site, five N. pumilio 18-month-old seedlings were collected, morphometrically measured (shoot, epicotyl and main root length; shoot, epicotyl and root collar diameter), and environmental factors were also registered (light intensity, soil pH and conductivity, available P, bulk and particle soil density, and porosity). The main results indicated that three years after eruption the site with tephra deposition and dead trees (the most near to the crater) had the biggest seedlings, the lowest pH and the highest values for available P and light intensity. This temporally unique geological event showed that the regeneration potentiality of N. pumilio is high when environmental factors allow direct incident light on a substrate with high mineral content, even when the environment has previously been subjected to a significant degree of disturbance. Given the recurrence of volcanic events in northern Patagonia, this subject merits further long-term study.Fil: Moguilevsky, Denise. Consejo Nacional de Investigaciones Científicas y Técnicas. Instituto Andino Patagónico de Tecnologías Biológicas y Geoambientales. Universidad nacional del Comahue. San Carlos de Bariloche; Argentina; ArgentinaFil: Fernández, Natalia Verónica. Consejo Nacional de Investigaciones Científicas y Técnicas. Instituto Andino Patagónico de Tecnologías Biológicas y Geoambientales. Universidad nacional del Comahue. San Carlos de Bariloche; Argentina; ArgentinaFil: Cornejo, Pablo E.. Universidad de La Frontera; ChileFil: Puntieri, Javier Guido. Universidad Nacional de Río Negro; Argentina. Consejo Nacional de Investigaciones Científicas y Técnicas; ArgentinaFil: Fontenla, Sonia. Universidad Nacional del Comahue. Centro Regional Universitario Bariloche; Argentin"
+                    },
+                    "DOI": {
+                        "S": "10.4067/S0718-95162018005001502"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/248197756.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-06-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Moguilevsky, Denise, Fernández, Natalia Verónica, Cornejo, Pablo E., Puntieri, Javier Guido, Fontenla, Sonia"
+                    },
+                    "Publisher": {
+                        "S": "SciELO Agencia Nacional de Investigacion y Desarrollo (ANID)"
+                    },
+                    "Probability": {
+                        "N": "88.7"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-break_down_structure"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-145186772"
+                    },
+                    "Title": {
+                        "S": "Biomimicry a “Natural Lesson” in STEAM"
+                    },
+                    "Abstract": {
+                        "S": "The introduction of biomimicry as a theme in the classroom has some significant advantages when developing a STEAM curriculum. This growing field has many natural overlaps between the different disciplines within STEAM. There are many fascinating stories surrounding biomimicry connecting nature to simple solutions for many of our most difficult problems, especially related to the sustainability of our planet. Biomimicry cannot but help capture the imagination of our students"
+                    },
+                    "DOI": {
+                        "S": "10.5642/steam.20170301.33"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/145186772.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-12-16T07:19:34"
+                    },
+                    "Authors": {
+                        "S": "Pauls, Steve"
+                    },
+                    "Publisher": {
+                        "S": "Scholarship @ Claremont"
+                    },
+                    "Probability": {
+                        "N": "99.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-optimize_shape/materials"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-42594416"
+                    },
+                    "Title": {
+                        "S": "Non-functional biomimicry : utilising natural patterns to provoke attention responses"
+                    },
+                    "Abstract": {
+                        "S": "Natural reoccurring patterns arise from chaos and are prevalent throughout nature. The formation of these patterns is controlled by, or produces, underlying geometrical structures. Biomimicry is the study of nature’s structure, processes and systems, as models and solutions for design challenges and is being widely utilized in order to address many issues of contemporary engineering. Many academics now believe that aesthetics stem from pattern recognition, consequently, aesthetic preference may be a result of individuals recognising, and interacting with, natural patterns. The goal of this research was to investigate the impact of specific naturally occurring pattern types (spiral, branching, and fractal patterns) on user behaviour; investigating the potential of such patterns to control and influence how individuals interact with their surrounding environment. The results showed that the underlying geometry of natural patterns has the potential to induce attention responses to a statistically significant level"
+                    },
+                    "DOI": {
+                        "S": "10.1080/21650349.2016.1246204"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/42594416.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-11-24T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Young, Bryan G., Wodehouse, Andrew"
+                    },
+                    "Publisher": {
+                        "S": "Informa UK Limited"
+                    },
+                    "Probability": {
+                        "N": "23.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-send_light_signals_in_the_visible_spectrum"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-131287515"
+                    },
+                    "Title": {
+                        "S": "Discomfort glare evaluation: the influence of anchor bias in luminance adjustments"
+                    },
+                    "Abstract": {
+                        "S": "Luminance adjustment is a procedure commonly used to evaluate discomfort glare and the results from adjustment experiments form the basis of some recommendations for limiting its occurrence. There are, however, strong reasons to expect that settings made using adjustment are unintentionally influenced by extraneous variables. This paper discusses bias towards the initial anchor, the setting of the variable stimulus immediately before an adjustment is made. Specifically, the initial luminance is expected to influence the setting that is made by adjustment; for example, a lower initial luminance leads to a lower setting than a high initial luminance. To investigate anchor bias, a Hopkinson-like multiple-criterion adjustment experiment was undertaken, but with three different anchors. The results confirmed significant bias: glare settings were biased towards the luminance of the initial anchor. This demonstrates a need for caution when using adjustment to explore discomfort glare and when interpreting the results of past studies that used discomfort glare models fitted to data obtained with this procedure"
+                    },
+                    "DOI": {
+                        "S": "10.1177/1477153517734280"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/131287515.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-10-13T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kent, M.G., Fotios, S., Altomonte, Sergio"
+                    },
+                    "Publisher": {
+                        "S": "SAGE Publications"
+                    },
+                    "Probability": {
+                        "N": "9.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-send_light_signals_in_the_non-visible_spectrum"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-99053779"
+                    },
+                    "Title": {
+                        "S": "Retrofit planning for the performance gap: results of a workshop on addressing energy, health and comfort needs in a protected building"
+                    },
+                    "Abstract": {
+                        "S": "Research on the performance gap suggests that the actual energy consumption in buildings can be twice as much as expected from modelled estimates. Energy models rely on predictive indicators and assumptions that are usually done at the design stage, without acknowledging behavioral patterns of actual users, amongst other uncertain elements. Moreover, in the context of the performance gap, it is evident that energy efficiency is overemphasized while other key issues such as health and comfort of occupants associated with indoor air quality, noise levels etc., have been less stressed and discussed. This paper discusses physical measurements of indoor temperature in a case study building at the University of Cambridge and reports findings of a workshop with researchers, building professionals and graduate students working on environmental performance in the built environment. The workshop addressed research issues related to energy, comfort and health (couched in terms of thermal performance), used as a means to understand the complexities of and trade-off between different aspects of sustainable buildings. Retrofit measures were suggested while considering how to balance energy and comfort needs, with some these measures being modelled to determine their efficacy. This research concludes with a reflection on how to implement these retrofit measures in a manner that addresses the performance gap"
+                    },
+                    "DOI": {
+                        "S": "10.3390/en10081177"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/99053779.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-08-10T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Mohareb, Eugene, Hashemi, Arman, Shahrestani, Mehdi, Sunikka-Blank, Minna"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "46.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-send_sound_signals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-148364429"
+                    },
+                    "Title": {
+                        "S": "A Brief History of STEM and STEAM from an Inadvertent Insider"
+                    },
+                    "Abstract": {
+                        "S": "This article traces a history of STEM and STEAM from the perspective of someone involved in arts integration research for the last 35 years, and proposes a vision for the next steps. It also provides an assessment of the risks inherent in current trends of STEAM roll-out in schools, from the lack of resources for professional development to the burgeoning market in STEAM kits and activity books that do not lead to the original learning goals of STEAM"
+                    },
+                    "DOI": {
+                        "S": "10.5642/steam.20170301.05"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/148364429.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-12-16T07:17:37"
+                    },
+                    "Authors": {
+                        "S": "Catterall, Lisa G."
+                    },
+                    "Publisher": {
+                        "S": "Scholarship @ Claremont"
+                    },
+                    "Probability": {
+                        "N": "77.7"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-send_tactile_signals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-234927927"
+                    },
+                    "Title": {
+                        "S": "Transformation of an Office Building into a Nearly Zero Energy Building (nZEB): Implications for Thermal and Visual Comfort and Energy Performance"
+                    },
+                    "Abstract": {
+                        "S": "Directive 2010/31/EU promotes the refurbishment of existing buildings to change them into nearly zero-energy buildings (nZEBs). Within this framework, it is of crucial importance to guarantee the best trade-off between energy performance and indoor environmental quality (IEQ). The implications of a global refurbishment scenario on thermal and visual comfort are assessed in this paper pertaining to an existing office building. The retrofit actions applied to achieve the nZEB target consist of a combination of envelope and technical building systems refurbishment measures, involving both HVAC and lighting. Energy and comfort calculations were carried out through dynamic simulation using Energy Plus and DIVA, for the thermal and visual performance assessments, respectively. The results point out that energy retrofit actions on the building envelope would lead to significant improvements in the thermal performance, regarding both energy savings (-37% of the annual primary energy for heating) and thermal comfort. However, a daylighting reduction would occur with a consequent higher electricity demand for lighting (36%). The research presents a detailed approach applicable to further analyses aimed at optimizing the energy efficiency measures in order to reduce the imbalance between visual and thermal comfort and to ensure the best performance in both domains"
+                    },
+                    "DOI": {
+                        "S": "10.3390/en12050895"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/234927927.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019"
+                    },
+                    "Authors": {
+                        "S": "Ballarini, Ilaria, De Luca, Giovanna, Paragamyan, Argun, Pellegrino, Anna, Corrado, Vincenzo"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "35.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-send_chemical_signals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-55254963"
+                    },
+                    "Title": {
+                        "S": "Multi-objective optimization of a nearly zero-energy building based on thermal and visual discomfort minimization using a non-dominated sorting genetic algorithm (NSGA-II)"
+                    },
+                    "Abstract": {
+                        "S": "Multi-objective optimization methods provide a valid support to buildings' design. They aim at identifying the most promising building variants on the basis of diverse and potentially contrasting needs. However, optimization has been mainly used to optimize the energy performance of buildings, giving secondary importance to thermal comfort and usually neglecting visual comfort and the indoor air quality. The present study addresses the design of a detached net zero-energy house located in Southern Italy to minimize thermal and visual discomfort. The optimization problem admits four objective functions (thermal discomfort during winter and summer and visual discomfort due to glare and an inappropriate quantity of daylight) and uses the non-dominated sorting genetic algorithm, implemented in the GenOpt optimization engine through the Java genetic algorithms package, to instruct the EnergyPlus simulation engine. The simulation outcome is a four-dimensional solution set. The building variants of the Pareto frontier adopt diverse and non-intuitive design alternatives. To derive good design practices, two-dimensional projections of the solution set were also analyzed. Finally, in cases of complex optimization problems with many objective functions, optimization techniques are recommended to effectively explore the large number of available building variants in a relatively short time and, hence, identify viable non-intuitive solutions"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.enbuild.2015.06.064"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/55254963.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Carlucci, Salvatore, Cattarin, Giulio, Causone, Francesco, Pagliano, Lorenzo"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "70.6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-send_vibratory_signals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-52115624"
+                    },
+                    "Title": {
+                        "S": "A review of indices for assessing visual comfort with a view to their use in optimization processes to support building integrated design"
+                    },
+                    "Abstract": {
+                        "S": "In the last decades, several studies aimed at assessing some specified aspects of visual comfort characterizing the relationship between the human needs and the light environment, such as an available amount of light, light uniformity, light quality in rendering colors, and predicting the risk of glare for space occupants. For each of them, a (still growing) number of indices and metrics have been proposed in literature and standards. In the present work, they are described, categorized according to common features, and finally discussed. As in the case of long-term thermal comfort indices, such visual comfort indices and their summation over a specified calculation period might be used for driving optimization processes to support a more conscious integrated design of buildings. To that purpose, the choice among the available visual comfort indices needs to be informed by an analysis of their features and implications. We present recommendations for use, and suggest areas where improvement is needed for their use in optimization processes to support buildings’ design.© Elsevier. This is the authors pre-refereed manuscript to the article"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.rser.2015.03.062"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/52115624.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-04-02T15:18:32Z"
+                    },
+                    "Authors": {
+                        "S": "Carlucci, Salvatore, Causone, Francesco, De Rosa, Francesco, Pagliano, Lorenzo"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier"
+                    },
+                    "Probability": {
+                        "N": "88.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-send_electrical/magnetic_signals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-148034506"
+                    },
+                    "Title": {
+                        "S": "Integrated Daylighting and Artificial Lighting Control based on High Dynamic Range Vision Sensors"
+                    },
+                    "Abstract": {
+                        "S": "One fifth of the electricity consumption of Swiss buildings is due to electric lighting. Integrated control of sun shading and artificial lighting can mitigate this demand while maintaining user comfort. However, the drawback of existing building control approaches is that they do not consider one of the main aspects of human-centric lighting: visual comfort.    The goal of this doctoral thesis is to develop an integrated energy efficient sun shading and electric lighting control system that incorporates widely accepted visual comfort criteria and privileges daylighting over electric lighting.    The first part is dedicated to High Dynamic Range (HDR) vision sensor calibration, programing, validation and preliminary testing. A sensor originally developed by the Centre Suisse dâElectronique et de Microtechnique (CSEM) was photometrically, spectrally and geometrically calibrated and validated with respect to reliable illuminance and multi-point luminance meters. This HDR vision sensor was then equipped with an embedded image processing routine in order to assess âon the flyâ discomfort glare indices. It has been demonstrated that the developed device, is able to serve as an enhanced visual comfort feedback sensor in building automation systems. On the other hand, it can be employed to characterize highly glazed facades and workspaces regarding visual comfort and glare risks, as demonstrated in a project in Singapore.    Two monitoring campaigns are reported in the second part of this thesis.    Firstly, 30 human subjects occupied two identical office rooms of the LESO solar experimental building for 15 afternoons to compare the performance of a fuzzy logic control system incorporating two HDR vision sensors with respect to a âbest-practiceâ controller. Subjective self-reported visual comfort surveys, paper- and computer-based visual tests and monitoring of the electric lighting consumption were carried out simultaneously in both offices. It was shown that the electricity demand of the office with the advanced controller is 32% lower than that of the reference room, while the subjectsâ visual performance remained comparable.    Secondly, an eight-month data monitoring campaign was carried out in the same building in order to study the ability of a novel control approach to maintain optimal visual and thermal comfort conditions while reducing the energy performance gap of a room as well as its electric lighting demand. The experimental results showed that the advanced controller mitigated the performance gap during the heating season by 72% with regard to standard occupant behavior and by 19% with respect to a best-practice automated system. This system reduced backup heating demand leading to lower CO2 gas emissions. At the same time, visual comfort constraints regarding Daylight Glare Probability (DGP) and workplane horizontal illuminance were respected during work hours.    Finally, a self-commissioning integrated controller for Venetian blinds enhanced with a learning module was developed and validated for 22 days in a daylighting testbed at the Fraunhofer Institute for Solar Energy (ISE) in Freiburg, Germany. It has been shown that the visual comfort constraints are respected for 96% of the work hours and that the controller can successfully limit the number of shading movements.    The market potential for HDR vision sensors and integrated control platforms has been studied and possible commercialization tracks have been identified"
+                    },
+                    "DOI": {
+                        "S": "10.5075/epfl-thesis-8277"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/148034506.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-12-04T16:19:51"
+                    },
+                    "Authors": {
+                        "S": "Motamed, Ali"
+                    },
+                    "Publisher": {
+                        "S": "Lausanne, EPFL"
+                    },
+                    "Probability": {
+                        "N": "68.0"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-differentiate_signal_from_noise"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-237088204"
+                    },
+                    "Title": {
+                        "S": "Shear-sensitive adhesion enables size-independent adhesive performance in stick insects."
+                    },
+                    "Abstract": {
+                        "S": "The ability to climb with adhesive pads conveys significant advantages and is widespread in the animal kingdom. The physics of adhesion predict that attachment is more challenging for large animals, whereas detachment is harder for small animals, due to the difference in surface-to-volume ratios. Here, we use stick insects to show that this problem is solved at both ends of the scale by linking adhesion to the applied shear force. Adhesive forces of individual insect pads, measured with perpendicular pull-offs, increased approximately in proportion to a linear pad dimension across instars. In sharp contrast, whole-body force measurements suggested area scaling of adhesion. This discrepancy is explained by the presence of shear forces during whole-body measurements, as confirmed in experiments with pads sheared prior to detachment. When we applied shear forces proportional to either pad area or body weight, pad adhesion also scaled approximately with area or mass, respectively, providing a mechanism that can compensate for the size-related loss of adhesive performance predicted by isometry. We demonstrate that the adhesion-enhancing effect of shear forces is linked to pad sliding, which increased the maximum adhesive force per area sustainable by the pads. As shear forces in natural conditions are expected to scale with mass, sliding is more frequent and extensive in large animals, thus ensuring that large animals can attach safely, while small animals can still detach their pads effortlessly. Our results therefore help to explain how nature's climbers maintain a dynamic attachment performance across seven orders of magnitude in body weight"
+                    },
+                    "DOI": {
+                        "S": "10.1098/rspb.2019.1327"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/237088204.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-10-23T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Labonte, D, Struecker, M-Y, Birn-Jeffery, AV, Federle, W"
+                    },
+                    "Publisher": {
+                        "S": "The Royal Society"
+                    },
+                    "Probability": {
+                        "N": "87.9"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-convert_signals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-10913869"
+                    },
+                    "Title": {
+                        "S": "Post occupancy evaluations relating to discomfort glare: A study of green buildings in Brisbane"
+                    },
+                    "Abstract": {
+                        "S": "Glare indices have yet to be extensively tested in daylit open plan offices, as such there is no effective method to predict discomfort glare within these spaces. This study into discomfort glare in open plan green buildings targeted full-time employees, working under their everyday lighting conditions. Three green buildings in Brisbane were used for data collection, two were Green Star accredited and the other contained innovative daylighting strategies. Data were collected on full-time employees, mostly aged between 30 and 50 years, who broadly reflect the demographics of the wider working population in Australia. It was discovered 36 of the 64 respondents experienced discomfort from both electric and daylight sources at their workspace. The study used a specially tailored post-occupancy evaluation (POE) survey to help assess discomfort glare. Luminance maps extracted from High Dynamic Range (HDR) images were used to capture the luminous environment of the occupants. These were analysed using participant data and the program Evalglare. The physical results indicated no correlation with other developed glare metrics for daylight within these open plan green buildings, including the recently developed Daylight Glare Probability (DGP) Index. The strong influence of vertical illuminance, Ev in the DGP precludes the mostly contrast-based glare from windows observed in this investigation from forming a significant part of this index. Furthermore, critical assessment of the survey techniques used are considered. These will provide insight for further research into discomfort glare in the endeavour to fully develop a suitable glare metric"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.buildenv.2012.08.032"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/10913869.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2013-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Hirning, Michael, Isoardi, Gillian, Coyne, Steve, Garcia Hansen, Veronica, Cowling, Ian"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "33.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-respond_to_signals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-46580203"
+                    },
+                    "Title": {
+                        "S": "Nanoscale friction and adhesion of tree frog toe pads"
+                    },
+                    "Abstract": {
+                        "S": "Tree frogs have become an object of interest in biomimetics due to their ability to cling to wet and slippery surfaces. In this study, we have investigated the adhesion and friction behavior of toe pads of White's tree frog (Litoria caerulea) using atomic force microscopy (AFM) in an aqueous medium. Facilitating special types of AFM probes with radii of ~400 nm and ~13 μm, we were able to sense the frictional response without damaging the delicate nanopillar structures of the epithelial cells. While we observed no significant adhesion between both types of probes and toe pads in wet conditions, frictional forces under such conditions were very pronounced and friction coefficients amounted between 0.3 and 1.1 for the sliding friction between probes and the epithelial cell surfaces"
+                    },
+                    "DOI": {
+                        "S": "10.1088/1748-3190/11/3/035003"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/46580203.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2016-06-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kappl, Michael, Kaveh, Farzaneh, Barnes, W Jon P."
+                    },
+                    "Publisher": {
+                        "S": "IOP Publishing"
+                    },
+                    "Probability": {
+                        "N": "80.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_light_in_the_visible_spectrum"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-185244834"
+                    },
+                    "Title": {
+                        "S": "Stimulus range bias leads to different settings when using luminance adjustment to evaluate discomfort due to glare"
+                    },
+                    "Abstract": {
+                        "S": "Luminance adjustment is widely used to evaluate discomfort due to glare. This paper reports an experiment conducted to investigate two factors of the luminance adjustment procedure, stimulus range bias and direct vs indirect control. Stimulus range bias describes the influence on subjective evaluations of the range of stimuli available to the test observer, with range being the minimum and maximum available glare source luminance in the current context. For the glare source, an artificial window, there were three ranges, having maximum luminances of 5 106, 7 288 and 9 469 cd/m 2. The results suggest that luminance range had a significant effect on settings made, sufficient to change settings by an amount equivalent to one step of a Hopkinson-like discomfort sensation scale. The mean luminance associated with just intolerable discomfort with the low range was less than that associated with just uncomfortable with the high range. Past experiments have used direct control, where the observer makes the adjustment directly, and indirect control, where the observer instructs the experimenter to make the adjustment actions. Both methods were used in the current experiment. It was found that range bias was larger when using direct control than with indirect control. These findings contribute to an understanding of why different studies of discomfort glare have reported different results and hence proposed different discomfort models"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.buildenv.2018.12.061"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/185244834.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-04-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kent, Michael, Fotios, S., Cheung, T."
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "94.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_light_in_the_non-visible_spectrum"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-78838010"
+                    },
+                    "Title": {
+                        "S": "When the going gets rough – studying the effect of surface roughness on the adhesive abilities of tree frogs"
+                    },
+                    "Abstract": {
+                        "S": "Tree frogs need to adhere to surfaces of various roughnesses in their natural habitats; these include bark, leaves and rocks. Rough  surfaces can alter the effectiveness of their toe pads, due to factors such as a change of real contact area and abrasion of the pad  epithelium. Here, we tested the effect of surface roughness on the attachment abilities of the tree frog Litoria caerulea. This was  done by testing shear and adhesive forces on artificial surfaces with controlled roughness, both on single toe pads and whole animal  scales. It was shown that frogs can stick 2–3 times better on small scale roughnesses (3–6 µm asperities), producing higher adhesive  and frictional forces, but relatively poorly on the larger scale roughnesses tested (58.5–562.5 µm asperities). Our experiments  suggested that, on such surfaces, the pads secrete insufficient fluid to fill the space under the pad, leaving air pockets that would  significantly reduce the Laplace pressure component of capillarity. Therefore, we measured how well the adhesive toe pad would  conform to spherical asperities of known sizes using interference reflection microscopy. Based on experiments where the conformation  of the pad to individual asperities was examined microscopically, our calculations indicate that the pad epithelium has a low  elastic modulus, making it highly deformable"
+                    },
+                    "DOI": {
+                        "S": "10.3762/bjnano.7.201"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/78838010.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2016-12-30T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Crawford, Niall, Endlein, Thomas, Pham, Jonathan T., Riehle, Mathis, Barnes, W. Jon P."
+                    },
+                    "Publisher": {
+                        "S": "Beilstein Institut"
+                    },
+                    "Probability": {
+                        "N": "44.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_electricity/magnetism"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-151169961"
+                    },
+                    "Title": {
+                        "S": "The biomechanics of tree frogs climbing curved surfaces: a gripping problem"
+                    },
+                    "Abstract": {
+                        "S": "The adhesive mechanisms of climbing animals have become an important research topic because of their biomimetic implications. We examined the climbing abilities of hylid tree frogs on vertical cylinders of differing diameter and surface roughness to investigate the relative roles of adduction forces (gripping) and adhesion. Tree frogs adhere using their toe pads and subarticular tubercles, the adhesive joint being fluid-filled. Our hypothesis was that, on an effectively flat surface (adduction forces on the largest 120 mm diameter cylinder were insufficient to allow climbing), adhesion would effectively be the only means by which tree frogs could climb, but on the two smaller diameter cylinders (44 mm and 13 mm), frogs could additionally utilise adduction forces by gripping the cylinder either with their limbs outstretched or by grasping around the cylinder with their digits, respectively. The frogs' performance would also depend on whether the surfaces were smooth (easy to adhere to) or rough (relatively non-adhesive). Our findings showed that climbing performance was highest on the narrowest smooth cylinder. Frogs climbed faster, frequently using a 'walking trot' gait rather than the 'lateral sequence walk' used on other cylinders. Using an optical technique to visualize substrate contact during climbing on smooth surfaces, we also observed an increasing engagement of the subarticular tubercles on the narrower cylinders. Finally, on the rough substrate, frogs were unable to climb the largest diameter cylinder, but were able to climb the narrowest one slowly. These results support our hypotheses and have relevance for the design of climbing robots"
+                    },
+                    "DOI": {
+                        "S": "10.1242/jeb.168179"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/151169961.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-03-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Hill, Iain D.C., Dong, Benzheng, Barnes, W. Jon P., Ji, Aihong, Endlein, Thomas"
+                    },
+                    "Publisher": {
+                        "S": "The Company of Biologists"
+                    },
+                    "Probability": {
+                        "N": "78.0"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_disease_in_a_living_system"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-223214464"
+                    },
+                    "Title": {
+                        "S": "The effect of a pre-trial range demonstration on subjective evaluations using category rating of discomfort due to glare"
+                    },
+                    "Abstract": {
+                        "S": "Category rating is a procedure commonly used to evaluate visual discomfort due to glare. One recommended step for good practise in a category rating procedure is to use a pre-trial demonstration (PTD) of the range of stimuli to be experienced. However, PTD have rarely, if at all, been used in past research on discomfort glare. In this study, two experiments were conducted to test the influence of the PTD on evaluations of discomfort due to glare. In the first experiment participants evaluated four glare source luminances with, and without, a PTD. The results suggest that using a PTD increased the reported degree of discomfort perceived for the same glare setting, although this may depend on the manner in which the PTD is presented. In the second experiment, participants evaluated four glare source luminances using PTD with three different luminance ranges: the results suggest this had significant effect on discomfort evaluations in that evaluations of discomfort were lower when a higher luminance range was used. Along with other recent studies, these findings suggest a need to derive a more robust procedure for measuring the discomfort due to glare"
+                    },
+                    "DOI": {
+                        "S": "10.1080/15502724.2019.1631177"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/223214464.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2020-12-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kent, M.G., Fotios, S."
+                    },
+                    "Publisher": {
+                        "S": "Informa UK Limited"
+                    },
+                    "Probability": {
+                        "N": "56.7"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_touch_and_mechanical_forces"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-296158778"
+                    },
+                    "Title": {
+                        "S": "Sticking under wet conditions: the remarkable attachment abilities of the torrent frog, staurois guttatus"
+                    },
+                    "Abstract": {
+                        "S": "Tree frogs climb smooth surfaces utilising capillary forces arising from an air-fluid interface around their toe pads, whereas torrent frogs are able to climb in wet environments near waterfalls where the integrity of the meniscus is at risk. This study compares the adhesive capabilities of a torrent frog to a tree frog, investigating possible adaptations for adhesion under wet conditions. We challenged both frog species to cling to a platform which could be tilted from the horizontal to an upside-down orientation, testing the frogs on different levels of roughness and water flow. On dry, smooth surfaces, both frog species stayed attached to overhanging slopes equally well. In contrast, under both low and high flow rate conditions, the torrent frogs performed significantly better, even adhering under conditions where their toe pads were submerged in water, abolishing the meniscus that underlies capillarity. Using a transparent platform where areas of contact are illuminated, we measured the contact area of frogs during platform rotation under dry conditions. Both frog species not only used the contact area of their pads to adhere, but also large parts of their belly and thigh skin. In the tree frogs, the belly and thighs often detached on steeper slopes, whereas the torrent frogs increased the use of these areas as the slope angle increased. Probing small areas of the different skin parts with a force transducer revealed that forces declined significantly in wet conditions, with only minor differences between the frog species. The superior abilities of the torrent frogs were thus due to the large contact area they used on steep, overhanging surfaces. SEM images revealed slightly elongated cells in the periphery of the toe pads in the torrent frogs, with straightened channels in between them which could facilitate drainage of excess fluid underneath the pad"
+                    },
+                    "DOI": {
+                        "S": "10.1371/journal.pone.0073810"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/296158778.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2013-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Endlein, T., Barnes, W.J.P., Samuel, D.S., Crawford, N.A., Biaw, A.B., Grafe, U."
+                    },
+                    "Publisher": {
+                        "S": "Public Library of Science (PLoS)"
+                    },
+                    "Probability": {
+                        "N": "99.0"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_chemicals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-29516386"
+                    },
+                    "Title": {
+                        "S": "Viscous-poroelastic interaction as mechanism to create adhesion in   frogs' toe pads"
+                    },
+                    "Abstract": {
+                        "S": "The toe pads of frogs consist of soft hexagonal structures and a viscous liquid contained between and within the hexagonal structures. It has been hypothesized that this configuration creates adhesion by allowing for long range capillary forces, or alternatively, by allowing for exit of the liquid and thus improving contact of the toe pad. In this work we suggest interaction between viscosity and elasticity as a mechanism to create temporary adhesion, even in the absence of capillary effects or van der Waals forces. We initially illustrate this concept experimentally by a simplified configuration consisting of two surfaces connected by a liquid bridge and elastic springs. We then utilize poroelastic mixture theory and model frog's toe pads as an elastic porous medium, immersed within a viscous liquid and pressed against a rigid rough surface. The flow between the surface and the toe pad is modeled by the lubrication approximation. Inertia is neglected and analysis of the elastic-viscous dynamics yields a governing partial differential equation describing the flow and stress within the porous medium. Several solutions of the governing equation are presented and show a temporary adhesion due to stress created at the contact surface between the solids. This work thus may explain how some frogs (such as the torrent frog) maintain adhesion underwater and the reason for the periodic repositioning of frogs' toe pads during adhesion to surfaces"
+                    },
+                    "DOI": {
+                        "S": "10.1017/jfm.2015.293"
+                    },
+                    "DownloadURL": {
+                        "S": "http://arxiv.org/abs/1503.01435"
+                    },
+                    "DatePublished": {
+                        "S": "2017-06-09T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Tulchinsky, A., Gat, A. D."
+                    },
+                    "Publisher": {
+                        "S": "Cambridge University Press (CUP)"
+                    },
+                    "Probability": {
+                        "N": "65.1"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_atmospheric_conditions"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-141531548"
+                    },
+                    "Title": {
+                        "S": "Hybrid Surface Patterns Mimicking the Design of the Adhesive Toe Pad of   Tree Frog"
+                    },
+                    "Abstract": {
+                        "S": "Biological materials achieve directional reinforcement with oriented assemblies of anisotropic building blocks. One such example is the nanocomposite structure of keratinized epithelium on the toe pad of tree frogs, in which hexagonal arrays of (soft) epithelial cells are crossed by densely packed and oriented (hard) keratin nanofibrils. Here, a method is established to fabricate arrays of tree-frog-inspired composite micropatterns composed of polydimethylsiloxane (PDMS) micropillars embedded with polystyrene (PS) nanopillars. Adhesive and frictional studies of these synthetic materials reveal a benefit of the hierarchical and anisotropic design for both adhesion and friction, in particular, at high matrix-fiber interfacial strengths. The presence of PS nanopillars alters the stress distribution at the contact interface of micropillars and therefore enhances the adhesion and friction of the composite micropattern. The results suggest a design principle for bioinspired structural adhesives, especially for wet environments"
+                    },
+                    "DOI": {
+                        "S": "10.1021/acsnano.7b04994"
+                    },
+                    "DownloadURL": {
+                        "S": "http://arxiv.org/abs/1711.09066"
+                    },
+                    "DatePublished": {
+                        "S": "2017-11-24T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Xue, Longjian, Sanz, Belén, Luo, Aoyi, Turner, Kevin T., Wang, Xin, Tan, Di, Zhang, Rui, Du, Hang, Steinhart, Martin, Mijangos, Carmen, Guttmann, Markus, Kappl, Michael, del Campo, Aránzazu"
+                    },
+                    "Publisher": {
+                        "S": "American Chemical Society (ACS)"
+                    },
+                    "Probability": {
+                        "N": "12.0"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_sound/vibrations"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-162672494"
+                    },
+                    "Title": {
+                        "S": "A Bayesian method of evaluating discomfort due to glare: the effect of order bias from a large glare source"
+                    },
+                    "Abstract": {
+                        "S": "Replicating scientific findings is a fundamental aspect of research. However, in studies of discomfort due to glare, it is difficult to make comparisons between the results of different experiments since the statistical tests usually reported do not allow independent findings to be directly compared to each other. Here we present an alternative Bayesian approach that can address this problem. To show how this approach works, we performed a laboratory test with 55 participants to validate the effect of order bias previously detected in a similar study evaluating discomfort due to glare but, this time, under a large luminous source. Using the luminance adjustment procedure, the glare source was varied to meet four sensations of discomfort due to glare. Adjustments were performed under three different order sequences: ascending, descending, and randomised. Test participants provided glare settings using a newly proposed evaluation scale. The effect of order bias detected in the original study was compared to the data obtained with the same methodological procedure in the new experiment using Bayesian inferential tests. The results showed a close replication, highlighting that the order bias effect found in the original study was also present in the new experiment. The wide application of Bayesian methods in the design and analysis of experimental studies may improve the accuracy and validity of glare models"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.buildenv.2018.10.005"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/162672494.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-12-31T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kent, M.G., Cheung, T., Altomonte, S., Schiavon, S., Lipczyńska, A."
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "76.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_temperature_cues"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-287605219"
+                    },
+                    "Title": {
+                        "S": "Architectural self-fabrication"
+                    },
+                    "Abstract": {
+                        "S": "The paper will focus on the role of computational design and digital fabrication in the processes of urban and architectural self-regeneration of existing infrastructures and buildings. The Architectural Fabrication research agenda takes inspiration from some of the concepts mentioned in Christopher Alexander’s essay ‘Systems generating systems’ (1968). It aims at introducing ways in which systems thinking and computer aided manufacturing can be most directly applied to the built environment. Hacking architectural spaces, by evolving their genetic spatial and structural codes, is developing the idea of optimizing resources involving inhabitants rather than generating other top down architectural solutions. During the last decades (starting from the book of Mario Carpo, ‘The Digital Turn in Architecture’) the digital shift in architectural design has generated a new discipline with the aim to define an innovative way to bridge the notion of nature with the one of teknè. From such a cultural milieu many research agenda were focusing on the concepts of morphogenesis and evolutionary thinking inspired by the work of French philosophers Gilles Deleuze and Felix Guattari based on the theory of complex systems. Despite this interest in bridging an evolutionary approach with the notion of emergent technologies in architecture (well described in the book ‘The Architecture of Emergence’ of Michael Weinstock) only a very few researchers have investigated on the potential of computational design as a driver for the ecological rehabilitation of existing infrastructures. As a matter of fact, the computational designers were so worried to claim for a new aesthetical identity of their discipline while a new opportunity was emerging for applying this evolutionary approach in order to hack existing structures. The idea of living infrastructures is related to the possibility of developing contextual algorithms in order to customize standard solutions with a post-human process that creates diversified spatial configurations out of very rigid organizational systems. Therefore, the paper will also talk about the Hacking Gomorra project as a possible paradigm of experimenting a 3D printing protocol for the environmental rehabilitation of a mega-structural housing building in Naples (Italy)"
+                    },
+                    "DOI": {
+                        "S": "10.1080/17445760.2017.1390108"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/287605219.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Cascone, P., Galdi, F., Giglio, A., Ciancio, E., Cascone, P., Galdi, F., Giglio, A., Ciancio, E."
+                    },
+                    "Publisher": {
+                        "S": "Informa UK Limited"
+                    },
+                    "Probability": {
+                        "N": "64.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_motion"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-42494501"
+                    },
+                    "Title": {
+                        "S": "Discomfort glare and time of day"
+                    },
+                    "Abstract": {
+                        "S": "There are strong reasons to suspect that glare sensation varies with time of the day. This study was designed to test whether such a relationship exists. Thirty subjects were exposed to an artificial lighting source at four times of the day. The source luminance was progressively increased and subjects were required to give Glare Sensation Votes (GSVs) corresponding to the level of visual discomfort experienced. Glare indices were calculated for every reported GSV, and results were statistically analysed. The findings indicated a tendency towards greater tolerance to luminance increases in artificial lighting as the day progresses. This trend was found not to be statistically related to the possible confounding variable of learning, providing evidence of an effect of time of the day on glare sensation"
+                    },
+                    "DOI": {
+                        "S": "10.1177/1477153514547291"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/42494501.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2014-08-21T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kent, Michael G., Altomonte, Sergio, Tregenza, Peter R., Wilson, Robin"
+                    },
+                    "Publisher": {
+                        "S": "SAGE Publications"
+                    },
+                    "Probability": {
+                        "N": "47.9"
+                    }
+                }
+            }
+        }
+    ]
+}
