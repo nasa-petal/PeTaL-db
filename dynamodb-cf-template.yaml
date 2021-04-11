@@ -18,6 +18,9 @@ Parameters:
       - br
       - test
     Description: br, test, or empty for prod.
+  CoreDumpS3BucketName:
+    Type: String
+    Description: Name of bucket where CORE dump will be unziped
 Resources:
 
   ##############
@@ -277,6 +280,20 @@ Resources:
               - 'dynamodb:UpdateItem'
             Resource:
               - !GetAtt myDynamoDBTable.Arn
+  myLambdaSQSEventPolicy:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      ManagedPolicyName: petal-lambda-sqs-core-dump-s3
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'sqs:ReceiveMessage'
+              - 'sqs:DeleteMessage'
+              - 'sqs:GetQueueAttributes'
+            Resource:
+              - !GetAtt CoreDumpS3EventsSQS.Arn
   myLambdaRole:
     Type: AWS::IAM::Role
     Properties: 
@@ -308,6 +325,22 @@ Resources:
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
         - !Ref myLambdaPolicy
+      PermissionsBoundary:
+        Ref: GccTenantOperatorBoundaryArn
+  myLambdaRandomLabellerRole:
+    Type: AWS::IAM::Role
+    Properties: 
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          Effect: Allow
+          Principal:
+            Service: lambda.amazonaws.com
+          Action: sts:AssumeRole
+      Description: Allows Lambda functions to call AWS services on your behalf.
+      ManagedPolicyArns:
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+        - !Ref myLambdaSQSEventPolicy
       PermissionsBoundary:
         Ref: GccTenantOperatorBoundaryArn
   mySageMakerRole:
@@ -454,7 +487,7 @@ Resources:
                   print(e)
                   print('Unable to describe endpoint.')
                   raise(e)
-              return response    
+              return response
       Description: 'Checks for a successful Sagemaker endpoint deployment.'
       Role: !GetAtt myLambdaRole.Arn
   lambdaModelPredict:
@@ -486,7 +519,7 @@ Resources:
                 response = runtime.invoke_endpoint(EndpointName=endpointName,
                                                           ContentType='application/json',
                                                           Body=json.dumps(data))
-                response_body = response['Body'] 
+                response_body = response['Body']
                 print(response_body.read())
                 #result = json.loads(response['Body'].read().decode())
                 #print(result)
@@ -520,6 +553,33 @@ Resources:
           - { myDynamoDBTable: !Ref myDynamoDBTable }
       Description: 'Takes unprocessed CORE articles, labels them with biomimetic functions using a deployed SageMaker endpoint, and saves the labelled articles to DynamoDB.'
       Role: !GetAtt myLambdaPredictRole.Arn
+  lambdaRandomCoreLabeller:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: python3.8
+      #Timeout: 900
+      #MemorySize: 1024
+      Code:
+        ZipFile: !Sub
+          - |
+            import boto3
+            import json
+
+            def dummyFunc() :
+                return '${myDynamoDBTable}'
+
+            def handler(event, context):
+                if "eventName" in event:
+                    return
+          - { myDynamoDBTable: !Ref myDynamoDBTable }
+      Description: 'Takes unprocessed CORE articles and randomly labels them with biomimetic functions. Then saves the labeled articles to DynamoDB.'
+      Role: !GetAtt myLambdaRandomLabellerRole.Arn
+  labmdaRandomCoreLabellerEventMapping:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      FunctionName: !Ref lambdaRandomCoreLabeller
+      EventSourceArn: !GetAtt CoreDumpS3EventsSQS.Arn
 
   ####################
   #  Step Functions  #
@@ -595,6 +655,75 @@ Resources:
         - { lambdaModelDeployArn: !GetAtt lambdaModelDeploy.Arn, lambdaModelAwaitArn: !GetAtt lambdaModelAwait.Arn, lambdaModelPredictArn: !GetAtt lambdaModelPredict.Arn }
       RoleArn: !GetAtt 'RoleOnboardingInstall.Arn'
 
+  ###############
+  #  S3 Bucket  #
+  ###############
+
+  CoreDumpS3Bucket:
+    Type: AWS::S3::Bucket
+    DependsOn: CoreDumpS3BucketSQSPolicy
+    Properties:
+      BucketName: !Ref CoreDumpS3BucketName
+      AccessControl: Private
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      NotificationConfiguration:
+        QueueConfigurations:
+        - Event: s3:ObjectCreated:*
+          Queue: !GetAtt CoreDumpS3EventsSQS.Arn
+          Filter:
+            S3Key:
+              Rules:
+                - Name: suffix
+                  Value: ".json"
+
+  ##############################
+  #  SQS Policy for S3 Bucket  #
+  ##############################   
+  #  Using SQS Policy instead of Bucket Policy as a work around of circular dependencies
+  CoreDumpS3BucketSQSPolicy:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues: 
+        - !Ref CoreDumpS3EventsSQS
+      PolicyDocument:
+        Id: S3ToSQSPolicy
+        Version: 2012-10-17
+        Statement:
+          - Sid: S3ToSendMsgToSQSForPutBucketObjects
+            Effect: Allow
+            Principal: 
+              Service: 's3.amazonaws.com'
+            Action: 
+              - sqs:SendMessage
+              - sqs:SendMessageBatch
+            Resource: !GetAtt CoreDumpS3EventsSQS.Arn
+            Condition:
+              ArnLike:
+                aws:SourceArn: !Sub 'arn:aws:s3:::${CoreDumpS3BucketName}'
+              StringEquals:
+                aws:SourceAccount: {Ref: AWS::AccountId}
+
+  #########
+  #  SQS  #
+  #########
+
+  CoreDumpS3EventsSQS:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: 60           # 60 seconds
+      MessageRetentionPeriod: 259200  # 3 days
+      RedrivePolicy: 
+        deadLetterTargetArn: !GetAtt CoreDumpS3EventsSQSDLQ.Arn
+        maxReceiveCount: 3
+  CoreDumpS3EventsSQSDLQ:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: 300          # 5 minutes
+      MessageRetentionPeriod: 1209600 # 14 days (SQS Max)
 
   ################################################
   #  Run Lambda on a schedule using EventBridge  #
