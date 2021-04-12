@@ -1,0 +1,904 @@
+{
+    "petal-stack-myDynamoDBTable-LFB4NGLY82L9": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_spatial_awareness/balance/orientation"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-81681278"
+                    },
+                    "Title": {
+                        "S": "Superoleophobic surfaces on stainless steel substrates obtained by chemical bath deposition"
+                    },
+                    "Abstract": {
+                        "S": "Superhydrophobic surfaces have shown great potential in domestic and industrial applications. However, these surfaces lose their superhydrophobic functions once being contaminated by oily liquids. In this work a simple chemical bath deposition method is reported to fabricate superoleophobic surfaces on steel substrates that repel both water and oil. The synthesis of superoleophobic surfaces involves the fabrication of the micro/nanometre-scale origami-ball-like structures on steel substrates, followed by the modification of low surface energy material. The fabricated surfaces have glycerol, peanut oil and hexadecane contact angles larger than 150° and roll-off angles smaller than 10°. This method is highly efficient because it takes only 5 min to create the surface re-entrant structures that are required by superoleophobicity. The prepared surfaces showed remarkable durability and retained superoleophobicity even after exposure to high and low temperatures (−30 and 100°C), and UV irradiation. This work will enrich the processing methods of the superoleophobic surfaces on stainless steel substrates"
+                    },
+                    "DOI": {
+                        "S": "10.1049/mnl.2016.0576"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/81681278.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-02-01"
+                    },
+                    "Authors": {
+                        "S": "Huang, L, Song, J, Lu, Y, Chen, F, Liu, X, Jin, Z, Zhao, D, Carmalt, CJ, Parkin, IP"
+                    },
+                    "Publisher": {
+                        "S": "INST ENGINEERING TECHNOLOGY-IET"
+                    },
+                    "Probability": {
+                        "N": "3.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-sense_shape_and/or_pattern"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-162911231"
+                    },
+                    "Title": {
+                        "S": "Atomised spray plasma deposition of hierarchical  superhydrophobic nanocomposite surfaces."
+                    },
+                    "Abstract": {
+                        "S": "Atomised spray plasma deposition (ASPD) using perfluorotributylamine–nanoparticle slurry mixtures yields superhydrophobic nanocomposite layers in a single solventless step. X-ray photoelectron and infrared spectroscopies indicate the formation of a poly(perfluorocarbon) host matrix containing nanoparticles. Electron microscopy shows the appearance of hierarchical surface roughness through the incorporation of nanoparticles. This gives rise to a synergistic effect combining low surface perfluoroalkyl groups and surface roughness leading to enhanced water and oil (hexadecane) contact angle values, Microindentation measurements show that the mechanical properties of the deposited liquid repellent nanocomposite layer are enhanced through the incorporation of methacryloyl functionalised silica, zinc oxide, or graphene nanoparticles"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.colsurfa.2018.08.054"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/162911231.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-12-31T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Castaneda-Montes,  I., Ritchie, A.W., Badyal,  J.P.S."
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "46.1"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-capture_solids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-324141500"
+                    },
+                    "Title": {
+                        "S": "Anticorrosion coating for magnesium alloys: Electrospun superhydrophobic polystyrene/SiO2 composite fibers"
+                    },
+                    "Abstract": {
+                        "S": "Superhydrophobic nanocomposite coatings for magnesium surfaces with remarkable corrosion resistance were fabricated by electrospinning in the presence of fluorosilane-functionalized silica (SiO2) nanoparticles. The effects of surface-modified silica (mod-SiO2) nanoparticles on the superhydrophobicity and corrosion resistance of polystyrene (PS)/mod-SiO2 fiber coatings were evaluated. The incorporation of the SiO2 nanoparticles endows PS fibers with rough surfaces exhibiting a water contact angle (WCA) of 165◦. The surface wettability, corrosion resistance, and their relation to the inorganic content in the PS fibers and the contact angle of the composite coatings were explored. Analysis of the corrosion results confirmed that the PS/mod-SiO2 coating protected the Mg surface from corrosion. In addition, PS fibers containing mod-SiO2 nanoparticles showed improved hydrophobicity, and excellent corrosion resistance was achieved with PS fibers containing 4 wt% SiO2 nanoparticles"
+                    },
+                    "DOI": {
+                        "S": "10.3906/kim-1711-22"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/324141500.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Horzum Polat, Nesrin, Kap, Özlem, Farzaneh, Amir"
+                    },
+                    "Publisher": {
+                        "S": "The Scientific and Technological Research Council of Turkey"
+                    },
+                    "Probability": {
+                        "N": "91.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-capture_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-286777325"
+                    },
+                    "Title": {
+                        "S": "New electrospun polystyrene/Al2O3 nanocomposite superhydrophobic coatings; Synthesis, characterization, and application"
+                    },
+                    "Abstract": {
+                        "S": "The effect of electrospinning operational parameters on the morphology, surface roughness, and wettability of different compositions of electrospun polystyrene (PS)-aluminum oxide (Al2O3) nanocomposite coatings was investigated using different techniques. For example, a scanning electron microscope (SEM) coupled with an energy dispersive X-ray (EDX) unit, a Fourier transform infrared (FTIR) spectrometer, an atomic force microscope (AFM), and water contact angle (WCA), and contact angle hysteresis (CAH) measurements using the sessile droplet method, were used. The latter used 4 μL of distilled water at room temperature. PS/Al2O3 nanocomposite coatings exhibited different morphologies, such as beaded fibers and microfibers, depending on the concentration ratio between the PS and Al2O3 nanoparticles and the operational parameters of the electrospinning process. The optimum conditions to produce a nanocomposite coating with the highest roughness and superhydrophobic properties (155° ± 1.9° for WCA and 3° ± 4.2° for CAH) are 2.5 and 0.25 wt % of PS and Al2O3, respectively, 25 kV for the applied potential and 1.5 mL·h-1 for the solution flow rate at 35 °C. The corrosion resistance of the as-prepared coatings was investigated using the electrochemical impedance spectroscopy (EIS) technique. The results have revealed that the highly porous superhydrophobic nanocomposite coatings (SHCs) possess a superior corrosion resistance that is higher than the uncoated Al alloy by three orders of magnitude. © 2018 by the authors.Acknowledgments: This publication was supported by Qatar University Internal Grant No. GCC-2017-012. The findings achieved herein are solely the responsibility of the authors. Thanks are also due to Anton Popelka for assistance with the AFM analysis.Scopu"
+                    },
+                    "DOI": {
+                        "S": "10.3390/coatings8020065"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/286777325.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Radwan A.B., Abdullah A.M., Mohamed A.M.A., Al-Maadeed M.A."
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "58.0"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-capture_gases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-248021772"
+                    },
+                    "Title": {
+                        "S": "A global evaluation of discomfort glare metrics in real office spaces with presence of direct sunlight"
+                    },
+                    "Abstract": {
+                        "S": "Existing glare metrics are usually tested in controlled studies and have certain limitations when predicting extremely bright scenes typical of clear sky with great daylight availability. A field-based research was carried out, where 26 real offices with direct sunlight were evaluated. Different daylight glare metrics were selected (luminance and illuminance levels, luminance ratios, luminance distribution). These were divided into two categories: “absolute glare values” and “relative glare values” following a study made by Suk et al. [22]. The contributions of these metrics about glare sensation (GSV scale) were statistically analyzed. In addition, the DGP model and uniformity values were calculated to complement this analysis. This paper demonstrates that Suk's proposal is a viable alternative; however, the “percentage of central and near FOV with luminance greater than 2000 cd/m2” metric showed a better correlation with the subjective response. Finally, a glare equation based on an absolute and a relative glare factor was proposed. This model is recommended to be used specifically when direct sunlight is present in the work area.Fil: Yamin Garretón, Julieta Alejandra. Consejo Nacional de Investigaciones Científicas y Técnicas. Centro Científico Tecnológico Conicet - Mendoza. Instituto de Ambiente, Hábitat y Energía; ArgentinaFil: Colombo, Elisa Margarita. Universidad Nacional de Tucumán. Facultad de Ciencias Exactas y Tecnología. Departamento de Luminotecnia, Luz y Visión; Argentina. Consejo Nacional de Investigaciones Científicas y Técnicas; ArgentinaFil: Pattini, Andrea Elvira. Consejo Nacional de Investigaciones Científicas y Técnicas. Centro Científico Tecnológico Conicet - Mendoza. Instituto de Ambiente, Hábitat y Energía; Argentin"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.enbuild.2018.01.024"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/248021772.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-05-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Yamin Garretón, Julieta Alejandra, Colombo, Elisa Margarita, Pattini, Andrea Elvira"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "35.7"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-capture_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-211329972"
+                    },
+                    "Title": {
+                        "S": "Qualitative and quantitative optimization of skylights : a comprehensive and inclusive analysis of skylight sizes for an office while providing enough daylight, avoiding glare and saving energy"
+                    },
+                    "Abstract": {
+                        "S": "While windows connect inside to outside, daylight entering through windows is a key element in architectural design. Although electrical lighting is able to replace daylight as an essential lighting requirement, daylight has qualitative and quantitative aspects that distinguish it from its competitor, electrical lighting.  One of the most unique characteristics of daylight is its variability in time, including different qualities of daylighting from sunset to sunrise, and from equinox to solstice. In addition, by regulating a circadian rhythm and hormone secretion, daylight impacts the physiological and psychological well-being of human beings. Moreover, daylight through windows carries information that flows from outside to inside and makes occupants aware of the outside world. While availability of daylight has been praised in building design, uneven distribution of daylight, reflective surfaces and excessive daylight may cause glare issues and visual discomfort which need to be avoided in daylight design. Beyond all the qualitative aspects of daylight, daylight, as a free resource, is able to illuminate the space and replace electrical lighting and lower electricity utility bills.  This quantitative aspect of daylight has been the center of attention among researchers, designers and builders, as lowering CO₂ emissions and environmental design have gained momentum in the building industry. Different stakeholders have various interests in qualitative and quantitative aspects of daylight, which eventually shape the design context. The interests of different stakeholders, including owners, environmentalists and occupants, may merge or conflict in different projects, which shows that daylight quality and quantity may have different weights, depending on the context of the project at hand.  This dissertation aims to provide an algorithmic platform to consider a context for skylight design by including all the interests of different stakeholders while either scaling importance of the different interests or requiring minimum qualities and performance targets. This dissertation proposes different methodological approaches for its platform to include both qualitative and quantitative aspects in designing skylights for a one-storey office building in different climates. Three different approaches are proposed in this dissertation, encompassing unconstrained optimization, constrained optimization and monetary metrics.  In the unconstrained optimization approach, the algorithmic platform has been developed to implement Parametric Analysis (PA) and Gradient Descent (GD) methods in order to optimize Skylight to Floor area Ratio (SFR) while saving energy consumption, as a quantitative aspect of daylight, and improving daylighting quality by providing sufficient daylight without causing glare discomfort. This platform was built as an Inclusive Integrative Algorithm (IIA) to weight different qualitative and quantitative aspects of daylight. The algorithm is able to perform single or multi-objective optimization by either applying GD or PA. In this approach, a single-objective optimization, considering only energy efficiency, showed that the optimal SFR was 6% in the examined climates of Austin, Chicago and San Francisco, for 300 lux lighting level and Lighting Power Density of 0.8 watt/sqft. The unconstrained optimization approach implemented a weighting system for an aggregated metric, including Mean Daylight (MD) and imperceptible Daylight Glare Probability (iDGP) and Ratio of Energy Saving (RES), which resulted in a SFR of 11% as the inclusive optimal solution for all the examined climates.  In addition to the discussion of inclusive optimization considering both daylight and energy performance and scaling their importance, this dissertation initiated the use of GD for the unconstrained optimization in single and multi-objective optimization. The result showed that GD is considerably faster than the traditional method, PA, while predicting the optimal solution with higher resolution. For example, GD resulted in 6.22% SFR for the San Francisco climate as an energy efficient optimal solution by only 9 iterations. However, PA required 10,000 iterations to find the optimal solution with the same resolution. Thus, GD has shown a promising result for the future of multi-objective optimization in building design. In addition to the unconstrained optimization, this dissertation applied the second approach, constrained optimization, by imposing different thresholds for two sets of metrics, including daylight availability and glare. Where Useful Daylight Illuminance (UDI) and spatial Daylight Autonomy (sDA) of 100% were used, the inclusive optimal SFRs were 9-10%, 8-10% and 9% for the climates of San Francisco, Austin and Chicago, respectively. For the other set of daylight metrics, MD of 50% and Mean Daylight Glare Probability (mDGP) of 35% were used, which resulted in optimal solutions of 7-14%, 7-11% and 8-13% SFR for San Francisco, Austin and Chicago, respectively. Therefore, multi-objective optimization considering both daylight and energy performance resulted in different inclusive optimal solutions to energy optimization alone. The study also concludes that optimal solutions depend on applied metrics and daylight thresholds. For the third approach this research investigated the monetary gains from energy efficiency and increased productivity. Assuming that productivity does not occur in spaces with poor daylight performance, inclusive optimal solutions will be the scenarios that most probably boost productivity. The study indicated that the energy cost saving is always negligible compared to the monetary gains from minimum increased productivity (1%). This conclusion may influence an owner’s perspective toward the quality of daylight performance and its resultant productivity increase. Although the proposed algorithm (IIA) has been used to perform multi-objective optimization for skylight design, this platform can be used in the design process to optimize any fenestration, including widows, based on daylight availability, glare and energy factors. GD as one of the contributions of this dissertation is a faster and more accurate method which can facilitate the application of multi-objective optimization for daylight analysis in the early stage of design.Architectur"
+                    },
+                    "DOI": {
+                        "S": "10.15781/T2DB7W60B"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/211329972.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-09-26T15:35:41"
+                    },
+                    "Authors": {
+                        "S": "Motamedi, Sara"
+                    },
+                    "Publisher": {
+                        "S": "Aquatic Mammals Journal"
+                    },
+                    "Probability": {
+                        "N": "45.7"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-absorb_and/or_filter_solids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-226761713"
+                    },
+                    "Title": {
+                        "S": "Functionalized electrospun fibers for the design of novel hydrophobic and anticorrosive surfaces"
+                    },
+                    "Abstract": {
+                        "S": "In this work, a novel coating was deposited on aluminum alloy samples by using a combination of electrospinning and chemical vapor deposition (CVD-silanization) techniques in order to create a functionalized film with an enhancement of both corrosion resistance and hydrophobicity. The electrospinning technique makes the fabrication of highly crosslinked electrospun fibers possible by the combination of both poly(acrylic acid) and beta-cyclodextrin, respectively, which can be easily functionalized in a further step by using the CVD-silanization process due to the evaporation of a hydrophobic molecule such as 1H,1H,2H,2H-Perflurodecyltriethoxysilane. In addition, the resultant electrospun fibers with a high degree of insolubility have been successfully fabricated and metal oxide nanoparticles (TiO(2)NPs) have been incorporated into the electrospun polymeric solution in order to improve the corrosion protection. The surface morphology has been determined by using light optical microscopy, atomic force microscopy, scanning electron microscopy, and water contact angle (WCA) measurements. The corrosion resistance has been evaluated by using both potentiodynamic polarization and pitting corrosion tests. Finally, the results related to WCA measurements after CVD-silanization corroborate that the surfaces have been successfully functionalized with a hydrophobic behavior in comparison with the electrospinning process, showing a considerable difference in the roughness.This work was funded by the Spanish Economy and Competitiveness Ministry-FEDER Proyecto Retos (TRA2013-48603-C4-1-R) and the Public University (Navarre-PRO-UPNA18 (6107))"
+                    },
+                    "DOI": {
+                        "S": "10.3390/coatings8090300"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/226761713.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Rivero Fuente, Pedro J., Yurrita Silanes, David, Berlanga Labari, Carlos, Palacio, José, Rodríguez Trías, Rafael"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "72.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-absorb_and/or_filter_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-328792428"
+                    },
+                    "Title": {
+                        "S": "Sputtering of electrospun polymer-based nanofibers for biomedical applications: A perspective"
+                    },
+                    "Abstract": {
+                        "S": "Electrospinning has gained wide attention recently in biomedical applications. Electrospun biocompatible scaffolds are well-known for biomedical applications such as drug delivery, wound dressing, and tissue engineering applications. In this review, the synthesis of polymer-based fiber composites using an electrospinning technique is discussed. Formerly, metal particles were then deposited on the surface of electrospun fibers using sputtering technology. Key nanometals for biomedical applications including silver and copper nanoparticles are discussed throughout this review. The formulated scaffolds were found to be suitable candidates for biomedical uses such as antibacterial coatings, surface modification for improving biocompatibility, and tissue engineering. This review briefly mentions the characteristics of the nanostructures while focusing on how nanostructures hold potential for a wide range of biomedical applications.This work was funded by Qatar University, grant number GCC-2017-007 and the publication of this article was funded by the Qatar National Library.Scopu"
+                    },
+                    "DOI": {
+                        "S": "10.3390/nano9010077"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/328792428.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kadavil, Hana, Zagho, Moustafa, Ahmed Elzatahry, Altahtamouni, Talal"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "10.0"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-absorb_and/or_filter_gases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-93752296"
+                    },
+                    "Title": {
+                        "S": "Developing neural networks to investigate relationships between lighting quality and lighting glare indices"
+                    },
+                    "Abstract": {
+                        "S": "The present work compares the ability of the two most used glare indices, the Daylight Glare Probability (DGP) and the International Commission on Illumination (CIE) Glare Index (CGI), using Multiple Correspondence Analysis (MCA) and Artificial Neural Networks (ANN). The research investigates the efficiency of indexes in predictive indoor lighting quality. This study was carried out by analyzing data from a survey administered to ninety students in real design classrooms in the city of Biskra, Algeria. The experiment was conducted using three different lighting indoor conditions: natural and artificial lighting and mixed lighting. The true prediction of the Daylight Glare Probability for the variable Comfortable was 60.60%, and for (CIE) Glare Index the prediction values were equal to 44.60% for the same variable"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.egypro.2017.07.406"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/93752296.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Mohamed Yacine, Saadi, Noureddine, Zemmouri, Piga, Barbara E. A., Morello, Eugenio, Safa, Daich"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "63.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-store_solids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-160050958"
+                    },
+                    "Title": {
+                        "S": "Exploration of Adaptive Origami Shading Concepts through Integrated Dynamic Simulations"
+                    },
+                    "Abstract": {
+                        "S": "This paper presents integrated energy and lighting simulations as a part of wider research focused on the form-finding process of adaptive shading concepts and on the actuation of shading movement using shape memory alloys (SMAs). The use of this new type of microactuator in responsive architectural components presents a challenge because of the limited contraction state of the SMAs. Hence, origami shapes were considered to amplify shading movements thanks to their geometric properties. This study exploited the visual and thermal comfort of a south-oriented office located in Milan, Italy, that was equipped with adaptive origami shading. Two-hundred and ten shapes were considered and the geometry, contraction states, and surface materials were considered as variable properties. The final aim was to explore the potential of adaptive origami shadings in controlling visual and thermal comfort. Daylight illuminance (UDI), daylight glare probability (DGP), and total energy (TE) demand (for cooling, heating, and lighting per year) were used as main metrics for understanding the environmental benefits of the proposed shading devices"
+                    },
+                    "DOI": {
+                        "S": "10.1061/(ASCE)AE.1943-5568.0000323"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/160050958.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018"
+                    },
+                    "Authors": {
+                        "S": "Pesenti, Marco, Masera, Gabriele, Fiorito, Francesco"
+                    },
+                    "Publisher": {
+                        "S": "American Society of Civil Engineers (ASCE)"
+                    },
+                    "Probability": {
+                        "N": "83.1"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-store_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-80168131"
+                    },
+                    "Title": {
+                        "S": "Nanocarbons in electrospun polymeric nanomats for tissue engineering: A review"
+                    },
+                    "Abstract": {
+                        "S": "Electrospinning is a versatile process technology, exploited for the production of fibers with varying diameters, ranging from nano- to micro-scale, particularly useful for a wide range of applications. Among these, tissue engineering is particularly relevant to this technology since electrospun fibers offer topological structure features similar to the native extracellular matrix, thus providing an excellent environment for the growth of cells and tissues. Recently, nanocarbons have been emerging as promising fillers for biopolymeric nanofibrous scaffolds. In fact, they offer interesting physicochemical properties due to their small size, large surface area, high electrical conductivity and ability to interface/interact with the cells/tissues. Nevertheless, their biocompatibility is currently under debate and strictly correlated to their surface characteristics, in terms of chemical composition, hydrophilicity and roughness. Among the several nanofibrous scaffolds prepared by electrospinning, biopolymer/nanocarbons systems exhibit huge potential applications, since they combine the features of the matrix with those determined by the nanocarbons, such as conductivity and improved bioactivity. Furthermore, combining nanocarbons and electrospinning allows designing structures with engineered patterns at both nano- and microscale level. This article presents a comprehensive review of various types of electrospun polymer-nanocarbon currently used for tissue engineering applications. Furthermore, the differences among graphene, carbon nanotubes, nanodiamonds and fullerenes and their effect on the ultimate properties of the polymer-based nanofibrous scaffolds is elucidated and critically reviewed"
+                    },
+                    "DOI": {
+                        "S": "10.3390/polym9020076"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/80168131.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Scaffaro, R., Maio, A., Lopresti, F., Botta, L."
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "43.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-store_gases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-82392687"
+                    },
+                    "Title": {
+                        "S": "Shaping an Origami Shading Device through Visual and Thermal Simulations"
+                    },
+                    "Abstract": {
+                        "S": "This paper presents the first results of a research work aimed at the optimisation of a shading system through parameters of visual comfort – Useful Daylight Illuminance (UDI), Daylight autonomy (DA) and Daylight Glare Probability (DGP) – and Total Energy (TE) consumption (cooling, heating and lighting per year). The goal is to define a shading system for office buildings that delivers visual comfort for users whilst reducing energy consumption for indoor climate control and artificial lighting.As the design of the shading system considers the use of shape memory alloys (SMA) as micro-actuators to accomplish solar adaptation, Origami pattern has been adopted to guarantee a relatively large displacement of the shading system with a small deformation of the SMA wires actuators. Thanks to this shape change, generating overlapped pleats and angle variation and using different materials, it has been possible to provide alterations of the direct light transmission inside the building while maintaining a certain degree of diffuse light component"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.egypro.2015.11.663"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/82392687.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-11-30"
+                    },
+                    "Authors": {
+                        "S": "Pesenti, Marco, Masera, Gabriele, Fiorito, Francesco"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier Ltd."
+                    },
+                    "Probability": {
+                        "N": "36.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-store_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-84251600"
+                    },
+                    "Title": {
+                        "S": "A Novel Photo-bioreactor Application for Microalgae Production as a Shading System in Buildings"
+                    },
+                    "Abstract": {
+                        "S": "The optical performances of plastic bag photo-bioreactors for microalgae production as shading systems for windows were assessed. The micro-algal growth rate and the light transmittance of prototypes were monitored in a photo-incubator and in a real room. Daylight in the room with algae and the energy demand for lighting EDl were then simulated using Daysim and compared to the case of a traditional venetian blind, for two different Italian sites (Turin, Palermo) and 3 orientations (south, west, north). It was found that the algae-system resulted in increased daylight level and glare and in decreased EDl"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.egypro.2017.03.017"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/84251600.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017"
+                    },
+                    "Authors": {
+                        "S": "Pagliolico, Simonetta Lucia, Lo Verso, Valerio Roberto Maria, Bosco, Francesca, Mollea, Chiara, La Forgia, Cinzia"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier"
+                    },
+                    "Probability": {
+                        "N": "38.1"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-distribute_solids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-74233535"
+                    },
+                    "Title": {
+                        "S": "Fibers for hearts: A critical review on electrospinning for cardiac tissue engineering"
+                    },
+                    "Abstract": {
+                        "S": "Cardiac cell therapy holds a real promise for improving heart function and especially of the chronically failing myocardium. Embedding cells into 3D biodegradable scaffolds may better preserve cell survival and enhance cell engraftment after transplantation, consequently improving cardiac cell therapy compared with direct intramyocardial injection of isolated cells. The primary objective of a scaffold used in tissue engineering is the recreation of the natural 3D environment most suitable for an adequate tissue growth. An important aspect of this commitment is to mimic the fibrillar structure of the extracellular matrix, which provides essential guidance for cell organization, survival, and function. Recent advances in nanotechnology have significantly improved our capacities to mimic the extracellular matrix. Among them, electrospinning is well known for being easy to process and cost effective. Consequently, it is becoming increasingly popular for biomedical applications and it is most definitely the cutting edge technique to make scaffolds that mimic the extracellular matrix for industrial applications. Here, the desirable physico-chemical properties of the electrospun scaffolds for cardiac therapy are described, and polymers are categorized to natural and synthetic.Moreover, the methods used for improving functionalities by providing cells with the necessary chemical cues and a more in vivo- like environment are reported"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.actbio.2016.11.014"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/74233535.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-01-15T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kitsara, M, Agbulut, O, Kontziampasis, D, Chen, Y, Menasché, P"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "79.9"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-distribute_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-270202617"
+                    },
+                    "Title": {
+                        "S": "Photobioreactors as a Dynamic Shading System Conceived for an Outdoor Workspace of the State Library of Queensland in Brisbane: Study of Daylighting Performances"
+                    },
+                    "Abstract": {
+                        "S": "In the field of responsive shading systems, the use of photobioreactors (PBRs) containing microalgae seems to be a promising technology. Within this framework, this paper presents a case study where a PBR was specifically conceived as a shading system for an external workspace located on an open terrace of the State Library of Queensland (SLQ) in Brisbane. The proposed shading system makes use of PBRs as translucent screening elements, capable of regulating natural light to provide adequate visual comfort for a multi-purpose workspace, despite exposure of the site to direct sunlight and fluctuating weather conditions. The microalgae (Scenedesmus Obliquus) cultivated within the shading elements contribute to improving the environment by bio-sequestrating CO2 and producing oxygen. They are also a valuable raw material containing bioactive compounds with various applications including nutraceutical products, livestock feed, and biofuel synthesis. In addition, their green pigmentation is visually engaging and allows for the filtration of solar radiation. The paper focuses on analyzing the daylight performance in the outdoor workplace under the PBR shade. The biomass density of the PBR is adjustable across a wide range of light transmittances (10%-80%) to counter the highly variable outdoor conditions. For different Tv values, illuminance values were calculated using the simulation tool DIVA-for-Rhino and then analyzed as both point-in-time illuminance in June, September and December, and through climate-based daylight metrics such as the Daylight Autonomy and the Useful Daylight Illuminance. As a further step, the daylighting performances were compared to two other climates (Turin, Italy, and Dubai, United Arab Emirates), to verify which setting of the PBR may be suitable for different boundary conditions, thus making the system more widely applicable. The results in Brisbane showed that for clear sky conditions, higher levels of biomass saturation are needed (Tv < 20%) to remain in the 300-3000 lx ‘optimal’ illuminance comfort range, with lower concentrations (Tv < 30%) to remain within the 300-6000 lx ‘acceptable’ illuminance comfort range. Differently, in overcast sky conditions, the optimal range of illuminance is easily obtained with reduced levels of biomass saturation (Tv < 80%)"
+                    },
+                    "DOI": {
+                        "S": "10.15627/jd.2019.14"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/270202617.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019"
+                    },
+                    "Authors": {
+                        "S": "Lo Verso, Valerio R. M., Javadi, Matin H. S., Pagliolico, Simonetta, Carbonaro, Corrado, Sassi, Guido"
+                    },
+                    "Publisher": {
+                        "S": "SolarLits"
+                    },
+                    "Probability": {
+                        "N": "87.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-distribute_gases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-372704220"
+                    },
+                    "Title": {
+                        "S": "Antibacterial Porous Electrospun Fibers as Skin Scaffolds for Wound Healing Applications"
+                    },
+                    "Abstract": {
+                        "S": "Electrospun fiber scaffolds have a huge potential for the successful treatment of infected wounds based on their unique properties. Although several studies report novel drug-loaded electrospun fiber-based biomaterials, many of these do not provide information on their interactions with eukaryotic and bacterial cells. The main aim of this study was to develop antibacterial drug-loaded porous biocompatible polycaprolactone (PCL) fiber scaffolds mimicking the native extracellular matrix for wound healing purposes. Mechanical property evaluation and different biorelevant tests were conducted in order to understand the structure-activity relationships and reveal how the surface porosity of fibers and the fiber diameter affect the scaffold interactions with the living bacterial and eukaryotic fibroblast cells. Cell migration and proliferation assays and antibiofilm assays enabled us to enlighten the biocompatibility and safety of fiber scaffolds and their suitability to be used as scaffolds for the treatment of infected wounds. Here, we report that porous PCL microfiber scaffolds obtained using electrospinning at high relative humidity served as the best surfaces for fibroblast attachment and growth compared to the nonporous microfiber or nonporous nanofiber PCL scaffolds. Porous chloramphenicol-loaded microfiber scaffolds were more elastic compared to nonporous scaffolds and had the highest antibiofilm activity. The results indicate that in addition to the fiber diameter and fiber scaffold porosity, the single-fiber surface porosity and its effect on drug release, mechanical properties, cell viability, and antibiofilm activity need to be understood when developing antibacterial biocompatible scaffolds for wound healing applications. We show that pores on single fibers within an electrospun scaffold, in addition to nano- and microscale diameter of the fibers, change the living cell-fiber interactions affecting the antibiofilm efficacy and biocompatibility of the scaffolds for the local treatment of wounds"
+                    },
+                    "DOI": {
+                        "S": "10.1021/acsomega.0c04402"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/372704220.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2020-11-12T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Lanno, G, Ramos, C, Putrinš, M, Preem, L, Kogermann, K, Tenson, T"
+                    },
+                    "Publisher": {
+                        "S": "American Chemical Society (ACS)"
+                    },
+                    "Probability": {
+                        "N": "47.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-distribute_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-286436045"
+                    },
+                    "Title": {
+                        "S": "Physical and Antibacterial Properties of Peppermint Essential Oil Loaded Poly (ε-caprolactone) (PCL) Electrospun Fiber Mats for Wound Healing"
+                    },
+                    "Abstract": {
+                        "S": "The aim of this study was to fabricate and characterize various concentrations of peppermint essential oil (PEP) loaded on poly(ε-caprolactone) (PCL) electrospun fiber mats for healing applications, where PEP was intended to impart antibacterial activity to the fibers. SEM images illustrated that the morphology of all electrospun fiber mats was smooth, uniform, and bead-free. The average fiber diameter was reduced by the addition of PEP from 1.6 ± 0.1 to 1.0 ± 0.2 μm. Functional groups of the fibers were determined by Raman spectroscopy. Gas chromatography-mass spectroscopy (GC-MS) analysis demonstrated the actual PEP content in the samples. In vitro degradation was determined by measuring weight loss and their morphology change, showing that the electrospun fibers slightly degraded by the addition of PEP. The wettability of PCL and PEP loaded electrospun fiber mats was measured by determining contact angle and it was shown that wettability increased with the incorporation of PEP. The antimicrobial activity results revealed that PEP loaded PCL electrospun fiber mats exhibited inhibition against Staphylococcus aureus (gram-positive) and Escherichia coli (gram-negative) bacteria. In addition, an in-vitro cell viability assay using normal human dermal fibroblast (NHDF) cells revealed improved cell viability on PCL, PCLPEP1.5, PCLPEP3, and PCLGEL6 electrospun fiber mats compared to the control (CNT) after 48 h cell culture. Our findings showed for the first time PEP loaded PCL electrospun fiber mats with antibiotic-free antibacterial activity as promising candidates for wound healing applications"
+                    },
+                    "DOI": {
+                        "S": "10.3389/fbioe.2019.00346"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/286436045.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-11-26T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Unalan, Irem, Slavik, Benedikt, Buettner, Andrea, Goldmann, Wolfgang H., Frank, Gerhard, Boccaccini, Aldo R."
+                    },
+                    "Publisher": {
+                        "S": "Frontiers Media SA"
+                    },
+                    "Probability": {
+                        "N": "54.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-expel_solids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-199243411"
+                    },
+                    "Title": {
+                        "S": "Impact of furniture layout on indoor daylighting performance in existing residential buildings in Malaysia"
+                    },
+                    "Abstract": {
+                        "S": "Currently, home-based computing workspaces have developed substantially all over the world, especially in Malaysia. This growing trend attracts computer workers to run a business from their residential units. Hence, visual comfort needs to be considered in addition to thermal comfort for home workers in their residential working rooms. While such rooms are always occupied with furniture, the layout of the furniture may influence the indoor daylighting distribution. Several various furniture layouts can be arranged in a residential working room. However, to have better generalisation, this study focused on the impacts of mostly-used-furniture-layouts (MUFLs) on indoor daylighting performance in residential working rooms. The field measurement was conducted in a typically furnished room under a tropical sky to validate the results of the simulation software under different sky conditions. Then, daylight ratio (DR), as a quantitative daylighting variable, and the illuminance uniformity ratio (IUR), CIE glare index (CGI), and Guth visual comfort probability (GVCP), as qualitative daylighting variables, were analysed through simulation experiments. In conclusion, by changing the furniture layout, daylight uniformity recorded the highest fluctuations in the case room among all variables. While various furniture layouts, in a residential working room in the tropics, may even slightly reduce the extreme indoor daylight quantity, they can worsen the indoor daylight quality compared to an unfurnished space. The paper shows that furniture as an interior design parameter cannot help to improve tropical daylighting performance in a building"
+                    },
+                    "DOI": {
+                        "S": "10.15627/jd.2018.1"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/199243411.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Mousavi, S. M., Khan, T. H., Wah, L. Y."
+                    },
+                    "Publisher": {
+                        "S": "SolarLits"
+                    },
+                    "Probability": {
+                        "N": "78.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-expel_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-30273806"
+                    },
+                    "Title": {
+                        "S": "Optimization of facade design based on the impact of interior obstructions to daylighting"
+                    },
+                    "Abstract": {
+                        "S": "Overcrowding in the perimeter zone is an inevitable issue in residential rooms with limited space. Obstructions, such as furniture and household items, may block the existing windows, and therefore affect interior daylight conditions. A facade design approach is needed that simultaneously takes into account daylighting and the volume of usable space for obstructions in the perimeter zone of such rooms. This study simulates daylight distributions in a typical small residential room with obstructions in front of windows. The simulation consists of two parts. First, the effects on horizontal illuminances caused by different positions and shapes of obstructions are examined under an overcast sky. Second, the maximum usable space volumes for obstructions of 51 optimized facade configurations are calculated in terms of four window-to-wall ratios (WWRs). The results of this study show that optimizing the forms of facade design can increase the usable interior space volume and meet the daylighting requirements of Chinese standards for small residential rooms. Additionally, by using the optimized facade forms, a facade with a WWR value of 50% provides the maximum usable space for obstructions. Based on the above results, this paper presents two matrices that can help architects in selecting the appropriate fenestration methods and confirming the size of usable space and allocation for residents"
+                    },
+                    "DOI": {
+                        "S": "10.1007/s12273-015-0253-4"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/30273806.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-09-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Lu, Y., Wolf, T., Kang, J."
+                    },
+                    "Publisher": {
+                        "S": "Springer Science and Business Media LLC"
+                    },
+                    "Probability": {
+                        "N": "10.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-expel_gases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-234924968"
+                    },
+                    "Title": {
+                        "S": "A Comparative Analysis of the Visual Comfort Performance between a PCM Glazing and a Conventional Selective Double Glazed Unit"
+                    },
+                    "Abstract": {
+                        "S": "The performance of a Double Glazing Unit (DGU) with a Phase Change Material (PCM) layer embedded in the cavity was analyzed in terms of the visual comfort perceived by the occupants. The analysis was carried out through a set of simulations, performed by the Radiance engine managed through Honeybee. As an input for the simulations, the visible transmittance Tv of PCM in solid (diffusing) state was used, based on previous laboratory measurements. The simulations were run for several specific times of the year: The two solstices and the autumn equinox, for different hours during the day. Other variables investigated were the site (Östersund, 63.2° N; Turin, 45.2° N; Abu Dhabi, 24.4° N), the room orientation (south; west), and the sky conditions (clear sky with sun; overcast). For comparative purpose, the simulations were repeated for the same boundary conditions in a room equipped with a selective glazing, with a Tv of 0.5. For each case, the visual comfort perceived by the occupants has been analyzed in terms of Daylight Glare Probability (DGP) in two different points in the room and of “Spatial Useful Illuminance” (percent of work plane points where the illuminance lies in the range 100–3000 lx). The results showed that the glazed package with PCM in most cases admits more daylight into the room, resulting into an increased glare (DGP values), but also in lower Spatial Useful Illuminance values"
+                    },
+                    "DOI": {
+                        "S": "10.3390/su10103579"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/234924968.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018"
+                    },
+                    "Authors": {
+                        "S": "Giovannini, Luigi, Goia, Francesco, Lo Verso, Valerio R. M., Serra, Valentina"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "89.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-detox/purify"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-84251601"
+                    },
+                    "Title": {
+                        "S": "Phase Change Materials in Glazing: Implications on Light Distribution and Visual Comfort. Preliminary Results"
+                    },
+                    "Abstract": {
+                        "S": "The visual comfort concerned with a technology with PCM embedded into a double glazing unit was analyzed, using the Daylight Probability Glare and the ‘Useful Illuminance' (percent of workplane with an illuminance in the range 100-3000 lx). A sample office room was modeled using Radiance, under a clear sky and with the façade facing south. The visible transmittance of PCM was measured in laboratory and used as input in Radiance. The simulations were carried out for the two solstices and the Autumn equinox (four hours per day), for three sites (Östersund, 63.2°N; Turin, 45.2°N; Abu Dhabi, 24.4°N), considering the solid state of the PCM only"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.egypro.2017.03.197"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/84251601.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017"
+                    },
+                    "Authors": {
+                        "S": "Giovannini, Luigi, Goia, Francesco, Lo Verso, Valerio Roberto Maria, Serra, Valentina"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier"
+                    },
+                    "Probability": {
+                        "N": "29.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-change_structural_color"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-148008748"
+                    },
+                    "Title": {
+                        "S": "On advanced daylighting simulations and integrated performance assessment of complex fenestration systems for sunny climates"
+                    },
+                    "Abstract": {
+                        "S": "The inclusion of daylight in buildings represents several benefits: its use not only signifies a reduction in the building energy consumption through the compensation of electric lighting, it also has positive effects in the execution of human activities. Through its spectral composition, it contributes to create a better interior atmosphere for visual comfort, leading to a better performance on working tasks. It also influences biological human cycles, which has an impact on human alertness, mood and well-being. Compared with electric light, its intensity and dynamic variations have a stimulating effect by providing a connection with the exterior environment. However, for buildings located at low latitudes (between 23°N and S), the inclusion of daylight implies the admission of sunrays, which affect the visual comfort and perception of the indoor environment by altering the interior luminance distribution increasing the risk of glare. An additional unfavourable effect is the increment of the interior thermal loads which represent a risk of overheating for the occupants. In those regions, common practices such as: the reduction of the window size, the use of tinted glazing and solar protection are usually applied to buildings in the search of overcoming such problems. However, the use of such strategies also implies a reduction of the admission of daylight inducing the use of electric light, which is incongruent in countries with large amounts of this natural resource. The use of Complex Fenestration Systems (CFS) may represent a solution given their characteristics: daylight redirection and direct solar rays protection. The latter would contribute to control the admission of solar gains while maintaining a good visual interior environment. However, the appropriate selection of CFS requires a careful evaluation of their features and performance regarding their suitability to the building location. This thesis explores the potentiality of using CFS to improve the interior daylight distribution in buildings located at low latitudes while maintaining a satisfactory visual and thermal interior environment for the occupants. In order to do this, the existing daylight situation of two office rooms located in the central-north of México (Zacatecas 22° 783' N., 102° 583' W, Altitude: 2543m) were monitored from 2011 to 2013. Illuminance and luminance were measured on periods of the year that are crucial for the interior luminous environment (summer and winter solstices together with spring equinox), in order to characterize the existing daylighting situation and to study the dispersion of results obtained using a virtual model which reproduces the features of both offices. The performance of five CFS was then tested using computer simulations in order to assess their suitability to the local sky conditions. For this, three main factors were taken into account: the improvement of the interior daylight distribution, the risk of glare and overheating. The effects of the CFS in a room regarding such conditions were simulated using RADIANCE and Energy Plus using BTDF data (Bidirectional Transmission Distribution Function that characterizes the CFS’s lighting transmission properties) assessed by the use of a gonio-photometer. The assessment was performed first during the winter and summer solstices as well as spring equinox and secondly then on annual basis. The latter was done in order to take into account the daylight variation characteristics of two locations with prevailing clear sky conditions. The results obtained allow determining the CFS that better contributes to a better interior luminous environment in each building without compromising the thermal and visual comfort of the occupants"
+                    },
+                    "DOI": {
+                        "S": "10.5075/epfl-thesis-6425"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/148008748.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2014-11-26T14:07:41"
+                    },
+                    "Authors": {
+                        "S": "Basurto Dávila, Chantal"
+                    },
+                    "Publisher": {
+                        "S": "Lausanne, EPFL"
+                    },
+                    "Probability": {
+                        "N": "49.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-change_chemical_color/pigmentation"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-162668018"
+                    },
+                    "Title": {
+                        "S": "A review of thermal and optical characterisation of complex window systems and their building performance prediction"
+                    },
+                    "Abstract": {
+                        "S": "Window systems play a key role in establishing both the thermal and luminous environments within buildings, as well as the consequent energy required to maintain these for the comfort of their occupants. Various strategies have been employed to improve the thermal and optical performance of window systems. Some of these approaches result in products with relatively complex structures. Thus, it becomes difficult to characterise their optical and thermal properties for use in building performance prediction. This review discusses the experimental and numerical methods used to predict the thermal and optical behaviour of complex window systems. Following a discussion of thermal characterisation methods available in the literature that include experimental test methods, theoretical calculation methods and Computational Fluid Dynamic methods, sophisticated optical methods, such as use of Bidirectional Scatter Distribution Functions (BSDF) to optically characterise complex window systems, are introduced. The application of BSDF allows advanced daylight assessment metrics along with daylight evaluation tools to be used to realise dynamic annual prediction of the luminous environment. Finally, this paper reviews methods that permit the prediction of the combined thermal, daylight and energy behaviour of buildings that make use of complex window systems"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.apenergy.2018.03.144"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/162668018.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-07-15T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Sun, Yanyi, Wu, Yupeng, Wilson, Robin"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "78.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-camouflage/mimicry"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-266987220"
+                    },
+                    "Title": {
+                        "S": "Thermal performance of semitransparent CdTe BIPV window at temperate climate"
+                    },
+                    "Abstract": {
+                        "S": "Semi-transparent photovoltaic (PV) technology is attractive for building-integrated photovoltaics (BIPV) due to its ability to lower the admitted solar heat gain, to control the penetrating daylight and to generate onsite benevolent direct current power. In this work, semi-transparent cadmium telluride (CdTe) based BIPV as window was experimentally characterized using outdoor test cell in temperate UK climate. Spectral measurement confirmed its 25% visible transmission and 12% solar transmission. Thermal transmission and solar heat gain coefficient were calculated from measured thermal data. Overall heat transfer coefficient (U-value) of 2.7 W/m2 K was found for outdoor and indoor characterization of CdTe BIPV window. A comparison with single glazed window has been produced emphasis its feasibility for Facade buildings"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.solener.2019.11.084"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/266987220.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-12-03T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Alrashidi, Hameed, Ghosh, Aritra, Issa, Walid, Sellami, Nazmi, Mallick, Tapas K, Sundaram, Senthilarasu"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "38.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-change_size/shape"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-195451613"
+                    },
+                    "Title": {
+                        "S": "Performance comparison of BAPV and BIPV systems with c-Si, CIS and CdTe photovoltaic technologies under tropical weather conditions"
+                    },
+                    "Abstract": {
+                        "S": "This paper compares the performance of photovoltaics (PV) for building applications in two configurations: building applied photovoltaics (BAPV) and building integrated photovoltaics (BIPV). A 32.7 kWp PV capacity is proposed for a roof building and its performance in BAPV and BIPV configurations with three PV technologies namely crystalline (c-Si), CIS, and CdTe is analyzed. The standard methodology with performance parameters such as energy yield (EY), yield factor (YF), capacity utilization factor (CUF), performance ratio (PR), and losses is used. It is found that the EY, YF, and year to year energy production variability of BIPV and BAPV technologies varies from 43,700–46,800 kW h, 1336.39–1431.19 kW h/kWp, and 1910–2100 kW h respectively. The CUF and PR vary from 15.25–16.33%, and 72.23–77.36% respectively. Irrespective of PV configuration and technology, observed losses due to the angle of incidence, spectral effects, effects of change in irradianceand module temperatures are observed to be − 2.8%, − 1 to − 5%, and − 7.4 to − 13.6% respectively. Total system losses range from −22.6 to 27.8% causing a fair amount of loss in the PV efficiency. Among, three PV technologies, CdTe is observed to perform better than CIS, and c-Si"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.csite.2018.100374"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/195451613.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Manoj Kumar, Nallapaneni, Sudhakar, K., Mahendran, Samykano"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "12.3"
+                    }
+                }
+            }
+        }
+    ]
+}

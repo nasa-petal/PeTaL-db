@@ -1,0 +1,904 @@
+{
+    "petal-stack-myDynamoDBTable-LFB4NGLY82L9": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-prevent_fatigue"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-288471064"
+                    },
+                    "Title": {
+                        "S": "Employing biomimicry in Urban metamorphosis seeking for sustainability: Case studies"
+                    },
+                    "Abstract": {
+                        "S": "Objective The current study has aimed to develop the framework of biomimicry involvement in urban metamorphosis for sustainability. This research has engaged four objectives to achieve the aim. Objective one is to explore the rudiment interaction between human and nature through interrogating history, nature's design. Objective two is to excavate the biomimicry in emulating nature's genius. Objective three is to investigate the association between biomimicry and sustainable development, focusing on architectural features. Objective four is to develop the framework based on the biomimicry rules for human evolution and survival in the natural environment. Methodology To achieve objective one, the grounded theory method was applied for scrutinizing human development and human awareness about their natural environment. To achieve objective two, an evidence study was conducted on the biomimicry emulation of nature's genius. To achieve objective three, a critical literature review was conducted using content analysis method to identify the biomimicry focus and architectural features. Through matrix development method, the focus and architectural features were tabulated. To achieve objective four, the waterfall framework design method and case studies were conducted to plot this framework. Conclusions This research gained a better understanding of biomimicry-based on theories of the evolution of organisms, including humans in the urban context, as measurement against sustainable benchmarks. It followed the paths of ecological researcher and urban philosophers, such as Freya Mathews and Moore, by re-versioned the human relationship with nature and the surrounding environment and observing human actions and development about life principles.In particular, the research found out that biomimicry is an approach that recently becomes the focus of many researchers of different disciplines seeking a solution for human problems. The biomimicry has been merged with sustainable architecture design through specific features; included, form and function, geometry, metaphor, movement, material, pattern, proportion, sustainability, and technology. Furthermore, biomimicry is an approach that involves nature as a model, mentor, and measure for inspiration, which converges law, principles, and strategies in the context of biomimicry-based on human evolution. Originality The findings allowed architects and urban designers to enhance people's awareness of their natural environment and provide a better perception of biomimicry in the application of human world, whether founded because of base instinct or a strategic view derived from the life's principles.The authors would like to thank the Ministry of Science, Technology, and Innovation (MOSTI) for funding this research via the grant number PY/2015/04995.Scopu"
+                    },
+                    "DOI": {
+                        "S": "10.5821/ace.14.40.6460"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/288471064.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Ferwati M.S., Alsuwaidi M., Shafaghat A., Keyvanfar A."
+                    },
+                    "Publisher": {
+                        "S": "Iniciativa Digital Politecnica"
+                    },
+                    "Probability": {
+                        "N": "96.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-prevent_fracture/rupture"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-33611318"
+                    },
+                    "Title": {
+                        "S": "Superamphiphobic surfaces"
+                    },
+                    "Abstract": {
+                        "S": "Superamphiphobicity is an effect where surface roughness and surface chemistry combine to generate surfaces which are both superhydrophobic and superoleophobic, i.e., contact angles (yCA) greater than 1501 along with low contact angle hysteresis (CAH) not only towards probing water but also for low-surface- tension 'oils'. In this review, we summarize the research on superamphiphobic surfaces, including the characterization of superamphiphobicity, different techniques towards the fabrication of surface roughness and surface modification with low-surface-energy materials as well as their functional applications"
+                    },
+                    "DOI": {
+                        "S": "10.1039/c3cs60415b"
+                    },
+                    "DownloadURL": {
+                        "S": "http://www.zora.uzh.ch/106233/7/Superamphiphobic%20surfaces_%20Accepted%20Manuscript.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2014"
+                    },
+                    "Authors": {
+                        "S": "Chu, Zonglin, Seeger, Stefan"
+                    },
+                    "Publisher": {
+                        "S": "RSC Publishing"
+                    },
+                    "Probability": {
+                        "N": "89.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-control_erosion"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-30273741"
+                    },
+                    "Title": {
+                        "S": "The Art of Imitating Life: The Potential Contribution of Biomimicry in Shaping the Future of Our Cities"
+                    },
+                    "Abstract": {
+                        "S": "This paper discusses the significance of biomimicry as a design methodology within the context of urban infrastructure planning and design. The application of biomimicry principles to urban infrastructure problems is examined by analysing case studies that used biomimicry inspired designs rather than ‘mainstream’ infrastructure approaches. Biomimicry is presented as an ontology of the city that fosters innovative and collaborative urban infrastructure design and management, supplements dominant future city paradigms like the ‘smart’ city, and is worthy of further, detailed study. Keywords: Biomimicry; Sustainable urban infrastructure; Transdisciplinarity; Design methodology; Ontology; Innovation; Integrated Infrastructur"
+                    },
+                    "DOI": {
+                        "S": "10.1177/0265813515611417"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/30273741.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Taylor Buck, N."
+                    },
+                    "Publisher": {
+                        "S": "SAGE Publications"
+                    },
+                    "Probability": {
+                        "N": "83.1"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-manage_shear"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-82641952"
+                    },
+                    "Title": {
+                        "S": "First Steps to Develop Biomimicry Ideas"
+                    },
+                    "Abstract": {
+                        "S": "There is urgent need for new building insulation materials or building thermal envelope concepts while it is often economically not feasible to achieve nearly zero energy level for buildings in northern climate.The purpose of this study is to research and create solution for applicable facade system or wall construction itself that has dynamic optical and dynamic properties that will adapt to external weather conditions and will be able to react to different outdoor and indoor temperature and lighting conditions using biomimetic principles avoiding the necessity for additional energy input. The goal of such solution is to gather the energy of Sun in summer for heating in winter"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.egypro.2015.06.044"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/82641952.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-06-30"
+                    },
+                    "Authors": {
+                        "S": "Vanaga, Ruta, Blumberga, Andra"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier Ltd."
+                    },
+                    "Probability": {
+                        "N": "92.1"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-manage_stress/strain"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-153211117"
+                    },
+                    "Title": {
+                        "S": "Biomimetic Architecture in Building Envelope Maintenance  (A Literature)"
+                    },
+                    "Abstract": {
+                        "S": "The study of biomimetic architecture on building envelope is the main  structure of this research. The concept is believed more sustainable and efficient for  energy saving, operating cost consumption, waste recycle and design renewal in the  future. The inspiration from the nature developed the intention on this study to explore on  what and how this concept to overcome the problems through design. Biomimicry does  catch the attention of human to study more on the system and function of its nature  course. The designers are not exception influenced by this concept when the form, shape,  texture and colour inspired them in their design. The domination of building form will  affect the building envelope as the skin of the structure. A clear impact on building failure  is begun with building envelope appearance without a proper maintenance. The faults in  building design place a heavy burden on the building for the rest of its operational life and  there is no compensation for it. In such situations, the responsibility falls on the shoulders  of the designer"
+                    },
+                    "DOI": {
+                        "S": "10.1051/e3sconf/20140301007"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/153211117.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2014-08-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Agus Salim, N.A., Mydin, M.A.O, Md. Ulang, N. H."
+                    },
+                    "Publisher": {
+                        "S": "EDP Sciences"
+                    },
+                    "Probability": {
+                        "N": "76.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-manage_impact"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-237430836"
+                    },
+                    "Title": {
+                        "S": "Exploring design principles of biological and living building envelopes: what can we learn from plant cell walls?"
+                    },
+                    "Abstract": {
+                        "S": "A number of innovations in building envelope technologies have been implemented recently, for example, to improve insulation and air tightness to reduce energy consumption. However, growing concern over the embodied energy and carbon as well as resource depletion, is beginning to impact on the design and implementation of existing and novel building envelope technologies. Biomimicry is proposed as one approach to create buildings which are resilient to a changing climate, embedded in wider ecological systems, energy efficient and waste free. However, the diversity of form and function in biological organisms and therefore potential applications for biomimicry, requires a holistic approach spanning biology, materials science and architecture. It is considered timely to re-examine opportunities to learn from nature, including in the light of recent understanding of how plant form and function are determined at the cellular levels. In this article, we call for a systemic approach for the development of innovative biological and living building envelopes. Plant cell walls are compared to building envelopes. Key features of cell walls with the potential to inform the development of design principles of biological and living building envelopes are identified and discussed"
+                    },
+                    "DOI": {
+                        "S": "10.1080/17508975.2017.1394808"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/237430836.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Xing, Y, Jones, P, Bosch, M, Donnison, I, Spear, M, Ormondroyd, G"
+                    },
+                    "Publisher": {
+                        "S": "Informa UK Limited"
+                    },
+                    "Probability": {
+                        "N": "33.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-manage_drag/turbulence"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-334945781"
+                    },
+                    "Title": {
+                        "S": "Sprayable Thin and Robust Carbon Nanofiber Composite Coating for Extreme: Jumping Dropwise Condensation Performance"
+                    },
+                    "Abstract": {
+                        "S": "Condensation of water on metallic surfaces is critical for multiple energy conversion processes. Enhancement in condensation heat transfer efficiency often requires surface texturing and hydrophobicity, usually achieved through coatings, to maintain dropwise condensation. However, such surface treatments face conflicting challenges of minimal coating thermal resistance, enhanced coating durability and scalable fabrication. Here we present a thin (~ 2 {\\mu}m) polytetrafluoroethylene - carbon nanofiber nanocomposite coating which meets these challenges and sustains coalescence-induced jumping droplet condensation for extended periods under highly demanding condensation conditions. Coating durability is achieved through improved substrate adhesion by depositing a sub-micron thick aluminum primer layer. Carbon nanofibers in a polytetrafluoroethylene matrix increase coating thermal conductivity and promote spontaneous surface nano-texturing to achieve superhydrophobicity for condensate microdroplets. The coating material can be deposited through direct spraying, ensuring economical scalability and versatility for a wide range of substrates. We know of no other coating for metallic surfaces that is able to sustain jumping dropwise condensation under shear of steam at 111 degC flowing at ~ 3 m s-1 over the surface for 10 hours and dropwise condensation for an additional 50 hours. Up to ~ 900% improvement in condensation heat transfer coefficient is achieved compared to conventional filmwise condensation"
+                    },
+                    "DOI": {
+                        "S": "10.1002/admi.202001176"
+                    },
+                    "DownloadURL": {
+                        "S": "http://arxiv.org/abs/2010.02201"
+                    },
+                    "DatePublished": {
+                        "S": "2020-10-05T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Donati, Matteo, Lam, Cheuk Wing Edmond, Milionis, Athanasios, Sharma, Chander Shekhar, Tripathy, Abinash, Zendeli, Armend, Poulikakos, Dimos"
+                    },
+                    "Publisher": {
+                        "S": "Wiley"
+                    },
+                    "Probability": {
+                        "N": "99.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-manage_wear"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-153570195"
+                    },
+                    "Title": {
+                        "S": "Optimizing the thermal performance of building envelopes for energy saving in underground office buildings in various climates of China"
+                    },
+                    "Abstract": {
+                        "S": "This article investigates the influence of the thermal performance of building envelopes on annual energy consumption in a ground-buried office building by means of the dynamic building energy simulation, aiming at offering reasonable guidelines for the energy efficient design of envelopes for underground office buildings in China. In this study, the accuracy of dealing with the thermal process for underground buildings by using the Designer's Energy Simulation Tool (DeST) is validated by measured data. The analyzed results show that the annual energy consumptions for this type of buildings vary significantly, and it is based on the value of the overall heat transfer coefficient (U-value) of the envelopes. Thus, it is necessary to optimize the U-value for underground buildings located in various climatic zones in China. With respect to the roof, an improvement in its thermal performance is significantly beneficial to the underground office building in terms of annual energy demand. With respect to the external walls, the optimized U-values completely change with the distribution of the climate zones. The recommended optimal values for various climate zones of China are also specified as design references for public office building in underground in terms of the building energy efficiency"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.tust.2018.03.019"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/153570195.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-07-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Shi, Luyang, Zhang, Huibo, Li, Zongxin, Luo, Zhiwen, Liu, Jing"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "75.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-regulate_reproduction_or_growth"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-189720465"
+                    },
+                    "Title": {
+                        "S": "Hospital wards and modular construction: Summertime overheating and energy efficiency"
+                    },
+                    "Abstract": {
+                        "S": "The UK National Health Service (NHS) is continually under pressure to provide more bed spaces and to do this within a tight budget. Therefore, NHS Trusts may turn to modular buildings, which promise faster construction and low energy demands helping the NHS meet its stringent energy targets. However, there is growing evidence that thermally lightweight, well insulated and naturally ventilated dwellings are at risk of overheating during warm UK summers.  This paper examines the energy demands and internal temperatures in two 16-bed hospital wards built in 2008?at Bradford Royal Infirmary in northern England using modular fast track methods. The two-storey building used ceiling-mounted radiant panels and a mix of natural and mechanical ventilation with heat recovery to condition patients' rooms. Monitoring showed that the annual energy demand was 289?kWh/m2 ±16%, which is below the NHS guidelines for new hospital buildings.  It was observed that the criterion given in Department of Health Technical Memorandum HTM03-01 can lead to the incorrect diagnosis of overheating risk in existing buildings. Assessment using other static and adaptive overheating criteria showed that patient rooms and the nurses' station overheated in summer. To maintain patient safety, temporary air conditioning units had to be installed during the warmest weather.  It is concluded that thermally lightweight, well insulated, naturally ventilated hospital wards can be low-energy but are at risk of overheating even in relatively cool UK summer conditions and that this needs to be addressed before such buildings can be recommended for wider adoption"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.buildenv.2018.05.041"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/189720465.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-05-19T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Fifield, L.J, Lomas, K.J., Giridharan, R., Allinson, D."
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "10.6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-self-replicate"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-222840430"
+                    },
+                    "Title": {
+                        "S": "Comparative study of corrosion performance of HVOF-sprayed coatings produced using conventional and suspension WC-Co feedstock."
+                    },
+                    "Abstract": {
+                        "S": "Corrosion properties of nanostructured coatings deposited by suspension high-velocity oxy-fuel (S-HVOF) via an aqueous suspension of milled WC-Co powder were compared with conventional HVOF-sprayed coatings. Microstructural evaluations of these coatings included x-ray diffraction and scanning electron microscopy equipped with an energy-dispersive x-ray spectroscopy. The corrosion performance of AISI440C stainless steel substrate and the coatings was evaluated in a 3.5 wt.% NaCl aqueous solution at ~25 °C. The electrochemical properties of the samples were assessed experimentally, employing potentiodynamic polarization and electrochemical impedance spectroscopy. The potentiodynamic polarization results indicated that coatings produced by S-HVOF technique show lower corrosion resistance compared with the coatings produced by HVOF-JK (HVOF Jet Kote) and HVOF-JP (HVOF JP5000) techniques. Results are discussed in terms of corrosion mechanism, Bode and Nyquist plots, as well as equivalent circuit models of the coating–substrate system"
+                    },
+                    "DOI": {
+                        "S": "10.1007/s11666-018-0775-2"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/222840430.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-10-30T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Ahmed, Rehan, Vourlias, G., Algoburi, A., Vogiatzis, C., Chaliampalias, D., Skolianos, S., Berger, Lutz-Michael, Paul, Shiladitya, Faisal, Nadimul Haque, Toma, Filofteia-Laura, Al-Anazi, Nayef M, Goosen, Mattheus F.A."
+                    },
+                    "Publisher": {
+                        "S": "Springer Science and Business Media LLC"
+                    },
+                    "Probability": {
+                        "N": "67.7"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-coordinate_by_self-organization"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-228130926"
+                    },
+                    "Title": {
+                        "S": "Assessment of overheating risk in gynaecology scanning rooms during near-heatwave conditions: a case study of the Royal Berkshire Hospital in the UK"
+                    },
+                    "Abstract": {
+                        "S": "Hospital buildings in the UK are at particular risk to rising summer temperatures associated with climate change. Balancing the thermal needs of patients, staff, and visitors is a challenging, complex endeavour. A case study of the ultrasound area of the Royal Berkshire Hospital’s Maternity and Gynaecology building is presented, where temperatures were measured for 35 days in waiting areas, staff offices, and ultrasound scanning rooms, aiming to assess the overheating risk posed to occupants. Local external temperature measurements were used for comparison whereby determining the indoor-outdoor environmental connection. Results show that most rooms had already breached standard overheating thresholds within the study period. Anthropogenic and waste heat from equipment has a noticeable effect on indoor temperatures. Local air-conditioning helped reduce the peaks in temperature seen between 14:00 and 17:00 for similar scanning rooms but is in contradiction to the National Health Service’s sustainability plans. Several low-level solutions such as improved signage, access to water, and the allocation of vulnerable patients to morning clinics are suggested. Barriers to solutions are also discussed and the requirement of sufficient maintenance plans for cooling equipment is empathised. These solutions are likely to be applicable to other hospital buildings experiencing similar conditions"
+                    },
+                    "DOI": {
+                        "S": "10.3390/ijerph16183347"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/228130926.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-09-11T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Gough, Hannah, Faulknall-Mills, Samuel, King, Marco-Felipe, Luo, Zhiwen, Royal Berkshire Hospital"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "78.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-cooperate_within_or_between_species"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-82596983"
+                    },
+                    "Title": {
+                        "S": "Measured Indoor Temperatures, Thermal Comfort and Overheating Risk: Post-occupancy Evaluation of Low Energy Houses in the UK"
+                    },
+                    "Abstract": {
+                        "S": "There is growing concern in Western Europe that higher insulation and air tightness of residential buildings leads to increased overheating risk. This paper discusses temperature monitoring from identical houses in the Southwest of the UK that were built to low energy standards (Code for Sustainable Homes Level 5). The temperature data were analysed using both established static overheating criteria (CIBSE Guide A) and an adaptive thermal comfort standard (BSEN15251). The houses can be considered uncomfortably warm during summer and are at risk of overheating. The study suggests that occupant behaviour plays an important role in reducing or increasing internal temperatures"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.egypro.2016.06.049"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/82596983.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2016-06-30"
+                    },
+                    "Authors": {
+                        "S": "Jones, Rory V., Goodhew, Steve, de Wilde, Pieter"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier Ltd."
+                    },
+                    "Probability": {
+                        "N": "11.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-compete_within_or_between_species"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-199376438"
+                    },
+                    "Title": {
+                        "S": "Corrosion Initiation and Propagation on Carburized Martensitic Stainless Steel Surfaces Studied via Advanced Scanning Probe Microscopy"
+                    },
+                    "Abstract": {
+                        "S": "Historically, high carbon steels have been used in mechanical applications because their high surface hardness contributes to excellent wear performance. However, in aggressive environments, current bearing steels exhibit insufficient corrosion resistance. Martensitic stainless steels are attractive for bearing applications due to their high corrosion resistance and ability to be surface hardened via carburizing heat treatments. Here three different carburizing heat treatments were applied to UNS S42670: a high-temperature temper (HTT), a low-temperature temper (LTT), and carbo-nitriding (CN). Magnetic force microscopy showed differences in magnetic domains between the matrix and carbides, while scanning Kelvin probe force microscopy (SKPFM) revealed a 90–200 mV Volta potential difference between the two phases. Corrosion progression was monitored on the nanoscale via SKPFM and in situ atomic force microscopy (AFM), revealing different corrosion modes among heat treatments that predicted bulk corrosion behavior in electrochemical testing. HTT outperforms LTT and CN in wear testing and thus is recommended for non-corrosive aerospace applications, whereas CN is recommended for corrosion-prone applications as it exhibits exceptional corrosion resistance. The results reported here support the use of scanning probe microscopy for predicting bulk corrosion behavior by measuring nanoscale surface differences in properties between carbides and the surrounding matrix"
+                    },
+                    "DOI": {
+                        "S": "10.3390/ma12060940"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/199376438.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-03-01T08:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kvryan, Armen, Efaw, Corey M., Higginbotham, Kari A., Maryon, Olivia O., Davis, Paul H., Graugnard, Elton, Hurley, Michael F."
+                    },
+                    "Publisher": {
+                        "S": "IUScholarWorks"
+                    },
+                    "Probability": {
+                        "N": "55.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-manage_environmental_disturbance_in_a_community"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-199375836"
+                    },
+                    "Title": {
+                        "S": "Improving the Relative Calculations of Volta Potential Differences Acquired from Scanning Kelvin Probe Force Microscopy (SKPFM) from Comparing an Inert Material to First-Principle Calculations"
+                    },
+                    "Abstract": {
+                        "S": "An improved relative scaling of Volta potential differences (VPD) acquired from scanning Kelvin probe force microscopy (SKPFM) was developed by quantifying the probe work function. In corrosion studies, SKPFM has been used to identify local nobility of complex metallic systems and provide theoretical corrosion initiation sites. However, large variability in measured VPD values for metallic phases has led to controversy in their interpretation. Tracking changes of the probe work function has been shown to decrease the variability seen in SKPFM results. To quantify the work function of SKPFM probes, the measured VPD of an inert gold standard was compared to the work function theoretically calculated by density functional theory (DFT) first-principles. For proof of concept, a stainless steel sample joined by a Cu-Ag-Ti brazing material was characterized by SKPFM with three different types of probes"
+                    },
+                    "DOI": {
+                        "S": "10.1149/08513.0701ecst"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/199375836.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-01-01T08:00:00"
+                    },
+                    "Authors": {
+                        "S": "Efaw, C. M., da Silva, T., Davis, P. H., Li, L., Graugnard, E., Hurley, M."
+                    },
+                    "Publisher": {
+                        "S": "IUScholarWorks"
+                    },
+                    "Probability": {
+                        "N": "86.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-manage_populations/pests/diseases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-82391874"
+                    },
+                    "Title": {
+                        "S": "SKPFM measured Volta potential correlated with strain localisation in microstructure to understand corrosion susceptibility of cold-rolled grade 2205 duplex stainless steel"
+                    },
+                    "Abstract": {
+                        "S": "AbstractScanning Kelvin probe force microscopy (SKPFM) of annealed and cold-rolled grade 2205 duplex stainless steel has been correlated with microstructure analysis using electron back-scattered diffraction (EBSD). In annealed microstructure Volta potential differences indicated micro-galvanic coupling between ferrite and austenite reasoning selective dissolution of ferrite. The introduction of cold work reduced the difference between both phases, but the development of local extremes in Volta potential was observed. Microstructure analysis revealed the presence of larger misorientation concentrations at these sites, which can explain the changes in observed corrosion behaviour, from selective dissolution in the annealed condition to localised corrosion attack after cold-rolling"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.corsci.2015.06.035"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/82391874.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-10-31"
+                    },
+                    "Authors": {
+                        "S": "Örnek, C., Engelberg, D.L."
+                    },
+                    "Publisher": {
+                        "S": "Elsevier Ltd."
+                    },
+                    "Probability": {
+                        "N": "41.1"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-maintain_biodiversity"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-61763438"
+                    },
+                    "Title": {
+                        "S": "Microgalvanic Corrosion Behavior of Cu-Ag Active Braze Alloys Investigated with SKPFM"
+                    },
+                    "Abstract": {
+                        "S": "The nature of microgalvanic couple driven corrosion of brazed joints was investigated. 316L stainless steel samples were joined using Cu-Ag-Ti and Cu-Ag-In-Ti braze alloys. Phase and elemental composition across each braze and parent metal interface was characterized and scanning Kelvin probe force microscopy (SKPFM) was used to map the Volta potential differences. Co-localization of SKPFM with Energy Dispersive Spectroscopy (EDS) measurements enabled spatially resolved correlation of potential differences with composition and subsequent galvanic corrosion behavior. Following exposure to the aggressive solution, corrosion damage morphology was characterized to determine the mode of attack and likely initiation areas. When exposed to 0.6 M NaCl, corrosion occurred at the braze-316L interface preceded by preferential dissolution of the Cu-rich phase within the braze alloy. Braze corrosion was driven by galvanic couples between the braze alloys and stainless steel as well as between different phases within the braze microstructure. Microgalvanic corrosion between phases of the braze alloys was investigated via SKPFM to determine how corrosion of the brazed joints developed"
+                    },
+                    "DOI": {
+                        "S": "10.3390/met6040091"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/61763438.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2016-04-01T07:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kvryan, Armen, Livingston, Kari, Efaw, Corey M., Knori, Kyle, Jaques, Brian J., Davis, Paul H., Butt, Darryl P., Hurley, Michael F."
+                    },
+                    "Publisher": {
+                        "S": "IUScholarWorks"
+                    },
+                    "Probability": {
+                        "N": "67.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-chemically_assemble_inorganic_compounds"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-286353103"
+                    },
+                    "Title": {
+                        "S": "The significance of occupancy profiles in determining post retrofit indoor thermal comfort, overheating risk and building energy performance"
+                    },
+                    "Abstract": {
+                        "S": "Recently, retrofit of tower blocks has gained momentum particularly in the UK social housing sector due to the increasing rate of fuel poverty coupled with deteriorating indoor living conditions. However, the process of making improvements to the thermal performance of building envelopes can significantly impact on occupants’ thermal comfort, increasing overheating risks with the changing climate and associated heat waves. The first phase of the study evaluated the building energy performance of a 1960s social housing tower block prototype in London, pre-retrofit, where the building simulation model was created and calibrated with monitored indoor data and occupants’ interviews. The second research phase, the subject of this paper, uses the model to further investigate the impact of improved thermal insulation of the building envelope, based on U-values prescribed by the UK Building Regulations (Part L1B), on the potential risk of overheating. The study investigates the impact of retrofitting on occupants’ thermal comfort and building energy performance in the current and future climate scenarios (2030, 2050 and 2080). Results confirm that improving the U-value of external walls will significantly reduce the heating energy use by 70% under future climate scenarios while the Tₒ increases by 15-17% with U-value of 0.5 W/m²K and 0.3 W/m²K in comparison to the base case. The overall results indicate that the different occupancy patterns adopted in the simulation model have a significant impact on the predicted duration of overheating which will, in turn, have an impact on determining appropriate retrofit strategies to reduce overheating risks"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.buildenv.2020.106676"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/286353103.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2020-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Elsharkawy, H., Zahiri, S., Elsharkawy, H., Zahiri, S."
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "76.2"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-chemically_assemble_organic_compounds"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-145317240"
+                    },
+                    "Title": {
+                        "S": "Low energy housing retrofit in North England: Overheating risks and possible mitigation strategies"
+                    },
+                    "Abstract": {
+                        "S": "In the drive to reduce space-heating demand and associated CO2 emissions as well as tackle fuel poverty, dwelling overheating and summer-time occupant thermal discomfort might be the unintended consequences of low-energy building retrofits. This paper presents the findings of a steady-state modelled low energy retrofit dwelling in northern England and its potential current and future climate overheating risks using UK Climate Projections 2009 (UKCP09) scenarios (2050 and 2080 High Emission Scenarios). Predictive findings highlight that retrofitting to low energy standards increases overheating risk over time, unless passive prevention measures are included in the retrofit design. In addition, the steady-state nature of the model might not fully capture the occupants’ exposure to actual future overheating risks. Among the most effective individual passive overheating mitigation strategies are temporary internal shading, permanent external shading, and night-time ventilation. Most effective is a combination of these adaptation measures, so that predictive overheating is minimised in a future changing climate, reducing the uptake of active cooling in retrofitted dwellings. Practical applications: Much research focuses on building overheating risks in the warmer South-east of England. However, this paper highlights how dwelling retrofit in north England (Sheffield) also can lead to increased dwelling overheating risk, unless passive design measures are included in the retrofit design. Among the most effective individual passive overheating mitigation strategies are solar shading devices and increased night-time ventilation, though ideally different measures are combined. Using future climate scenarios highlights that retrofits designed today might not be able to provide occupant thermal comfort in a future warming world"
+                    },
+                    "DOI": {
+                        "S": "10.1177/0143624418754386"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/145317240.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-03-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Ibrahim, A., Pelsmakers, S."
+                    },
+                    "Publisher": {
+                        "S": "SAGE Publications"
+                    },
+                    "Probability": {
+                        "N": "34.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-self-assemble"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-232593536"
+                    },
+                    "Title": {
+                        "S": "Research and Development of Powder Brazing Filler Metals for Diamond Tools: A Review"
+                    },
+                    "Abstract": {
+                        "S": "Powder brazing filler metals (PBFMs) feature a number of comparative advantages. Among others, these include a low energy consumption, an accurate dosage, a good brazeability, a short production time, and a high production efficiency. These filler metals have been used in the aerospace, automobile, and electric appliances industries. The PBFMs are especially suitable for diamond tools bonding, which involves complex workpiece shapes and requires accurate dosage. The recent research of PBFMs for diamond tools is reviewed in this paper. The current applications are discussed. The CuSnTi and Ni-Cr-based PBFMs have been the two commonly used monolayer PBFMs. Thus, the bonding mechanism at the interface between both the monolayer PBFMs and a diamond tool are summarized first. The ways to improve the performance of the monolayer PBFMs for diamond tools are analyzed. Next, a research of PBFMs for impregnated diamond tools is reviewed. The technical problems that urgently need solutions are discussed. Finally, the challenges and opportunities involved with the PBFMs for diamond tools research and development are summarized, and corresponding prospects are suggested"
+                    },
+                    "DOI": {
+                        "S": "10.3390/met8050315"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/232593536.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-05-03T07:00:00"
+                    },
+                    "Authors": {
+                        "S": "Long, Fei, He, Peng, Sekulic, Dusan P."
+                    },
+                    "Publisher": {
+                        "S": "UKnowledge"
+                    },
+                    "Probability": {
+                        "N": "93.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-chemically_break_down_inorganic_compounds"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-286140152"
+                    },
+                    "Title": {
+                        "S": "Vertebrates are poor umbrellas for invertebrates: cross-taxon congruence in an Australian tropical savanna"
+                    },
+                    "Abstract": {
+                        "S": "Invertebrates are commonly ignored in conservation planning due to their vast diversity, difficulties with species identification, a poor understanding of their spatial patterns, and the impracticability of carrying out comprehensive sampling. Conservation planning for fauna is therefore often based on patterns of diversity and distribution of vertebrates, under the assumption that these are representative of animal diversity more generally. Here, we evaluate how well vertebrates act as umbrellas for invertebrate diversity and distribution in a highly diverse tropical savanna landscape, and we investigate the effect of vertebrate sampling intensity (i.e., number of surveys) on congruence results. We assessed congruence between each of the four classes of terrestrial vertebrates (amphibians, reptiles, birds, and mammals) and twelve invertebrate families (representing four dominant invertebrate taxa: ants, beetles, flies, and spiders) by applying a range of modeling approaches to analyze patterns of cross‐taxon congruence in species richness and composition across sampling sites. To investigate drivers of congruence, we applied generalized and distance‐based linear models to identify environmental associations of richness and composition for each taxon, then examined variation in environmental associations across taxa. Vertebrate and invertebrate richness was weakly (<30%) associated, and ~60% of the significant associations were negative. Correlations in species composition between vertebrate and invertebrate taxa were also weak, with a maximum of 13% congruence. In most cases, pairwise correlation scores using data from single surveys of vertebrates were only marginally lower than those from multiple surveys. Poor among‐site congruence between vertebrates and invertebrates was reflected by marked variation among taxa in their environmental associations. Our findings show that vertebrates are poor umbrellas for invertebrates in the tropical savannas of northern Australia in terms of geographic patterns of diversity and distribution and that this is not just an artifact of low vertebrate sampling intensity. Our study is one of the most comprehensive regional analyses of the congruence of vertebrate and invertebrate diversity, and it significantly adds to the growing evidence that empirical data on invertebrate diversity and distribution are required for conservation planning that effectively protects all faunal diversity"
+                    },
+                    "DOI": {
+                        "S": "10.1002/ecs2.2755"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/286140152.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-08-18T08:16:46"
+                    },
+                    "Authors": {
+                        "S": "Oberprieler, Stefanie, Andersen, Alan N., Gillespie, Graeme R., Einoder, Luke"
+                    },
+                    "Publisher": {
+                        "S": "Wiley"
+                    },
+                    "Probability": {
+                        "N": "45.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-chemically_break_down_organic_compounds"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-42546161"
+                    },
+                    "Title": {
+                        "S": "Do Global Diversity Patterns of Vertebrates Reflect Those of Monocots?"
+                    },
+                    "Abstract": {
+                        "S": "Few studies of global diversity gradients in plants exist, largely because the data are not available for all species involved. Instead, most global studies have focussed on vertebrates, as these taxa have historically been associated with the most complete data. Here, we address this shortfall by first investigating global diversity gradients in monocots, a morphologically and functionally diverse clade representing a quarter of flowering plant diversity, and then assessing congruence between monocot and vertebrate diversity patterns. To do this, we create a new dataset that merges biome-level associations for all monocot genera with country-level associations for almost all ∼70,000 species. We then assess the evidence for direct versus indirect effects of this plant diversity on vertebrate diversity using a combination of linear regression and structural equation modelling (SEM). Finally, we also calculate overlap of diversity hotspots for monocots and each vertebrate taxon. Monocots follow a latitudinal gradient although with pockets of extra-tropical diversity, mirroring patterns in vertebrates. Monocot diversity is positively associated with vertebrate diversity, but the strength of correlation varies depending on the clades being compared. Monocot diversity explains marginal amounts of variance (<10%) after environmental factors have been accounted for. However, correlations remain among model residuals, and SEMs apparently reveal some direct effects of monocot richness. Our results suggest that collinear responses to environmental gradients are behind much of the congruence observed, but that there is some evidence for direct effects of producer diversity on consumer diversity. Much remains to be done before broad-scale diversity gradients among taxa are fully explained. Our dataset of monocot distributions will aid in this endeavour"
+                    },
+                    "DOI": {
+                        "S": "10.1371/journal.pone.0056979"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/42546161.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2013-05-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Bunnefeld, Lynsey, Jones, F Andrew, Orme, C David L, Sobkowiak, Benjamin, Barraclough, Timothy G, Chase, Mark W, Govaerts, Rafael, Soltis, Douglas E, Soltis, Pamela S, Savolainen, Vincent"
+                    },
+                    "Publisher": {
+                        "S": "Public Library of Science (PLoS)"
+                    },
+                    "Probability": {
+                        "N": "64.3"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-modify/convert_electrical_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-159149940"
+                    },
+                    "Title": {
+                        "S": "Elevational diversity of terrestrial rainforest herbs: when the whole is less than the sum of its parts"
+                    },
+                    "Abstract": {
+                        "S": "We studied the species richness of herbaceous terrestrial plant species along an elevational gradient at 250-2425m a.s.l. in evergreen tropical forest in Central Sulawesi, Indonesia. We recorded 302 species belonging to 51 families. Ferns and lycophytes contributed 62% of the species, followed by monocots with 24% and dicots with 14%. Overall herb species richness did not show any particular relation with elevation, while the richness of ferns increased significantly with elevation, monocots did not show a pattern, and dicots showed a hump-shaped pattern with maximum richness at 1800m. These patterns in turn were only partly reflected in the patterns of the individual plant families making up each group. The independence of different taxa was also reflected in their relationships to environmental factors (temperature, precipitation, and area): although, each single family was related to one or several factors, at the group level and at the overall level these trends were lost. These results show that interpreting diversity at higher taxonomic level may overlook important information at the family level and raises the biologically intriguing question whether overall patterns of diversity result from a random accumulation of group-specific patterns or if there is some interaction between groups (e.g., via competition and niche-pre-emption"
+                    },
+                    "DOI": {
+                        "S": "0.1007/s11258-011-9986-z"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/159149940.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-06-18T17:50:20"
+                    },
+                    "Authors": {
+                        "S": "Willinghöfer, Sandra, Cicuzza, Daniele, Kessler, Michael"
+                    },
+                    "Publisher": {
+                        "S": "RERO DOC Digital Library"
+                    },
+                    "Probability": {
+                        "N": "77.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-modify/convert_magnetic_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-159152658"
+                    },
+                    "Title": {
+                        "S": "A transcontinental comparison of the diversity and composition of tropical forest understory herb assemblages"
+                    },
+                    "Abstract": {
+                        "S": "Although tropical forests are renowned for their high plant diversity, to date there has been no global quantitative evaluation of the local species richness of terrestrial forest herbs in tropical forests. In this paper, richness and composition of terrestrial herb assemblages is compared in tropical forests of America, Africa and South East Asia. We established 86 non-continuous transects of 445m each. Herb species richness was analysed and compared to six environmental parameters using minimal adequate regression models and simultaneous autoregressive models. At the global scale, we found a close relationship between herb species richness and temperature parameters, with no differences between continents. The subdivision into three main taxonomic groups (ferns, monocots, dicots) showed that each group has distinct relations to environmental factors and differences in richness between continents. Most of the 72 families found have pantropical distributions but 12, 11, and 16 families were significantly over-represented in America, Africa, and Asia, respectively. Although total species richness was closely related to climatic factors, ferns, monocots and dicots were represented by distinct sets of families with varying species richness on each continent. Which species are found at a given site may thus reflect group-specific evolutionary and historical factor"
+                    },
+                    "DOI": {
+                        "S": "10.1007/s10531-013-0447-y"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/159152658.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-06-18T17:53:41"
+                    },
+                    "Authors": {
+                        "S": "Cicuzza, Daniele, Krömer, Thorsten, Poulsen, Axel, Abrahamczyk, Stefan, Delhotal, Thomas, Piedra, Henry, Kessler, Michael"
+                    },
+                    "Publisher": {
+                        "S": "Springer Science+Business Media"
+                    },
+                    "Probability": {
+                        "N": "54.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-modify/convert_chemical_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-161784233"
+                    },
+                    "Title": {
+                        "S": "The influence of canopy-layer composition on understory plant diversity in southern temperate forests"
+                    },
+                    "Abstract": {
+                        "S": "Background Understory plants represents the largest component of biodiversity in most forest ecosystems and plays a key role in forest functioning. Despite their importance, the influence of overstory-layer composition on understory plant diversity is relatively poorly understood within deciduous-evergreen broadleaved mixed forests. The aim of this work was to evaluate how tree overstory-layer composition influences on understory-layer diversity in three forest types (monospecific deciduous Nothofagus pumilio (Np), monospecific evergreen Nothofagus betuloides (Nb), and mixed N. pumilio-N. betuloides (M) forests), comparing also between two geographical locations (coast and mountain) to estimate differences at landscape level. Results We recorded 46 plant species: 4 ferns, 12 monocots, and 30 dicots. Canopy-layer composition influences the herb-layer structure and diversity in two different ways: while mixed forests have greater similarity to evergreen forests in the understory structural features, deciduous and mixed were similar in terms of the specific composition of plant assemblage. Deciduous pure stands were the most diverse, meanwhile evergreen stands were least diverse. Lack of exclusive species of mixed forest could represent a transition where evergreen and deciduous communities meet and integrate. Moreover, landscape has a major influence on the structure, diversity and richness of understory vegetation of pure and mixed forests likely associated to the magnitude and frequency of natural disturbances, where mountain forest not only had highest herb-layer diversity but also more exclusive species. Conclusions Our study suggests that mixed Nothofagus forest supports coexistence of both pure deciduous and pure evergreen understory plant species and different assemblages in coastal and mountain sites. Maintaining the mixture of canopy patch types within mixed stands will be important for conserving the natural patterns of understory plant composition in southern beech mixed forests.Fil: Mestre, Luciana Mariel. Consejo Nacional de Investigaciones Científicas y Técnicas. Centro Austral de Investigaciones Científicas; ArgentinaFil: Toro Manríquez, Mónica del Rosario. Consejo Nacional de Investigaciones Científicas y Técnicas. Centro Austral de Investigaciones Científicas; ArgentinaFil: Soler Esteban, Rosina Matilde. Consejo Nacional de Investigaciones Científicas y Técnicas. Centro Austral de Investigaciones Científicas; ArgentinaFil: Huertas Herrera, Alejandro. Consejo Nacional de Investigaciones Científicas y Técnicas. Centro Austral de Investigaciones Científicas; ArgentinaFil: Martínez Pastur, Guillermo José. Consejo Nacional de Investigaciones Científicas y Técnicas. Centro Austral de Investigaciones Científicas; ArgentinaFil: Lencinas, María Vanessa. Consejo Nacional de Investigaciones Científicas y Técnicas. Centro Austral de Investigaciones Científicas; Argentin"
+                    },
+                    "DOI": {
+                        "S": "10.1186/s40663-017-0093-z"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/161784233.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-05-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Mestre, Luciana Mariel, Toro Manríquez, Mónica del Rosario, Soler Esteban, Rosina Matilde, Huertas Herrera, Alejandro, Martínez Pastur, Guillermo José, Lencinas, María Vanessa"
+                    },
+                    "Publisher": {
+                        "S": "Springer Science and Business Media LLC"
+                    },
+                    "Probability": {
+                        "N": "33.9"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-modify/convert_mechanical_energy"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-42947535"
+                    },
+                    "Title": {
+                        "S": "Habitat-specific vegetation and seasonal drivers of bird community structure and function in southern Patagonian forests"
+                    },
+                    "Abstract": {
+                        "S": "Biodiversity conservation requires knowledge about the factors that influence the structure and function of biotic assemblages. In southern Patagonian Nothofagus forests, birds are the most abundant and diverse vertebrates and are known to have different requirements for nesting, breeding and feeding. Therefore, we chose this group to analyze key drivers of avian community dynamics; for conservation purposes, this information is requisite to manage Nothofagus forest landscapes and their associated biota. We first characterized forest structure and understory floristic composition in open and closed canopy broadleaved forests of mixed deciduous (MD) and mixed deciduous-evergreen (MDE) species on the southern coast of Tierra del Fuego National Park, Argentina. For each habitat, bird assemblages were assessed using point counts, checklists and mistnetting. We used ANOVAs and multivariate methods to analyze changes in bird species richness, density, and biomass as a function of habitat and seasonal characteristics. Forest structure and understory plant communities influenced avian assemblage and density; MDE forests had significantly greater species richness, but lower density than MD. Plus, particular species were associated with specific understory conditions, such as Anairetes parulus and Zonotrichia capensis whose presence was related to shrubs. Additionally, variations observed between seasons apparently were related to differential uses of each habitat type during certain times of year. Finally, it was not possible to define a single forest type with greater conservation value for birds; each had a specific bird species assemblage. Consequently, our results suggest the importance of a full representation of habitats to preserve the region’s bird diversity, which also has been described for forest invertebrates and understory plants"
+                    },
+                    "DOI": {
+                        "S": "10.1556/168.2015.16.1.7"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/42947535.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Pastur, G. M., Lencinas, M. V., Gallo, E., de Cruz, M., Borla, M. L., Esteban, R. S., Anderson, C. B."
+                    },
+                    "Publisher": {
+                        "S": "2015-01-01T00:00:00"
+                    },
+                    "Probability": {
+                        "N": "37.8"
+                    }
+                }
+            }
+        }
+    ]
+}

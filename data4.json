@@ -7,13 +7,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-attach_permanently"
+                        "S": "LABEL-sense_spatial_awareness/balance/orientation"
                     },
                     "Level2": {
-                        "S": "Attach permanently"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Attach permanently"
+                        "S": "Sense spatial awareness/balance/orientation"
                     }
                 }
             }
@@ -25,13 +25,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-attach_temporarily"
+                        "S": "LABEL-sense_shape_and/or_pattern"
                     },
                     "Level2": {
-                        "S": "Attach temporarily"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Attach temporarily"
+                        "S": "Sense shape and/or pattern"
                     }
                 }
             }
@@ -43,13 +43,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-passively_move_through/on_liquids"
+                        "S": "LABEL-capture_solids"
                     },
                     "Level2": {
-                        "S": "Passive movement"
+                        "S": "Capture resources"
                     },
                     "Level3": {
-                        "S": "Passively move through/on liquids"
+                        "S": "Capture solids"
                     }
                 }
             }
@@ -61,13 +61,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-passively_move_through/on_solids"
+                        "S": "LABEL-capture_liquids"
                     },
                     "Level2": {
-                        "S": "Passive movement"
+                        "S": "Capture resources"
                     },
                     "Level3": {
-                        "S": "Passively move through/on liquids"
+                        "S": "Capture liquids"
                     }
                 }
             }
@@ -79,31 +79,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-passively_move_through_gases"
+                        "S": "LABEL-capture_gases"
                     },
                     "Level2": {
-                        "S": "Passive movement"
+                        "S": "Capture resources"
                     },
                     "Level3": {
-                        "S": "Passively move through gases"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                   "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-actively_move_through/on_liquids"
-                    },
-                    "Level2": {
-                        "S": "Active movement"
-                    },
-                    "Level3": {
-                        "S": "Actively move through/on liquids"
+                        "S": "Capture gases"
                     }
                 }
             }
@@ -115,13 +97,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-actively_move_through/on_solids"
+                        "S": "LABEL-capture_energy"
                     },
                     "Level2": {
-                        "S": "Active movement"
+                        "S": "Capture resources"
                     },
                     "Level3": {
-                        "S": "Actively move through/on solids"
+                        "S": "Capture energy"
                     }
                 }
             }
@@ -133,13 +115,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-actively_move_through_gases"
+                        "S": "LABEL-absorb_and/or_filter_solids"
                     },
                     "Level2": {
-                        "S": "Active movement"
+                        "S": "Absorb and/or filter resources"
                     },
                     "Level3": {
-                        "S": "Actively move through gases"
+                        "S": "Absorb and/or filter solids"
                     }
                 }
             }
@@ -151,13 +133,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_animals"
+                        "S": "LABEL-absorb_and/or_filter_liquids"
                     },
                     "Level2": {
-                        "S": "Protect from living threats"
+                        "S": "Absorb and/or filter resources"
                     },
                     "Level3": {
-                        "S": "Protect from animals"
+                        "S": "Absorb and/or filter liquids"
                     }
                 }
             }
@@ -169,13 +151,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_plants"
+                        "S": "LABEL-absorb_and/or_filter_gases"
                     },
                     "Level2": {
-                        "S": "Protect from living threats"
+                        "S": "Absorb and/or filter resources"
                     },
                     "Level3": {
-                        "S": "Protect from plants"
+                        "S": "Absorb and/or filter gases"
                     }
                 }
             }
@@ -187,13 +169,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_fungi"
+                        "S": "LABEL-store_solids"
                     },
                     "Level2": {
-                        "S": "Protect from living threats"
+                        "S": "Store resources"
                     },
                     "Level3": {
-                        "S": "Protect from fungi"
+                        "S": "Store solids"
                     }
                 }
             }
@@ -205,13 +187,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_microbes"
+                        "S": "LABEL-store_liquids"
                     },
                     "Level2": {
-                        "S": "Protect from living threats"
+                        "S": "Store resources"
                     },
                     "Level3": {
-                        "S": "Protect from microbes"
+                        "S": "Store liquids"
                     }
                 }
             }
@@ -223,13 +205,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_solids"
+                        "S": "LABEL-store_gases"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Store resources"
                     },
                     "Level3": {
-                        "S": "Protect from solids"
+                        "S": "Store gases"
                     }
                 }
             }
@@ -241,13 +223,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_excess_liquids"
+                        "S": "LABEL-store_energy"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Store resources"
                     },
                     "Level3": {
-                        "S": "Protect from excess liquids"
+                        "S": "Store energy"
                     }
                 }
             }
@@ -259,13 +241,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_loss_of_liquids"
+                        "S": "LABEL-distribute_solids"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Distribute resources"
                     },
                     "Level3": {
-                        "S": "Protect from loss of liquids"
+                        "S": "Distribute solids"
                     }
                 }
             }
@@ -277,13 +259,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_gases"
+                        "S": "LABEL-distribute_liquids"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Distribute resources"
                     },
                     "Level3": {
-                        "S": "Protect from gases"
+                        "S": "Distribute liquids"
                     }
                 }
             }
@@ -295,13 +277,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_wind"
+                        "S": "LABEL-distribute_gases"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Distribute resources"
                     },
                     "Level3": {
-                        "S": "Protect from wind"
+                        "S": "Distribute gases"
                     }
                 }
             }
@@ -313,13 +295,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_temperature"
+                        "S": "LABEL-distribute_energy"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Distribute resources"
                     },
                     "Level3": {
-                        "S": "Protect from temperature"
+                        "S": "Distribute energy"
                     }
                 }
             }
@@ -331,13 +313,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_fire"
+                        "S": "LABEL-expel_solids"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Expel resources"
                     },
                     "Level3": {
-                        "S": "Protect from fire"
+                        "S": "Expel solids"
                     }
                 }
             }
@@ -349,13 +331,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_ice"
+                        "S": "LABEL-expel_liquids"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Expel resources"
                     },
                     "Level3": {
-                        "S": "Protect from ice"
+                        "S": "Expel liquids"
                     }
                 }
             }
@@ -367,13 +349,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_light"
+                        "S": "LABEL-expel_gases"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Expel resources"
                     },
                     "Level3": {
-                        "S": "Protect from light"
+                        "S": "Expel gases"
                     }
                 }
             }
@@ -385,13 +367,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_chemicals"
+                        "S": "LABEL-detox/purify"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Detox/purify"
                     },
                     "Level3": {
-                        "S": "Protect from chemicals"
+                        "S": "Detox/purify"
                     }
                 }
             }
@@ -403,13 +385,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_radiation"
+                        "S": "LABEL-change_structural_color"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Modify color"
                     },
                     "Level3": {
-                        "S": "Protect from radiation"
+                        "S": "Change structural color"
                     }
                 }
             }
@@ -421,13 +403,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-prevent_buckling"
+                        "S": "LABEL-change_chemical_color/pigmentation"
                     },
                     "Level2": {
-                        "S": "Prevent structural failure"
+                        "S": "Modify color"
                     },
                     "Level3": {
-                        "S": "Prevent buckling"
+                        "S": "Change chemical color/pigmentation"
                     }
                 }
             }
@@ -439,13 +421,31 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-prevent_deformation"
+                        "S": "LABEL-camouflage/mimicry"
                     },
                     "Level2": {
-                        "S": "Prevent structural failure"
+                        "S": "Modify color"
                     },
                     "Level3": {
-                        "S": "Prevent deformation"
+                        "S": "Camouflage/mimicry"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-change_size/shape"
+                    },
+                    "Level2": {
+                        "S": "Change size/shape"
+                    },
+                    "Level3": {
+                        "S": "Change size/shape"
                     }
                 }
             }

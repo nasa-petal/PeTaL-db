@@ -1,0 +1,904 @@
+{
+    "petal-stack-myDynamoDBTable-LFB4NGLY82L9": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-attach_permanently"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-196608890"
+                    },
+                    "Title": {
+                        "S": "Straining Flow Spinning of Artificial Silk Fibers: A Review"
+                    },
+                    "Abstract": {
+                        "S": "This work summarizes the main principles and some of the most significant results of straining flow spinning (SFS), a technology developed originally by the authors of this work. The principles on which the technology is based, inspired by the natural spinning system of silkworms and spiders, are presented, as well as some of the main achievements of the technique. Among these achievements, spinning under environmentally friendly conditions, obtaining high-performance fibers, and imparting the fibers with emerging properties such as supercontraction are discussed. Consequently, SFS appears as an efficient process that may represent one of the first realizations of a biomimetic technology with a significant impact at the production level.Ministerio de Economía y Competitividad MAT2016-75544-C2-1-RMinisterio de Economía y Competitividad MAT2016-79832-RMinisterio de Economía y Competitividad CPI2016-78887-C3-1-RComunidad de Madrid NEUROCENTRO-B2017Comunidad de Madrid BMD-376"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics3040029"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/196608890.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-10-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Pérez-Rigueiro, José, Madurga, Rodrigo, Gañán-Calvo, Alfonso M.,Plaza, Gustavo R., Elices, Manuel, López, Patricia A., Daza, Rafael, González-Nieto, Daniel, Guinea, Gustavo V"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "99.9"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-attach_temporarily"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-323251733"
+                    },
+                    "Title": {
+                        "S": "Optimal sensing for fish school identification"
+                    },
+                    "Abstract": {
+                        "S": "Fish schooling implies an awareness of the swimmers for their companions. In flow mediated environments, in addition to visual cues, pressure and shear sensors on the fish body are critical for providing quantitative information that assists the quantification of proximity to other swimmers. Here we examine the distribution of sensors on the surface of an artificial swimmer so that it can optimally identify a leading group of swimmers. We employ Bayesian experimental design coupled with two-dimensional Navier Stokes equations for multiple self-propelled swimmers. The follower tracks the school using information from its own surface pressure and shear stress. We demonstrate that the optimal sensor distribution of the follower is qualitatively similar to the distribution of neuromasts on fish. Our results show that it is possible to identify accurately the center of mass and even the number of the leading swimmers using surface only information"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics5010010"
+                    },
+                    "DownloadURL": {
+                        "S": "http://arxiv.org/abs/1910.09937"
+                    },
+                    "DatePublished": {
+                        "S": "2019-10-22T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Weber, Pascal, Arampatzis, Georgios, Novati, Guido, Verma, Siddhartha, Papadimitriou, Costas, Koumoutsakos, Petros"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "96.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-passively_move_through/on_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-231953176"
+                    },
+                    "Title": {
+                        "S": "Cell-Adhesive Bioinspired and Catechol-Based Multilayer Freestanding Membranes for Bone Tissue Engineering"
+                    },
+                    "Abstract": {
+                        "S": "Mussels are marine organisms that have been mimicked due to their exceptional adhesive properties to all kind of surfaces, including rocks, under wet conditions. The proteins present on the mussel's foot contain 3,4-dihydroxy-l-alanine (DOPA), an amino acid from the catechol family that has been reported by their adhesive character. Therefore, we synthesized a mussel-inspired conjugated polymer, modifying the backbone of hyaluronic acid with dopamine by carbodiimide chemistry. Ultraviolet-visible (UV-vis) spectroscopy and nuclear magnetic resonance (NMR) techniques confirmed the success of this modification. Different techniques have been reported to produce two-dimensional (2D) or three-dimensional (3D) systems capable to support cells and tissue regeneration; among others, multilayer systems allow the construction of hierarchical structures from nano- to macroscales. In this study, the layer-by-layer (LbL) technique was used to produce freestanding multilayer membranes made uniquely of chitosan and dopamine-modified hyaluronic acid (HA-DN). The electrostatic interactions were found to be the main forces involved in the film construction. The surface morphology, chemistry, and mechanical properties of the freestanding membranes were characterized, confirming the enhancement of the adhesive properties in the presence of HA-DN. The MC3T3-E1 cell line was cultured on the surface of the membranes, demonstrating the potential of these freestanding multilayer systems to be used for bone tissue engineering.publishe"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics2040019"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/231953176.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-10-05T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Sousa, Maria P, Mano, João F"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "87.6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-passively_move_through/on_solids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-301572723"
+                    },
+                    "Title": {
+                        "S": "Catechol-Containing Hydroxylated Biomimetic 4-Thiaflavanes as Inhibitors of Amyloid Aggregation"
+                    },
+                    "Abstract": {
+                        "S": "The study of compounds able to interfere in various ways with amyloid aggregation is of paramount importance in amyloid research. Molecules characterized by a 4-thiaflavane skeleton have received great attention in chemical, medicinal, and pharmaceutical research. Such molecules, especially polyhydroxylated 4-thiaflavanes, can be considered as structural mimickers of several natural polyphenols that have been previously demonstrated to bind and impair amyloid fibril formation. In this work, we tested five different 4-thiaflavanes on the hen egg-white lysozyme (HEWL) amyloid model for their potential anti-amyloid properties. By combining a thioflavin T assay, atomic force microscopy, and a cell toxicity assay, we demonstrated that such compounds can impair the formation of high-order amyloid aggregates and mature fibrils. Despite this, the tested 4-thiaflavanes, although non-toxic per se, are not able to prevent amyloid toxicity on human neuroblastoma cells. Rather, they proved to block early aggregates in a stable, toxic conformation. Accordingly, 4-thiaflavanes can be proposed for further studies aimed at identifying blocking agents for the study of toxicity mechanisms of amyloid aggregation. "
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics2020006"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/301572723.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S":"Ramazzotti, Matteo, Paoli, Paolo, Tiribilli, Bruno, Viglianisi, Caterina, Menichetti, Stefano, Degl&apos"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "73.6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-passively_move_through_gases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-301533958"
+                    },
+                    "Title": {
+                        "S": "A Note on the Depth-from-Defocus Mechanism of Jumping Spiders"
+                    },
+                    "Abstract": {
+                        "S": "Jumping spiders are capable of estimating the distance to their prey relying only on the information from one of their main eyes. Recently, it has been shown that jumping spiders perform this estimation based on image defocus cues. In order to gain insight into the mechanisms involved in this blur-to-distance mapping as performed by the spider and to judge whether inspirations can be drawn from spider vision for depth-from-defocus computer vision algorithms, we constructed a three-dimensional (3D) model of the anterior median eye of the Metaphidippus aeneolus, a well studied species of jumping spider. We were able to study images of the environment as the spider would see them and to measure the performances of a well known depth-from-defocus algorithm on this dataset. We found that the algorithm performs best when using images that are averaged over the considerable thickness of the spider’s receptor layers, thus pointing towards a possible functional role of the receptor thickness for the spider’s depth estimation capabilities.Peer Reviewe"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics2010003"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/301533958.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-03-14T00:00:00"
+                    },
+                    "Authors": {
+                        "S":"Nolte, Aleke, Hennes, Daniel, Izzo, Dario, Blum, Christian, Hafner, Verena, Gheysens, Tom"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "54.9"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                   "PartitionKey": {
+                        "S": "LABEL-actively_move_through/on_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-323892863"
+                    },
+                    "Title": {
+                        "S": "A parallel modular biomimetic cilia sorting platform"
+                    },
+                    "Abstract": {
+                        "S": "The aquatic unicellular organism Paramecium caudatum uses cilia to swim around its environment and to graze on food particles and bacteria. Paramecia use waves of ciliary beating for locomotion, intake of food particles and sensing. There is some evidence that Paramecia pre-sort food particles by discarding larger particles, but intake the particles matching their mouth cavity.Most prior attempts to mimic cilia-based manipulation merely mimicked the overall action rather than the beating of cilia. The majority of massive-parallel actuators are controlled by a central computer; however, a distributed control would be far more true-to-life. We propose and test a distributed parallel cilia platform where each actuating unit is autonomous, yet exchanging information with its closest neighboring units. The units are arranged in a hexagonal array. Each unit is a tileable circuit board, with a microprocessor, color-based object sensor and servo-actuated biomimetic cilia actuator.Localized synchronous communication between cilia allowed for the emergence of coordinated action, moving different colored objects together. The coordinated beating action was capable of moving objects up to 4 cm/s at its highest beating frequency; however, objects were moved at a speed proportional to the beat frequency. Using the local communication, we were able to detect the shape of objects and rotating an object using edge detection was performed; however, lateral manipulation using shape information was unsuccessful"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics3020005"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/323892863.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-06-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Whiting, James G.H., Mayne, Richard, Adamatzky, Andrew"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "90.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-actively_move_through/on_solids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-223010999"
+                    },
+                    "Title": {
+                        "S": "Copolymerization of a catechol and a diamine as a versatile polydopamine-like platform for surface functionalization : the case of a hydrophobic coating"
+                    },
+                    "Abstract": {
+                        "S": "The covalent functionalization of surfaces with molecules capable of providing new properties to the treated substrate, such as hydrophobicity or bioactivity, has been attracting a lot of interest in the last decades. For achieving this goal, the generation of a universally functionalizable primer coating in one-pot reaction and under relatively mild conditions is especially attractive due to its potential versatility and ease of application. The aim of the present work is to obtain such a functionalizable coating by a cross-linking reaction between pyrocatechol and hexamethylenediamine (HDMA) under oxidizing conditions. For demonstrating the efficacy of this approach, different substrates (glass, gold, silicon, and fabric) have been coated and later functionalized with two different alkylated species (1-hexadecanamine and stearoyl chloride). The success of their attachment has been demonstrated by evaluating the hydrophobicity conferred to the surface by contact angle measurements. Interestingly, these results, together with its chemical characterization by means of X-ray photoelectron spectroscopy (XPS) and Fourier-transform infrared spectroscopy (FT-IR), have proven that the reactivity of the primer coating towards the functionalizing agent can be tuned in function of its generation time"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics2040022"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/223010999.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Suárez García, Salvio, Sedó Vegara, Josep, Saiz-Poseu, Javier, Ruiz Molina, Daniel"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "87.1"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-actively_move_through_gases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-79490492"
+                    },
+                    "Title": {
+                        "S": "A Green’s Function Molecular Dynamics Approach to the Mechanical Contact between Thin Elastic Sheets and Randomly Rough Surfaces"
+                    },
+                    "Abstract": {
+                        "S": "Adhesion of biological systems is often made possible through thin elastic layers, such as human skin. To address the question of when a layer is sufficiently thin to become adhesive, we extended Green’s function molecular dynamics (GFMD) to account for the finite thickness of an elastic body that is supported by a fluid foundation. We observed that thin layers can much better accommodate rough counterfaces than thick structures. As a result, the contact area is enlarged, in particular, when the width of the layer w approaches or even falls below the short-wavelength cutoff λs of the surface spectra. In the latter case, the proportionality coefficient between area and load scales is (w/λs)3 , which is consistent with Persson’s contact mechanics theory"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics1010007"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/79490492.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2016"
+                    },
+                    "Authors": {
+                        "S": "Putignano, Carmine, Dapp, Wolfgang, Müser, Martin"
+                    },
+                    "Publisher": {
+                        "S": "MDPI"
+                    },
+                    "Probability": {
+                        "N": "33.9"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_animals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-323894909"
+                    },
+                    "Title": {
+                        "S": "Emergent behaviors in a bio-inspired platform controlled by a physical cellular automata cluster"
+                    },
+                    "Abstract": {
+                        "S": "This work illustrates behavior patterns and trajectories of a bio-inspired artificial platform induced by a cellular automata (CA)-based control strategy. The platform embeds both CA control as physical electronic architecture and a distributed hardware layer as effectors. In this work, we test both the functionality of the novel hardware’s components as well as the device’s capabilities in locomotion tasks. We also observe the trajectories and patterns emerging from different initial states of the CA excitation and hardware configurations. Two main result sets emerge from this study: the first set illustrates different trajectories according to different initial excitation of the physical CA controller layer. The second set suggests the potential of the developed platform for generating complex patterns of control, as well as indicating emergent characteristics similar to those common to morphological computation approaches in generating localized perturbations without affecting or notifying the central controller"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics1010005"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/323894909.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2016-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Assaf, Tareq, Mayne, Richard, Adamatzky, Andrew, Melhuish, Chris"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "88.6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_plants"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-187720106"
+                    },
+                    "Title": {
+                        "S": "Optimizing Epicardial Restraint and Reinforcement Following Myocardial Infarction: Moving Towards Localized, Biomimetic, and Multitherapeutic Options"
+                    },
+                    "Abstract": {
+                        "S": "The mechanical reinforcement of the ventricular wall after a myocardial infarction has been shown to modulate and attenuate negative remodeling that can lead to heart failure. Strategies include wraps, meshes, cardiac patches, or fluid-filled bladders. Here, we review the literature describing these strategies in the two broad categories of global restraint and local reinforcement. We further subdivide the global restraint category into biventricular and univentricular support. We discuss efforts to optimize devices in each of these categories, particularly in the last five years. These include adding functionality, biomimicry, and adjustability. We also discuss computational models of these strategies, and how they can be used to predict the reduction of stresses in the heart muscle wall. We discuss the range of timing of intervention that has been reported. Finally, we give a perspective on how novel fabrication technologies, imaging techniques, and computational models could potentially enhance these therapeutic strategies. Keywords: ventricular restraint; infarct reinforcement; biomimetic"
+                    },
+                    "DOI": {
+                        "S": "10.3390/biomimetics4010007"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/187720106.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-01-24T09:22:27"
+                    },
+                    "Authors": {
+                        "S": "Varela, Claudia Elena, Fan, Yiling, Roche, Ellen"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "99.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_fungi"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-304670686"
+                    },
+                    "Title": {
+                        "S": "Coatings preventing insect adhesion:An overview"
+                    },
+                    "Abstract": {
+                        "S": "Insect pests cause considerable damage worldwide to plants, buildings and human health. This review explores how controlling insect adhesion to coatings might mitigate these problems. We summarise the current knowledge of the mechanisms of insect adhesion on natural and synthetic surfaces and natural examples of nonadhesive and slippery surfaces. Biomimetic, multi-scaled rough and particle-transferring surfaces provide an efficient method to reduce adhesion of crawling insects."
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.porgcoat.2019.05.013"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/304670686.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-09-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Feat, Aurelie, Federle, Walter, Kamperman, Marleen, van der Gucht, Jasper"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "77.7"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_microbes"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-304670647"
+                    },
+                    "Title": {
+                        "S": "Slippery paints:Eco-friendly coatings that cause ants to slip"
+                    },
+                    "Abstract": {
+                        "S": "Many insects are considered to be pests and can be serious threats to buildings. Insecticides represent an effective way to control pest insects but are harmful to the environment. As an eco-friendlier alternative, we have formulated waterborne, organic paints which provided a slippery physical barrier for leafcutter ants (Atta cephalotes) on vertical surfaces. Different paints were produced by varying the Pigment Volume Concentration (PVC) and amount of TiO2 and CaCO3 particles, and characterised in terms of contact angles, surface roughness and scrub resistance. The paints’ slipperiness for A. cephalotes ants was evaluated in climbing tests on vertical paint panels (by recording the percentage of fallen ants). Two main factors reduced the insects’ attachment to vertical paint surfaces: (1) the PVC: in paints above a critical PVC, more loose particles detach from the coating and thereby reduce insect attachment; and (2) the type, dimensions and shape of solid particles: CaCO3 particles detach more easily from the paint than TiO2, probably due to their larger size and platelet shape. Paints formulated at PVC 70 and containing 20 wt% CaCO3 showed the best performance in terms of slipperiness, as well as providing good scrub resistance."
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.porgcoat.2019.06.004"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/304670647.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-10-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Feat, Aurelie, Federle, Walter, Kamperman, Marleen, Murray, Martin, van der Gucht, Jasper, Taylor, Philip"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "97.6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_solids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-322444883"
+                    },
+                    "Title": {
+                        "S": "Novel Antifouling and Self-Healing Eco-Friendly Coatings for Marine Applications Enhancing the Performance of Commercial Marine Paints"
+                    },
+                    "Abstract": {
+                        "S": "Nanocontainers of the type CuO and CeMo were filled with bromosphaerol and 8-hydroxyquinoline, respectively, and incorporated into commercial marine paints. The generated paints with nanotechnology perform better in laboratory tests with respect to fouling and corrosion and test carried out via painting commercial ship traveling across the Adriatic Sea for a year than the currently used commercial paints. This is another application of nanotechnology that will someday find a commercial application. Since copper oxide is used for the current commercial paints and bromosphaerol is a natural biocide, there will be no need to pass the expensive approvals to use these antifoulants."
+                    },
+                    "DOI": {
+                        "S": "10.5772/intechopen.89261"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/322444883.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-10-11T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Kordas, George"
+                    },
+                    "Publisher": {
+                        "S": "IntechOpen"
+                    },
+                    "Probability": {
+                        "N": "55.6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_excess_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-189233621"
+                    },
+                    "Title": {
+                        "S": "Nanocontainer-Based Active Systems: From Self-Healing Coatings to Thermal Energy Storage"
+                    },
+                    "Abstract": {
+                        "S": "We highlight in our feature article the development of nanocontainer-based active materials started in 2006 in Max Planck Institute of Colloids and Interfaces under supervision of Prof. Helmuth Möhwald. The active materials encapsulated into the nanocontainers with controlled shell permeability have been first applied for self-healing coatings with controlled release of the corrosion inhibitor. The nanocontainers have been added to the paint formulation matrix at 5-10 % wt. concentration, which resulted in attaining coating autonomous self-healing ability. This research idea has attracted attention of many scientists across the world (>1500 publications during last 10 years) and has already been transferred to the commercialization level. The current trend in nanocontainer-based active systems is devoted to the multifunctionality of the capsules which can combine self-healing, antibacterial, thermal and other functionalities in one host matrix. This paper summarizes the previous research done in the CORE Metadata, citation and similar papers at core.ac.uk Provided by University of Liverpool Repository 2 area of the nanocontainer-based active materials together with future perspectives of the capsulebased materials with antifouling or thermo-regulating activity."
+                    },
+                    "DOI": {
+                        "S": "10.1021/acs.langmuir.9b00151"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/189233621.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-07-02T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Shchukina, E, Shchukin, DG"
+                    },
+                    "Publisher": {
+                        "S": "American Chemical Society (ACS)"
+                    },
+                    "Probability": {
+                        "N": "46.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_loss_of_liquids"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-196222483"
+                    },
+                    "Title": {
+                        "S": "Nanocontainer-based self-healing coatings: current progress and future perspectives"
+                    },
+                    "Abstract": {
+                        "S": "Here, we summarize the recent achievements in the field of the nanocontainer-based self-healing coatings done during the last 8 years. The development of the nanocontainer-based self-healing coatings has been started 15 years ago from the study of the nanocontainers with stimuli responsive release properties able to release anticorrosion agent (inhibitor) on demand only into corroded area thus preventing its spontaneous leakage. Since that, many different types of the nanocontainers have been demonstrated: from polymer capsules to the porous inorganic nanoparticles with sophisticated mechanism of the release triggering. Nowadays, the study of the commercial application of the nanocontainer-based selfhealing coatings is the main focus in this area, especially for the coatings with several autonomic functionalities. However, the search for the new types of the multifunctional nanocontainers possessing different triggering mechanisms is still remained active, especially for low-cost natural nanocontainers."
+                    },
+                    "DOI": {
+                        "S": "10.1039/c8cc09982k"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/196222483.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2019-04-07T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Shchukina, Elena, Wang, Hongqiang, Shchukin, Dmitry G"
+                    },
+                    "Publisher": {
+                        "S": "Royal Society of Chemistry (RSC)"
+                    },
+                    "Probability": {
+                        "N": "22.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_gases"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-161529691"
+                    },
+                    "Title": {
+                        "S": "Halloysites and mesoporous silica as inhibitor nanocontainers for feedback active powder coatings"
+                    },
+                    "Abstract": {
+                        "S": "We carried out comparative study of the effect of inhibitor-loaded nanocontainers on corrosion protection performance of polyepoxy powder coatings employing neutral salt-spray test (5 % NaCl, 35°C, different time). W e demonstrated that halloysites and mesoporous silica particles loaded with corrosion inhibitor 8-hydroxyquinoline can be homogeneously distributed in powder coating effectively reducing corrosion of the metal substrate over 1000 h of salt-spray test. Addition of only 2 wt.% of inhibitor encapsulated in both nanocontainers to the powder coating is sufficient to decrease the delamination effect by 2-3 times and suppress the formation of the pitting corrosion."
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.porgcoat.2015.12.013"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/161529691.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2016-01-11T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Shchukina, Elena, Shchukin, Dmitry, Grigoriev, Dmitry"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "43.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_wind"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-80774602"
+                    },
+                    "Title": {
+                        "S": "Protective organic coatings with anticorrosive and other feedback-active features: micro- and nanocontainers-based approach"
+                    },
+                    "Abstract": {
+                        "S": "Development of materials possessing the ability to recover their main function(s) in response to destructive impacts is today one of most rapidly growing fields in the material science. In particular, protective organic coatings with the features to heal or restore their protective function autonomously are of great interest in fighting surface deterioration processes like corrosion, biofouling and other affecting metallic structures.  Embedding of micro- and nanocontainers in protective coatings is nowadays frequently used technique to provide them one or several feedback active functionalities. Depending on containers morphology and active agent(s) filled, coatings with specifically aimed self-recovering functionalities (anticorrosive, water-repelling, antifouling etc.) or multifunctional coatings can be created. In the present paper, different types of containers for self-recovering functional coatings synthesized by use of mesoporous nano- and microparticles or on the emulsion basis are presented. L-b-L polyelectrolyte deposition, interfacial polymerization, surface precipitation, Pickering emulsions and in-situ emulsion polymerization were utilized for the preparation of nano- or microscaled containers. Morphology of containers, efficiency of encapsulation and kinetics of active agents release were investigated using modern techniques such as T-SEM, Cryo-SEM etc.  Incorporation of containers in the coating matrix was followed by the experimental modeling of external impacts leading to the simultaneous containers damage. Subsequent release of the active agent at the affected site caused the active feedback of the coating and self-recovery of its specific protective function. The advantages of novel container based protective coatings as compared to conventional ones are illustrated by corrosion tests results according to ASTM Standard B 117"
+                    },
+                    "DOI": {
+                        "S": "10.5006/0976"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/80774602.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2014-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Shchukin, Dmitry"
+                    },
+                    "Publisher": {
+                        "S": "NACE International"
+                    },
+                    "Probability": {
+                        "N": "77.9"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_temperature"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-80773904"
+                    },
+                    "Title": {
+                        "S": "Influence of Functionalization of Nanocontainers on Self-Healing Anticorrosive Coatings"
+                    },
+                    "Abstract": {
+                        "S": "Feedback coating based on pH-induced release of inhibitor from organosilyl-functionalized containers is considered as a compelling candidate to achieve smart self-healing corrosion protection. Four key factors that determine the overall coating performance include 1) the uptake and release capacity of containers, 2) prevention of the premature leakage, 3) compatibility of containers in coating matrix and 4) cost and procedure simplicity consideration. The critical influence introduced by organosilyl-functionalization of containers is systematically demonstrated by investigating MCM-41 silica nanoparticles modified with ethylenediamine (en), en-4-oxobutanoic acid salt (en-COO-) and en-triacetate (en-(COO-)3) with higher and lower organic contents. The properties of the modified silica nanoparticles as containers were mainly characterized by solid-state 13C nuclear magnetic resonance, scanning and transmission electron microscopy, N2 sorption, thermogravimetric analysis, small-angle X-ray scattering, dynamic light scattering and UV-vis spectroscopy. Finally, the self-healing ability and anticorrosive performances of hybrid coatings were examined through scanning vibrating electrode technique (SVET) and electrochemical impedance spectroscopy (EIS). en-(COO-)3- type functionalization with content of only 0.23 mmol/g was found to perform the best as a candidate for establishing pH-induced release system. It is because the resulting capped and loaded (C-L) functionalized silica nanocontainers (FSNs) exhibit a high loading (26 wt%) and release capacity (80%) for inhibitor, prevention of premature leakage (less than 2%), good dispersibility in coating matrix and cost effectiveness"
+                    },
+                    "DOI": {
+                        "S": "10.1021/acsami.5b08028"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/80773904.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-10-21T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Zheng, Zhaoliang, Schenderlein, Matthias, Huang, Xing, Brownbill, Nick, Blanc, Frederic, Shchukin, Dmitry"
+                    },
+                    "Publisher": {
+                        "S": "American Chemical Society (ACS)"
+                    },
+                    "Probability": {
+                        "N": "97.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_fire"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-82807013"
+                    },
+                    "Title": {
+                        "S": "Biomimicry in Furniture Design"
+                    },
+                    "Abstract": {
+                        "S": "AbstractNature, is a big factory, where the faults are kept at a minimum, choosing the most suitable material of all for the purpose, recycling them, and even changing every ingredient as conditions impose. Biomimicry examined models in nature, then imitating these designs or taking inspiration from them which aims to provide solutions to people's problems is one of the new branches of science. From past to present many disciplines have produced designs and solutions inspired by the nature. Interior architecture is also one of the this disciplines. Interior design, interior, structure, comfort, and materials in furniture design, as well as the influence of these designs are carried out. Furniture has always been a symbolic aspect of the life style and cultural richness of mankind. Form, structure or materials in the nature as used for furniture design both for aesthetic and practical purposes. In the study, designs were made with inspiration from macro and micro sized living beings in the nature. Within the concept of Biomimicry, furniture designs were made, which were inspired by both forms and structures in the nature and applied exactly"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.sbspro.2015.07.255"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/82807013.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-07-25"
+                    },
+                    "Authors": {
+                        "S": "Tavsan, Filiz, Sonmez, Elif"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier Ltd."
+                    },
+                    "Probability": {
+                        "N": "76.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_ice"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-131170667"
+                    },
+                    "Title": {
+                        "S": "Modified Mesoporous Silica Nanoparticles with a Dual Synergetic Antibacterial Effect"
+                    },
+                    "Abstract": {
+                        "S": "Application of mesoporous silica nanoparticles (MSNs) as antifouling/antibacterial carriers is limited and specifically with a dual synergetic effect. In the present work, MSNs modified with quaternary ammonium salts (QASs) and loaded with the biocide Parmetol S15 were synthesized as functional fillers for antifouling/antibacterial coatings. From the family of the MSNs, MCM-48 was selected as a carrier because of its cubic pore structure, high surface area, and high specific pore volume. The QASs used for the surface modification of MCM-48 were dimethyloctadecyl[3-(trimethoxysilyl)propyl]ammonium chloride and dimethyltetradecyl[3-(triethoxysilyl)propyl]ammonium chloride. The QAS-modified MCM-48 reveals strong covalent bonds between the QAS and the surface of the nanoparticles. The surface functionalization was confirmed by Fourier transform infrared spectroscopy, thermogravimetric analysis, elemental analysis, and ζ-potential measurements. Additional loading of the QAS-modified MCM-48 with a commercially available biocide (Parmetol S15) resulted in a synergetic dual antibacterial/antifouling effect. Either loaded or unloaded QAS-modified MSNs exhibited high antibacterial performance confirming their dual activity. The QAS-modified MCM-48 loaded with the biocide Parmetol S15 killed all exposed bacteria after 3 h of incubation and presented 100% reduction at the antibacterial tests against Gram-negative and Gram-positive bacteria. Furthermore, the QAS-modified MCM-48 without Parmetol S15 presented 77–89% reduction against the exposed Gram-negative bacteria and 78–94% reduction against the exposed Gram-positive bacteria. In addition, the modified MCM-48 was mixed with coating formulations, and its antifouling performance was assessed in a field test trial in northern Red Sea. All synthesized paints presented significant antifouling properties after 5 months of exposure in real seawater conditions, and the dual antifouling effect of the nanoparticles was confirmed"
+                    },
+                    "DOI": {
+                        "S": "10.1021/acsami.7b14642"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/131170667.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-11-08T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Michailidis, M, Sorzabal-Bellido, I, Adamidou, E, Diaz-Fernandez, YA, Aveyard, JL, Wengier, R, Grigoriev, DO, Raval, R, Benayahu, Y, D'Sa, R, Shchukin, DG"
+                    },
+                    "Publisher": {
+                        "S": "American Chemical Society (ACS)"
+                    },
+                    "Probability": {
+                        "N": "93.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_light"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-82551598"
+                    },
+                    "Title": {
+                        "S": "Biomimicry, an Approach, for Energy Effecient Building Skin Design"
+                    },
+                    "Abstract": {
+                        "S": "Since 1970, a major problem worldwide is energy shortage along with the high consumption of energy in buildings. Architects are attempting to find solutions for managing buildings energy consumption. One innovative approach is Biomimicry,Which is defined as the applied science that derives inspiration for solutions to human problems through the study of natural designs, systems, and process2. A subcategory of biomimicry is building skin which forms the entire exterior of the building. It is the boundary through which the buildings interaction with the environment occurs. Proper management of the building skin can significantly reduce the building's energy demand. The main objective of this paper is to investigate the ability of reducing energy consumption by applying the biomimicry approach on buildings skin design. In order To achieve this aim, a research methodology has been designed to accomplish four objectives. First, it will carry out an in depth research on biomimicry, skin, and biomimicry in building skin through the study of existing literature. Second, international case studies will be presented and analyzed in terms of usage of biomimicry, in addition to, the impact it had on reducing the buildings energy consumption. Finally it will conclude with guidelines for building skin biomimicry design for more efficient energy consumption in buildings"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.proenv.2016.04.017"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/82551598.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2016-12-31"
+                    },
+                    "Authors": {
+                        "S": "Radwan, Gehan.A.N., Osama, Nouran"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier BV"
+                    },
+                    "Probability": {
+                        "N": "23.8"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_chemicals"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-328154544"
+                    },
+                    "Title": {
+                        "S": "Biomimicry Learning as Inspiration for Product Design Innovation in Industrial Revolution 4.0"
+                    },
+                    "Abstract": {
+                        "S": "ABSTRACTNature can be a source of unlimited inspiration, biomimicry is an innovative approach to find sustainable solutions to overcome problems and meet human needs by imitating existing patterns and strategies in nature. The Industrial Revolution 4.0 brought many changes in human life, changes in lifestyles, ways of working, ways of learning, and ways of communicating between humans in many aspects. Most University students make use of technology to find and develop their ideas especially in creative industries where the OIM (Observe, Imitate, Modify) practice can be done through the Internet by observing from another researcher's observation. While biomimicry offers researchers to observe nature and create technology innovation inspired by nature. Students need to experience and learn from nature and use technology wisely. This study examines the biomimicryinspired works of Product Design undergraduate program students of Podomoro University Jakarta. The methodology research that we use in this study is a qualitative participatory method with comparative and correlational studies. The content of this study is to learn and evaluate the process and result of student's biomimicry observation into innovative product design. The conclusion can also be drawn that comparing the different levels of students which is the first year, second year, and third-year students by using the biomimicry observation approach will show variated concepts and skills on their work depending on what knowledge that they have learned from each semester."
+                    },
+                    "DOI": {
+                        "S": "10.24821/ijcas.v7i1.4160"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/328154544.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2020-07-27T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Lestari, Dina"
+                    },
+                    "Publisher": {
+                        "S": "Institut Seni Indonesia Yogyakarta"
+                    },
+                    "Probability": {
+                        "N": "65.4"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-protect_from_radiation"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-304169842"
+                    },
+                    "Title": {
+                        "S": "Development and Characterization of Mechanically Durable Silicone-Polythiourethane Composites Modified with Tetrapodal Shaped ZnO Particles for the Potential Application as Fouling-Release Coating in the Marine Sector"
+                    },
+                    "Abstract": {
+                        "S": "Ecological considerations strongly necessitate the development of environmentally friendly antifouling paints. A promising alternative to biocide containing antifouling paints are fouling-release coatings, which are non-toxic and designed to prevent permanent attachment of marine organisms to the surface, due to their low surface energy. However, these coatings suffer from insufficient mechanical properties, which make them unsuitable for mechanically stressed surfaces e.g., on ship hulls. To overcome those obstacles, polydimethylsiloxane (PDMS)-polythiourethane (PTU) composites modified with tetrapodal shaped micro-nano ZnO particles (t-ZnO) were produced and characterized by evaluating the surface energy, mechanical properties, and fouling-release performance. Among all variations, PTU/1 wt.% PDMS composites with 1 wt.% t-ZnO particles possess superior properties for applications as fouling-release coatings for maritime purposes"
+                    },
+                    "DOI": {
+                        "S": "10.3390/ma11122413"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/304169842.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2018-01-01T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Qiu, Haoyi, Hölken, Iris, Gapeeva, Anna, Filiz, Volkan, Adelung, Rainer, Baum, Martina"
+                    },
+                    "Publisher": {
+                        "S": "MDPI AG"
+                    },
+                    "Probability": {
+                        "N": "88.5"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-prevent_buckling"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-217250887"
+                    },
+                    "Title": {
+                        "S": "In Situ Fabrication of One‐Dimensional‐Based Lotus‐Like Silicone/ϒ–Al2O3 Nanocomposites for Marine Fouling Release Coatings"
+                    },
+                    "Abstract": {
+                        "S": "Prohibition on the utilization of organotins compounds in antifouling (AF), and Fouling release (FR) paints have attracted considerable ineptest as an environmentally friendly alternative. In this work, an ecofriendly series of lotus‐like nano‐structured organic‐inorganic surfaces based on vinyl terminated polydimethylsiloxane (PDMS)/ϒ‐Al2O3 nanorods composites were successfully modeled for the first time via in‐situ technique. The tailored nanocomposites were cured via hydrosilation mechanism and applied for marine FR coatings. Incorporation of various concentrations of controlled 1D nanofillers was inevitable to study the structure property relationship. Mechanical tests, durability parameters, and the FR and biological inertness were assessed. The results confirmed that uniform distribution of the prepared ϒ‐Al2O3 nanorods dramatically improved their water repellency, homogenous topology, self‐cleaning and fouling repellency. With nanofiller insertion up to 0.5% nanofillers, a particular increase in the contact angle (CA), decrease in the surface free energy (SFE), and topological homogeneity was observed with improving phsico‐mechanical, and durability against UV properties. The biological assessments indicated excellent inhibition and superior AF potential of the 0.5% nanofiller composite coatings. Our finding introduces attractive merits such as simplicity, ecofriendly, economic feasibility, and potential application in marine FR nano‐coatings"
+                    },
+                    "DOI": {
+                        "S": "10.1002/slct.201701235"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/217250887.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2017-10-23T00:00:00"
+                    },
+                    "Authors": {
+                        "S": "Selim, M S, Shenashen, M A, Fathalla, N A, Elmarakbi, Ahmed, El-Safty, Sherif"
+                    },
+                    "Publisher": {
+                        "S": "Wiley"
+                    },
+                    "Probability": {
+                        "N": "55.6"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL-prevent_deformation"
+                    },
+                    "SortKey": {
+                        "S": "ARTICLE-82119581"
+                    },
+                    "Title": {
+                        "S": "Biomimicry in Architectural Design Education"
+                    },
+                    "Abstract": {
+                        "S": "In all sciences, nature is used as a guiding spirit. A domain exists which makes progress through the imitation and observation of nature. This domain, which is called biomimicry, can be expressed as the imitation of the life system in nature. As in many areas, in the field of architectural design behaviour is seen to imitate nature. The aim of this study is to describe the concept of biomimicry, which has confronted us in the field of architecture in recent years, and to consider design and nature in relation to architectural design education. At Karadeniz Technical University, the Department of Architecture Architectural Design Courses are carried out for this purpose. Courses within the scope of the concept of biomimicry, include the architectural design process that examines the relationship of nature and design in a comprehensive manner. At the end of the period during which biomimicry is applied to the design proposal a study was made of the relationship between biomimicry and design"
+                    },
+                    "DOI": {
+                        "S": "10.1016/j.sbspro.2015.04.832"
+                    },
+                    "DownloadURL": {
+                        "S": "https://core.ac.uk/download/pdf/82119581.pdf"
+                    },
+                    "DatePublished": {
+                        "S": "2015-05-13"
+                    },
+                    "Authors": {
+                        "S": "Tavsan, Cengiz, Tavsan, Filiz, Sonmez, Elif"
+                    },
+                    "Publisher": {
+                        "S": "Elsevier Ltd."
+                    },
+                    "Probability": {
+                        "N": "58.9"
+                    }
+                }
+            }
+        }
+    ]
+}

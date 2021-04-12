@@ -7,13 +7,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-attach_permanently"
+                        "S": "LABEL-modify/convert_thermal_energy"
                     },
                     "Level2": {
-                        "S": "Attach permanently"
+                        "S": "Change energy state"
                     },
                     "Level3": {
-                        "S": "Attach permanently"
+                        "S": "Modify/convert thermal energy"
                     }
                 }
             }
@@ -25,13 +25,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-attach_temporarily"
+                        "S": "LABEL-modify/convert_light_energy"
                     },
                     "Level2": {
-                        "S": "Attach temporarily"
+                        "S": "Change energy state"
                     },
                     "Level3": {
-                        "S": "Attach temporarily"
+                        "S": "Modify/convert light energy"
                     }
                 }
             }
@@ -43,13 +43,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-passively_move_through/on_liquids"
+                        "S": "LABEL-physically_assemble_structure"
                     },
                     "Level2": {
-                        "S": "Passive movement"
+                        "S": "Physically assemble structure"
                     },
                     "Level3": {
-                        "S": "Passively move through/on liquids"
+                        "S": "Physically assemble structure"
                     }
                 }
             }
@@ -61,13 +61,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-passively_move_through/on_solids"
+                        "S": "LABEL-break_down_structure"
                     },
                     "Level2": {
-                        "S": "Passive movement"
+                        "S": "Break down structure"
                     },
                     "Level3": {
-                        "S": "Passively move through/on liquids"
+                        "S": "Break down structure"
                     }
                 }
             }
@@ -79,31 +79,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-passively_move_through_gases"
+                        "S": "LABEL-optimize_shape/materials"
                     },
                     "Level2": {
-                        "S": "Passive movement"
+                        "S": "Optimize shape/materials"
                     },
                     "Level3": {
-                        "S": "Passively move through gases"
-                    }
-                }
-            }
-        },
-        {
-            "PutRequest": {
-                "Item": {
-                   "PartitionKey": {
-                        "S": "LABEL"
-                    },
-                    "SortKey": {
-                        "S": "LABEL-actively_move_through/on_liquids"
-                    },
-                    "Level2": {
-                        "S": "Active movement"
-                    },
-                    "Level3": {
-                        "S": "Actively move through/on liquids"
+                        "S": "Optimize shape/materials"
                     }
                 }
             }
@@ -115,13 +97,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-actively_move_through/on_solids"
+                        "S": "LABEL-send_light_signals_in_the_visible_spectrum"
                     },
                     "Level2": {
-                        "S": "Active movement"
+                        "S": "Send signals"
                     },
                     "Level3": {
-                        "S": "Actively move through/on solids"
+                        "S": "Send light signals in the visible spectrum"
                     }
                 }
             }
@@ -133,13 +115,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-actively_move_through_gases"
+                        "S": "LABEL-send_light_signals_in_the_non-visible_spectrum"
                     },
                     "Level2": {
-                        "S": "Active movement"
+                        "S": "Send signals"
                     },
                     "Level3": {
-                        "S": "Actively move through gases"
+                        "S": "Send light signals in the non-visible spectrum"
                     }
                 }
             }
@@ -151,13 +133,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_animals"
+                        "S": "LABEL-send_sound_signals"
                     },
                     "Level2": {
-                        "S": "Protect from living threats"
+                        "S": "Send signals"
                     },
                     "Level3": {
-                        "S": "Protect from animals"
+                        "S": "Send sound signals"
                     }
                 }
             }
@@ -169,13 +151,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_plants"
+                        "S": "LABEL-send_tactile_signals"
                     },
                     "Level2": {
-                        "S": "Protect from living threats"
+                        "S": "Send signals"
                     },
                     "Level3": {
-                        "S": "Protect from plants"
+                        "S": "Send tactile signals"
                     }
                 }
             }
@@ -187,13 +169,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_fungi"
+                        "S": "LABEL-send_chemical_signals"
                     },
                     "Level2": {
-                        "S": "Protect from living threats"
+                        "S": "Send signals"
                     },
                     "Level3": {
-                        "S": "Protect from fungi"
+                        "S": "Send chemical signals"
                     }
                 }
             }
@@ -205,13 +187,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_microbes"
+                        "S": "LABEL-send_vibratory_signals"
                     },
                     "Level2": {
-                        "S": "Protect from living threats"
+                        "S": "Send signals"
                     },
                     "Level3": {
-                        "S": "Protect from microbes"
+                        "S": "Send vibratory signals"
                     }
                 }
             }
@@ -223,13 +205,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_solids"
+                        "S": "LABEL-send_electrical/magnetic_signals"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Send signals"
                     },
                     "Level3": {
-                        "S": "Protect from solids"
+                        "S": "Send electrical/magnetic signals"
                     }
                 }
             }
@@ -241,13 +223,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_excess_liquids"
+                        "S": "LABEL-differentiate_signal_from_noise"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Process signals"
                     },
                     "Level3": {
-                        "S": "Protect from excess liquids"
+                        "S": "Differentiate signal from noise"
                     }
                 }
             }
@@ -259,13 +241,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_loss_of_liquids"
+                        "S": "LABEL-convert_signals"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Process signals"
                     },
                     "Level3": {
-                        "S": "Protect from loss of liquids"
+                        "S": "Convert signals"
                     }
                 }
             }
@@ -277,13 +259,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_gases"
+                        "S": "LABEL-respond_to_signals"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Process signals"
                     },
                     "Level3": {
-                        "S": "Protect from gases"
+                        "S": "Respond to signals"
                     }
                 }
             }
@@ -295,13 +277,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_wind"
+                        "S": "LABEL-sense_light_in_the_visible_spectrum"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Protect from wind"
+                        "S": "Sense light in the visible spectrum"
                     }
                 }
             }
@@ -313,13 +295,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_temperature"
+                        "S": "LABEL-sense_light_in_the_non-visible_spectrum"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Protect from temperature"
+                        "S": "Sense light in the non-visible spectrum"
                     }
                 }
             }
@@ -331,13 +313,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_fire"
+                        "S": "LABEL-sense_electricity/magnetism"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Protect from fire"
+                        "S": "Sense electricity/magnetism"
                     }
                 }
             }
@@ -349,13 +331,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_ice"
+                        "S": "LABEL-sense_disease_in_a_living_system"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Protect from ice"
+                        "S": "Sense disease in a living system"
                     }
                 }
             }
@@ -367,13 +349,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_light"
+                        "S": "LABEL-sense_touch_and_mechanical_forces"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Protect from light"
+                        "S": "Sense touch and mechanical forces"
                     }
                 }
             }
@@ -385,13 +367,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_chemicals"
+                        "S": "LABEL-sense_chemicals"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Protect from chemicals"
+                        "S": "Sense chemicals"
                     }
                 }
             }
@@ -403,13 +385,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-protect_from_radiation"
+                        "S": "LABEL-sense_atmospheric_conditions"
                     },
                     "Level2": {
-                        "S": "Protect from non-living threats"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Protect from radiation"
+                        "S": "Sense atmospheric conditions"
                     }
                 }
             }
@@ -421,13 +403,13 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-prevent_buckling"
+                        "S": "LABEL-sense_sound/vibrations"
                     },
                     "Level2": {
-                        "S": "Prevent structural failure"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Prevent buckling"
+                        "S": "Sense sound/vibrations"
                     }
                 }
             }
@@ -439,13 +421,31 @@
                         "S": "LABEL"
                     },
                     "SortKey": {
-                        "S": "LABEL-prevent_deformation"
+                        "S": "LABEL-sense_temperature_cues"
                     },
                     "Level2": {
-                        "S": "Prevent structural failure"
+                        "S": "Sense signals/environmental cues"
                     },
                     "Level3": {
-                        "S": "Prevent deformation"
+                        "S": "Sense temperature cues"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "PartitionKey": {
+                        "S": "LABEL"
+                    },
+                    "SortKey": {
+                        "S": "LABEL-sense_motion"
+                    },
+                    "Level2": {
+                        "S": "Sense signals/environmental cues"
+                    },
+                    "Level3": {
+                        "S": "Sense motion"
                     }
                 }
             }
