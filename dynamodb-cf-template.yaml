@@ -294,6 +294,18 @@ Resources:
               - 'sqs:GetQueueAttributes'
             Resource:
               - !GetAtt CoreDumpS3EventsSQS.Arn
+  myLambdaS3ReadPolicy:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      ManagedPolicyName: petal-lambda-s3-core-dump
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - 's3:GetObject'
+            Resource:
+              - !Sub 'arn:aws:s3:::${CoreDumpS3BucketName}/*'
   myLambdaRole:
     Type: AWS::IAM::Role
     Properties: 
@@ -340,7 +352,9 @@ Resources:
       Description: Allows Lambda functions to call AWS services on your behalf.
       ManagedPolicyArns:
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-        - !Ref myLambdaSQSEventPolicy
+        - !Ref myLambdaSQSEventPolicy     # SQS Permissions
+        - !Ref myLambdaS3ReadPolicy       # S3  Permissions
+        - !Ref myLambdaPolicy             # DDB Permissions
       PermissionsBoundary:
         Ref: GccTenantOperatorBoundaryArn
   mySageMakerRole:
