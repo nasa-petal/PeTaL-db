@@ -11,3 +11,4 @@ PeTaL is comprised of multiple interconnected services. This repository houses t
 1. Upload data.json file
 1. Run this command to add items to the PetalLabels table:    
 `aws dynamodb batch-write-item --request-items file://data.json`
+1. Repeat steps 3 and 4 for for data[2-8].json
