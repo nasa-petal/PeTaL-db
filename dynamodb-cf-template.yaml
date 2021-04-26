@@ -572,20 +572,67 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: python3.8
-      #Timeout: 900
-      #MemorySize: 1024
+      Timeout: 60
+      MemorySize: 128
       Code:
         ZipFile: !Sub
           - |
             import boto3
             import json
+            import random
 
-            def dummyFunc() :
-                return '${myDynamoDBTable}'
+            s3 = boto3.client('s3')
+            ddb = boto3.resource('dynamodb')
+            table = ddb.Table('${myDynamoDBTable}')
+
+            randomLabelList = ["label1", "label2", "label3"]
 
             def handler(event, context):
-                if "eventName" in event:
-                    return
+                records = event["Records"]
+
+                # it's possible to get multiple events in one lambda call
+                # this iterates over all possible records passed
+                for rec in records:
+                    recordsBody = json.loads(rec["body"])
+
+                    # handle first test event from setup
+                    if "Event" in recordsBody:
+                        if "s3:TestEvent" in recordsBody["Event"]:
+                            return
+
+                    # SQS message has records list and S3 event has records list as well
+                    recordBodyRecords = recordsBody["Records"]
+                    for s3RecordEvent in recordBodyRecords:
+                        eventName = s3RecordEvent["eventName"]
+                        if "ObjectCreated" in eventName:
+                            s3Bucket = s3RecordEvent["s3"]["bucket"]["name"]
+                            s3Key = s3RecordEvent["s3"]["object"]["key"]
+
+                            obj = s3.get_object(Bucket=s3Bucket, Key=s3Key)
+                            coreJson = json.loads(obj['Body'].read())
+
+                            response = table.put_item (
+                                Item = {
+                                    'PartitionKey': random.choice(randomLabelList),
+                                    'SortKey': coreJson['oai'],
+                                    'Title': coreJson['title'],
+                                    'Abstrat': coreJson['abstract'],
+                                    'DOI': coreJson['doi'],
+                                    'DownloadURL': coreJson['downloadUrl'],
+                                    'DatePublished': coreJson['datePublished'],
+                                    # authors are still in form "last, first"
+                                    # so it looks like there are extra commas in this list
+                                    'Authors': ', '.join(coreJson['authors']),
+                                    'Publisher': coreJson['publisher'],
+                                    # 0 <= random <= 100
+                                    'Probability': str(random.uniform(0, 100))
+                                }
+                            )
+
+                            # Fail here if HTTP status code is bad to put SQS message back on queue
+                            responseHTTPStatus = json.loads(json.dumps(response))['ResponseMetadata']['HTTPStatusCode']
+                            if responseHTTPStatus != 200:
+                                raise Exception("Failed somewhere to write to DDB. HTTPStatusCode: " + str(responseHTTPStatus))
           - { myDynamoDBTable: !Ref myDynamoDBTable }
       Description: 'Takes unprocessed CORE articles and randomly labels them with biomimetic functions. Then saves the labeled articles to DynamoDB.'
       Role: !GetAtt myLambdaRandomLabellerRole.Arn
