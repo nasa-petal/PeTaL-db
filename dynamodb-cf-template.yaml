@@ -350,7 +350,7 @@ Resources:
                         ModelName=modelName,
                         PrimaryContainer={
                             'Image': '763104351884.dkr.ecr.us-east-2.amazonaws.com/pytorch-inference-eia:1.5.1-cpu-py36-ubuntu16.04',
-                            'ModelDataUrl': 's3://petal-bucket/model.tar.gz'
+                            'ModelDataUrl': 's3://petal-bucket/scibert-0.1-model.tar.gz'
                         },
                         ExecutionRoleArn=role
                     )
@@ -482,7 +482,7 @@ Resources:
             def batchPredictions():#newArticles):#, endpoint):
                 # randomly assign labels to articles.
                 # 
-                data = {"xvalue": 1}
+                data = {"abstract": "Climbing plants have fascinated botanists since the pioneering works of Darwin and his contemporaries in the 19(th) century. Diverse plants have evolved different ways of climbing and a wide range of attachment devices and stem biomechanics to cope with the particular physical demands of life as a climber. We investigated the biomechanics of attachment in a range of climbing palms, including true rattans from Southeast Asia and the genus Desmoncus from South America. We found that hook strength and orientation is coordinated with rachis geometry and rigidity. These findings support the notion of a ratchet-type attachment mechanism and partly explain why these spiny plants are so catchy and efficient at attaching to supports."}
                 response = runtime.invoke_endpoint(EndpointName=endpointName,
                                                           ContentType='application/json',
                                                           Body=json.dumps(data))
