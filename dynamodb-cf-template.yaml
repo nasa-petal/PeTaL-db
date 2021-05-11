@@ -258,13 +258,45 @@ Resources:
     DependsOn: myRestApiDocumentationPart
 
   #############
+  #    S3     #
+  #############
+
+  petalBucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: petal-bucket
+      LifecycleConfiguration: 
+        Rules:
+          - Id: DeleteIncompleteUploads
+            Prefix: ''
+            AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 7
+            Status: Enabled
+  petalS3BucketRWPolicy:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: ListObjectsInBucket
+            Effect: Allow
+            Action:
+            - s3:ListBucket
+            Resource:
+            - arn:aws:s3:::petal-bucket
+          - Sid: AllObjectActions
+            Effect: Allow
+            Action: s3:*Object
+            Resource:
+            - arn:aws:s3:::petal-bucket/*
+
+  #############
   #  Lambdas  #
   #############
 
   myLambdaPolicy:
     Type: 'AWS::IAM::ManagedPolicy'
     Properties:
-      ManagedPolicyName: petal-lambda-dynamodb
       PolicyDocument:
         Version: "2012-10-17"
         Statement:
