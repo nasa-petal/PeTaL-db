@@ -2,7 +2,7 @@
 
 The Periodic Table of Life (PeTaL, pronounced petal) is a design tool aimed at allowing users to seemlesly move from ideas (from nature or other sources) to design.
 
-PeTaL is comprised of multiple interconnected services. This repository houses the AWS CloudFormation template that creates the DynamoDB table and AWS API Gateway REST API, and a json file with data to load into the DynamoDB table. There are other repositories for the [ReactJS web front end client](https://github.com/nasa/PeTaL) and [Labeller](https://github.com/nasa/petal-labeller).
+PeTaL is comprised of multiple interconnected services. This repository houses the AWS CloudFormation template that creates the DynamoDB table, AWS API Gateway REST API, Lambdas, Step Functions, and S3 definitions for the labeller, and a json file with dummy data to load into the DynamoDB table. There are other repositories for the [ReactJS web front end client](https://github.com/nasa/PeTaL) and [Labeller](https://github.com/nasa/petal-labeller).
 
 ## Getting started
 
