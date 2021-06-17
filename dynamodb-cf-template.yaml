@@ -18,6 +18,13 @@ Parameters:
       - br
       - test
     Description: br, test, or empty for prod.
+  SageMakerVPCId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC Id to deploy Sagemaker Studio to
+  SageMakerSubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Subnet Ids within the VPC to deploy Sagemaker Studio to. Select only the private subnets in all availability zones.
+
 Resources:
 
   ##############
@@ -350,11 +357,13 @@ Resources:
         Statement:
           Effect: Allow
           Principal:
-            Service: sagemaker.amazonaws.com
+            Service:
+              - sagemaker.amazonaws.com
+              - comprehend.amazonaws.com
           Action: sts:AssumeRole
-      Description: Allows Sagemaker to access AWS services.
+      Description: Allows Sagemaker and Comprehend to access AWS services.
       ManagedPolicyArns:
-        - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonS3ReadOnlyAccess"
+        - !Ref petalS3BucketRWPolicy
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
       PermissionsBoundary:
         Ref: GccTenantOperatorBoundaryArn  
@@ -552,6 +561,21 @@ Resources:
           - { myDynamoDBTable: !Ref myDynamoDBTable }
       Description: 'Takes unprocessed CORE articles, labels them with biomimetic functions using a deployed SageMaker endpoint, and saves the labelled articles to DynamoDB.'
       Role: !GetAtt myLambdaPredictRole.Arn
+
+  ###############
+  #  Sagemaker  #
+  ###############
+
+  mySageMakerDomain:
+    Type: AWS::SageMaker::Domain
+    Properties: 
+      AppNetworkAccessType: PublicInternetOnly
+      AuthMode: IAM
+      DefaultUserSettings:
+        ExecutionRole: !GetAtt mySageMakerRole.Arn
+      DomainName: petal-domain
+      SubnetIds: !Ref SageMakerSubnetIds
+      VpcId: !Ref SageMakerVPCId
 
   ####################
   #  Step Functions  #
