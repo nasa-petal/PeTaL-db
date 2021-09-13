@@ -18,12 +18,15 @@ Parameters:
       - br
       - test
     Description: br, test, or empty for prod.
-  SageMakerVPCId:
+  VPCId:
     Type: AWS::EC2::VPC::Id
-    Description: VPC Id to deploy Sagemaker Studio to
+    Description: VPC Id to deploy resources to
   SageMakerSubnetIds:
     Type: List<AWS::EC2::Subnet::Id>
     Description: Subnet Ids within the VPC to deploy Sagemaker Studio to. Select only the private subnets in all availability zones.
+  EC2SubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: Subnet Ids within the VPC to deploy EC2 instances to. If SSH access outside of AWS is required select a public subnet.
 
 Resources:
 
@@ -575,7 +578,7 @@ Resources:
         ExecutionRole: !GetAtt mySageMakerRole.Arn
       DomainName: petal-domain
       SubnetIds: !Ref SageMakerSubnetIds
-      VpcId: !Ref SageMakerVPCId
+      VpcId: !Ref VPCId
 
   ####################
   #  Step Functions  #
@@ -651,6 +654,37 @@ Resources:
         - { lambdaModelDeployArn: !GetAtt lambdaModelDeploy.Arn, lambdaModelAwaitArn: !GetAtt lambdaModelAwait.Arn, lambdaModelPredictArn: !GetAtt lambdaModelPredict.Arn }
       RoleArn: !GetAtt 'RoleOnboardingInstall.Arn'
 
+  #######################################################
+  #  EC2 Development Instances for Data Science/ML work #
+  #######################################################
+
+  SSHSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: !Ref VPCId
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+      - CidrIp: 0.0.0.0/0
+        FromPort: 22
+        IpProtocol: tcp
+        ToPort: 22
+  controlXface:
+    Type: AWS::EC2::NetworkInterface
+    Properties:
+      SubnetId: !Ref EC2SubnetId
+      Description: Interface for controlling traffic such as SSH
+      GroupSet: 
+      - !Ref SSHSecurityGroup
+  MLEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: "ami-04780c82d256efd84"
+      InstanceType: t2.micro
+      KeyName: "paht-ec2-ml"
+      NetworkInterfaces:
+        -
+          NetworkInterfaceId: !Ref controlXface
+          DeviceIndex: 0
 
   ################################################
   #  Run Lambda on a schedule using EventBridge  #
