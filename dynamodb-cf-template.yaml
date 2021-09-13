@@ -663,19 +663,19 @@ Resources:
     Properties:
       VpcId: !Ref VPCId
       GroupDescription: Enable SSH access via port 22
-      SecurityGroupIngress:
-      - CidrIp: 0.0.0.0/0
-        FromPort: 22
-        IpProtocol: tcp
-        ToPort: 22
-  controlXface:
+      #SecurityGroupIngress:
+      #- CidrIp: 0.0.0.0/0
+      #  FromPort: 22
+      #  IpProtocol: tcp
+      #  ToPort: 22
+  SSHNetworkInterface:
     Type: AWS::EC2::NetworkInterface
     Properties:
       SubnetId: !Ref EC2SubnetId
       Description: Interface for controlling traffic such as SSH
       GroupSet: 
       - !Ref SSHSecurityGroup
-  MLEC2Instance:
+  DataProcessingEC2Instance:
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: "ami-04780c82d256efd84"
@@ -683,7 +683,7 @@ Resources:
       KeyName: "paht-ec2-ml"
       NetworkInterfaces:
         -
-          NetworkInterfaceId: !Ref controlXface
+          NetworkInterfaceId: !Ref SSHNetworkInterface
           DeviceIndex: 0
 
   ################################################
