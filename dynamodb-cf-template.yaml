@@ -663,28 +663,24 @@ Resources:
     Properties:
       VpcId: !Ref VPCId
       GroupDescription: Enable SSH access via port 22
-      #SecurityGroupIngress:
-      #- CidrIp: 0.0.0.0/0
-      #  FromPort: 22
-      #  IpProtocol: tcp
-      #  ToPort: 22
-  SSHNetworkInterface:
-    Type: AWS::EC2::NetworkInterface
-    Properties:
-      SubnetId: !Ref EC2SubnetId
-      Description: Interface for controlling traffic such as SSH
-      GroupSet: 
-      - !Ref SSHSecurityGroup
+      SecurityGroupIngress:
+      - CidrIp: 0.0.0.0/0
+        FromPort: 22
+        IpProtocol: tcp
+        ToPort: 22
   DataProcessingEC2Instance:
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: "ami-04780c82d256efd84"
       InstanceType: t2.micro
       KeyName: "paht-ec2-ml"
-      NetworkInterfaces:
-        -
-          NetworkInterfaceId: !Ref SSHNetworkInterface
-          DeviceIndex: 0
+      SubnetId: !Ref EC2SubnetId
+      SecurityGroupIds: [!Ref 'SSHSecurityGroup']
+  IPAddress:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref 'DataProcessingEC2Instance'
 
   ################################################
   #  Run Lambda on a schedule using EventBridge  #
