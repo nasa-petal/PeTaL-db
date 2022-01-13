@@ -8,10 +8,10 @@ PeTaL is comprised of multiple interconnected services. This repository houses t
 
 1. In AWS console, go to CloudFormation and run this template (dynamodb-cf-template.yaml) to create PetalLabels dynamodb table and api
 1. Open AWS cloudshell
-1. Upload data.json file
-1. Run this command to add items to the PetalLabels table:    
-`aws dynamodb batch-write-item --request-items file://data.json`
-1. Repeat steps 3 and 4 for for data[2-8].json
+1. Upload biomimicry_predictions.csv, labels.csv, and csv-to-db.py.
+1. Run this command to initialize the PetalLabels table with data:    
+`python3 csv-to-db.py &`
+1. The script takes about 45 minutes to complete. Make sure you interact with the shell every 15 minutes or so; the shell will close if there's no activity for 20-30 minutes.
 
 ## Contributing
 

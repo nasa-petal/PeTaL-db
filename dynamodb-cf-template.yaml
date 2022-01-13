@@ -4,9 +4,9 @@
 
 Description: PeTal DynamoDB table and REST API
 Parameters:
-  GccTenantOperatorBoundaryArn:
+  mcpTenantOperatorArn:
     Type: String
-    Description: ARN for gcc-tenantOperatorBoundary Policy
+    Description: ARN for mcp-tenantOperator Policy
   APIDocVersion:
     Type: Number
     MinValue: 1
@@ -24,9 +24,9 @@ Parameters:
   SageMakerSubnetIds:
     Type: List<AWS::EC2::Subnet::Id>
     Description: Subnet Ids within the VPC to deploy Sagemaker Studio to. Select only the private subnets in all availability zones.
-  EC2SubnetId:
-    Type: AWS::EC2::Subnet::Id
-    Description: Subnet Ids within the VPC to deploy EC2 instances to. If SSH access outside of AWS is required select a public subnet.
+  #EC2SubnetId:
+  #  Type: AWS::EC2::Subnet::Id
+  #  Description: Subnet Ids within the VPC to deploy EC2 instances to. If SSH access outside of AWS is required select a public subnet.
 
 Resources:
 
@@ -75,7 +75,7 @@ Resources:
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonDynamoDBReadOnlyAccess"
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
       PermissionsBoundary:
-        Ref: GccTenantOperatorBoundaryArn
+        Ref: mcpTenantOperatorArn
   myRestApi:
     Type: AWS::ApiGateway::RestApi
     Properties: 
@@ -128,6 +128,8 @@ Resources:
             method.response.header.Access-Control-Allow-Origin: false
       RequestParameters:
         method.request.querystring.level3: true
+        method.request.querystring.sortkey: false
+        method.request.querystring.partkey: false
       RequestValidatorId:
         Ref: myRequestValidator
       Integration:
@@ -138,6 +140,8 @@ Resources:
         Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
         RequestParameters:
           integration.request.querystring.level3: method.request.querystring.level3
+          integration.request.querystring.sortkey: method.request.querystring.sortkey
+          integration.request.querystring.partkey: method.request.querystring.partkey
         IntegrationResponses:
         - StatusCode: 200
           ResponseParameters:
@@ -155,7 +159,10 @@ Resources:
               *#
 
               #set($sanitizedLevel3 = $util.escapeJavaScript($input.params('level3')))
+              #set($sanitizedSortKey = $util.escapeJavaScript($input.params('sortkey')))
+              #set($sanitizedPartKey = $util.escapeJavaScript($input.params('partkey')))
 
+              #if( $sanitizedSortKey == "" && $sanitizedPartKey == "")
               {
                 "TableName": "${myDynamoDBTable}",
                 "KeyConditionExpression": "PartitionKey = :v1",
@@ -165,6 +172,25 @@ Resources:
                   }
                 }
               }
+              #else
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1",
+                "ExpressionAttributeValues": {
+                  ":v1": {
+                    "S": "LABEL-$sanitizedLevel3"
+                  }
+                },
+                "ExclusiveStartKey": {
+                  "SortKey": {
+                      "S": "$sanitizedSortKey"
+                  },
+                  "PartitionKey": {
+                      "S": "$sanitizedPartKey"
+                  }
+                }
+              }
+              #end
             - { myDynamoDBTable: !Ref myDynamoDBTable }
   myGetDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
@@ -184,6 +210,26 @@ Resources:
         Name: level3
       RestApiId: !Ref myRestApi
       Properties: '{"description": "Label supplied should be all lowercase, with spaces converted to underscores. For example, attach_permanently, will return articles with the label, Attach permanently."}'
+  myQP2DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getarticles
+        Method: GET
+        Name: sortkey
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "SortKey from LastEvaluatedKey returned from the previous DynamoDB Query"}'
+  myQP3DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getarticles
+        Method: GET
+        Name: partkey
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "PartitionKey from LastEvaluatedKey returned from the previous DynamoDB Query"}'
   myResponseDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
@@ -334,7 +380,7 @@ Resources:
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
       PermissionsBoundary:
-        Ref: GccTenantOperatorBoundaryArn
+        Ref: mcpTenantOperatorArn
   myLambdaPredictRole:
     Type: AWS::IAM::Role
     Properties: 
@@ -351,7 +397,7 @@ Resources:
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
         - !Ref myLambdaPolicy
       PermissionsBoundary:
-        Ref: GccTenantOperatorBoundaryArn
+        Ref: mcpTenantOperatorArn
   mySageMakerRole:
     Type: AWS::IAM::Role
     Properties: 
@@ -369,7 +415,7 @@ Resources:
         - !Ref petalS3BucketRWPolicy
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
       PermissionsBoundary:
-        Ref: GccTenantOperatorBoundaryArn  
+        Ref: mcpTenantOperatorArn  
   lambdaModelDeploy:
     Type: 'AWS::Lambda::Function'
     Properties:
@@ -598,7 +644,7 @@ Resources:
       ManagedPolicyArns:
         - !Sub "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaRole"
       PermissionsBoundary:
-        Ref: GccTenantOperatorBoundaryArn
+        Ref: mcpTenantOperatorArn
   StateMachineOnboardingInstall:
     Type: 'AWS::StepFunctions::StateMachine'
     Properties:
@@ -658,29 +704,29 @@ Resources:
   #  EC2 Development Instances for Data Science/ML work #
   #######################################################
 
-  SSHSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      VpcId: !Ref VPCId
-      GroupDescription: Enable SSH access via port 22
-      SecurityGroupIngress:
-      - CidrIp: 0.0.0.0/0
-        FromPort: 22
-        IpProtocol: tcp
-        ToPort: 22
-  DataProcessingEC2Instance:
-    Type: AWS::EC2::Instance
-    Properties: 
-      ImageId: "ami-04780c82d256efd84"
-      InstanceType: t2.micro
-      KeyName: "paht-ec2-ml"
-      SubnetId: !Ref EC2SubnetId
-      SecurityGroupIds: [!Ref 'SSHSecurityGroup']
-  IPAddress:
-    Type: AWS::EC2::EIP
-    Properties:
-      Domain: vpc
-      InstanceId: !Ref 'DataProcessingEC2Instance'
+  #SSHSecurityGroup:
+  #  Type: AWS::EC2::SecurityGroup
+  #  Properties:
+  #    VpcId: !Ref VPCId
+  #    GroupDescription: Enable SSH access via port 22
+  #    SecurityGroupIngress:
+  #    - CidrIp: 0.0.0.0/0
+  #      FromPort: 22
+  #      IpProtocol: tcp
+  #      ToPort: 22
+  #DataProcessingEC2Instance:
+  #  Type: AWS::EC2::Instance
+  #  Properties: 
+  #    ImageId: "ami-04780c82d256efd84"
+  #    InstanceType: t2.micro
+  #    KeyName: "paht-ec2-ml"
+  #    SubnetId: !Ref EC2SubnetId
+  #    SecurityGroupIds: [!Ref 'SSHSecurityGroup']
+  #IPAddress:
+  #  Type: AWS::EC2::EIP
+  #  Properties:
+  #    Domain: vpc
+  #    InstanceId: !Ref 'DataProcessingEC2Instance'
 
   ################################################
   #  Run Lambda on a schedule using EventBridge  #
