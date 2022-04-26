@@ -1,12 +1,14 @@
 import sys
 import csv
 import boto3
+import re
 
 dynamodb = boto3.resource('dynamodb')
 
 tableName = 'petal-stack-myDynamoDBTable-4I5GQ39UPNHW'
-filename = './biomimicry_predictions.csv'
+filename = './biomim_pred_species.csv'
 filename_labels = './labels.csv'
+filename_creatures = './creaturesdb.csv'
 
 def main():
     csvfile = open(filename)
@@ -30,6 +32,17 @@ def write_labels_to_dynamo(rows):
                     'SortKey': row['SortKey'],
                     'level2': row['Level2'],
                     'level3': row['Level3']
+                }
+            )
+def write_species_to_dynamo(rows):
+    table = dynamodb.Table(tableName)
+    with table.batch_writer() as batch:
+        for row in rows:
+            batch.put_item(
+                Item={
+                    'PartitionKey': row['PartitionKey'],
+                    'SortKey': row['SortKey'],
+                    'names': row['names']
                 }
             )
 def write_to_dynamo(rows):
@@ -61,5 +74,26 @@ def write_to_dynamo(rows):
                         'score': value
                     }
                 )
+
+            creature_idx = 0
+            for creature_name in row["species"]:
+                only_letters = re.sub("[^A-z ]","",creature_name).lower().strip()
+                no_space_name = re.sub("\s","_",only_letters)
+                batch.put_item(
+                    Item={
+                        'PartitionKey': no_space_name,
+                        'SortKey': 'ARTICLE-' + row['petalID'],
+                        'title': row['title_full'],
+                        'abstract': row['abstract_full'],
+                        'doi': row['doi'],
+                        'venue': row['venue'],
+                        'url': row['url'],
+                        'creatureNames': row["species"],
+                        'absoluteRelevancy': row["absolute_relevancy"],
+                        'relative_relevancy': row["relative_relevancy"]  
+                    }
+                )
+                creature_idx += 1
+
 
 main()
