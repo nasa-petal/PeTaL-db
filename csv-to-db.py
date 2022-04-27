@@ -45,7 +45,7 @@ def write_species_to_dynamo(rows):
                 Item={
                     'PartitionKey': row['PartitionKey'],
                     'SortKey': row['SortKey'],
-                    'names': row['names']
+                    'speciesName': row['names']
                 }
             )
 def write_to_dynamo(rows):
