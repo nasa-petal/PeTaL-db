@@ -80,7 +80,7 @@ def write_to_dynamo(rows):
 
             creature_idx = 0
             for creature_name in row["species"]:
-                only_letters = re.sub("[^A-z ]","",creature_name).lower().strip()
+                only_letters = re.sub("[^a-zA-Z ]","",creature_name).lower().strip()
                 no_space_name = re.sub("\s","_",only_letters)
                 batch.put_item(
                     Item={
