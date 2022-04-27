@@ -8,12 +8,15 @@ dynamodb = boto3.resource('dynamodb')
 tableName = 'petal-stack-myDynamoDBTable-4I5GQ39UPNHW'
 filename = './biomim_pred_species.csv'
 filename_labels = './labels.csv'
+# need to update this to include rows for common to scientific mappings and rows for just the common names
 filename_creatures = './creaturesdb.csv'
 
 def main():
     csvfile = open(filename)
     csvfile_labels = open(filename_labels)
-
+    csvfile_species = open(filename_creatures)
+    
+    write_species_to_dynamo(csv.DictReader(csvfile_species))
     write_labels_to_dynamo(csv.DictReader(csvfile_labels))
     write_to_dynamo(csv.DictReader(csvfile))
 
@@ -81,16 +84,16 @@ def write_to_dynamo(rows):
                 no_space_name = re.sub("\s","_",only_letters)
                 batch.put_item(
                     Item={
-                        'PartitionKey': no_space_name,
+                        'PartitionKey': 'SPECIES-' + no_space_name,
                         'SortKey': 'ARTICLE-' + row['petalID'],
                         'title': row['title_full'],
                         'abstract': row['abstract_full'],
                         'doi': row['doi'],
                         'venue': row['venue'],
                         'url': row['url'],
-                        'creatureNames': row["species"],
-                        'absoluteRelevancy': row["absolute_relevancy"],
-                        'relative_relevancy': row["relative_relevancy"]  
+                        'speciesName': creature_name,
+                        'speciesAbsoluteRelevancy': row["absolute_relevancy"][creature_idx],
+                        'speciesRelativeRelevancy': row["relative_relevancy"][creature_idx]  
                     }
                 )
                 creature_idx += 1
