@@ -1,30 +1,30 @@
-PartitionKey,SortKey,Level2,Level3
-LABEL,LABEL-1,Attach permanently,Attach permanently
-LABEL,LABEL-2,Attach temporarily,Attach temporarily
-LABEL,LABEL-3,Passive movement,Passively move through/on liquids
-LABEL,LABEL-4,Active movement,Actively move through/on liquids
-LABEL,LABEL-5,Active movement,Actively move through/on solids
-LABEL,LABEL-6,Active movement,Actively move through gases
-LABEL,LABEL-7,Protect from living threats,Protect from microbes
-LABEL,LABEL-8,Protect from non-living threats,Protect from excess liquids
-LABEL,LABEL-9,Protect from non-living threats,Protect from loss of liquids
-LABEL,LABEL-10,Protect from non-living threats,Protect from temperature
-LABEL,LABEL-11,Protect from non-living threats,Protect from chemicals
-LABEL,LABEL-12,Prevent structural failure,Prevent fracture/rupture
-LABEL,LABEL-13,Manage structural forces,Manage shear
-LABEL,LABEL-14,Manage structural forces,Manage stress/strain
-LABEL,LABEL-15,Manage structural forces,Manage impact
-LABEL,LABEL-16,Individual benefit,Regulate reproduction or growth
-LABEL,LABEL-17,Chemically assemble,Chemically assemble organic compounds
-LABEL,LABEL-18,Chemically break down,Chemically break down organic compounds
-LABEL,LABEL-19,Physically assemble structure,Physically assemble structure
-LABEL,LABEL-20,Send signals,Send light signals in the visible spectrum
-LABEL,LABEL-21,Send signals,Send chemical signals
-LABEL,LABEL-22,Process signals,Respond to signals
-LABEL,LABEL-23,Sense signals/environmental cues,Sense light in the visible spectrum
-LABEL,LABEL-24,Sense signals/environmental cues,Sense chemicals
-LABEL,LABEL-25,Distribute resources,Distribute solids
-LABEL,LABEL-26,Distribute resources,Distribute liquids
-LABEL,LABEL-27,Change size/shape,Change size/shape
-LABEL,LABEL-28,Optimize shape/materials,Optimize shape/materials
-LABEL,LABEL-29,Manage structural forces,Manage wear
+OldLabelID,Level2,Level3
+LABEL-attach_permanently,Attach permanently,Attach permanently
+LABEL-attach_temporarily,Attach temporarily,Attach temporarily
+LABEL-passively_move_through/on_liquids,Passive movement,Passively move through/on liquids
+LABEL-actively_move_through/on_liquids,Active movement,Actively move through/on liquids
+LABEL-actively_move_through/on_solids,Active movement,Actively move through/on solids
+LABEL-actively_move_through_gases,Active movement,Actively move through gases
+LABEL-protect_from_microbes,Protect from living threats,Protect from microbes
+LABEL-protect_from_excess_liquids,Protect from non-living threats,Protect from excess liquids
+LABEL-protect_from_loss_of_liquids,Protect from non-living threats,Protect from loss of liquids
+LABEL-protect_from_temperature,Protect from non-living threats,Protect from temperature
+LABEL-protect_from_chemicals,Protect from non-living threats,Protect from chemicals
+LABEL-prevent_fracture/rupture,Prevent structural failure,Prevent fracture/rupture
+LABEL-manage_shear,Manage structural forces,Manage shear
+LABEL-manage_stress/strain,Manage structural forces,Manage stress/strain
+LABEL-manage_impact,Manage structural forces,Manage impact
+LABEL-regulate_reproduction_or_growth,Individual benefit,Regulate reproduction or growth
+LABEL-chemically_assemble_organic_compounds,Chemically assemble,Chemically assemble organic compounds
+LABEL-chemically_break_down_organic_compounds,Chemically break down,Chemically break down organic compounds
+LABEL-physically_assemble_structure,Physically assemble structure,Physically assemble structure
+LABEL-send_light_signals_in_the_visible_spectrum,Send signals,Send light signals in the visible spectrum
+LABEL-send_chemical_signals,Send signals,Send chemical signals
+LABEL-respond_to_signals,Process signals,Respond to signals
+LABEL-sense_light_in_the_visible_spectrum,Sense signals/environmental cues,Sense light in the visible spectrum
+LABEL-sense_chemicals,Sense signals/environmental cues,Sense chemicals
+LABEL-distribute_solids,Distribute resources,Distribute solids
+LABEL-distribute_liquids,Distribute resources,Distribute liquids
+LABEL-change_size/shape,Change size/shape,Change size/shape
+LABEL-optimize_shape/materials,Optimize shape/materials,Optimize shape/materials
+LABEL-manage_wear,Manage structural forces,Manage wear
