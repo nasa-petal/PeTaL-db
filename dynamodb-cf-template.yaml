@@ -168,7 +168,7 @@ Resources:
                 "KeyConditionExpression": "PartitionKey = :v1",
                 "ExpressionAttributeValues": {
                   ":v1": {
-                    "S": "LABEL-$sanitizedLevel3"
+                    "S": "LAB$sanitizedLevel3"
                   }
                 }
               }
@@ -178,7 +178,7 @@ Resources:
                 "KeyConditionExpression": "PartitionKey = :v1",
                 "ExpressionAttributeValues": {
                   ":v1": {
-                    "S": "LABEL-$sanitizedLevel3"
+                    "S": "LAB$sanitizedLevel3"
                   }
                 },
                 "ExclusiveStartKey": {
@@ -209,7 +209,7 @@ Resources:
         Method: GET
         Name: level3
       RestApiId: !Ref myRestApi
-      Properties: '{"description": "Label supplied should be all lowercase, with spaces converted to underscores. For example, attach_permanently, will return articles with the label, Attach permanently."}'
+      Properties: '{"description": "Label ID (integer). For example, 1, will return articles with the label, Attach permanently."}'
   myQP2DocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
@@ -280,10 +280,10 @@ Resources:
             - |
               {
                 "TableName": "${myDynamoDBTable}",
-                "KeyConditionExpression": "PartitionKey = :v1 AND begins_with( SortKey, :v1 )",
+                "KeyConditionExpression": "PartitionKey = :v1",
                 "ExpressionAttributeValues": {
                   ":v1": {
-                    "S": "LABEL"
+                    "S": "LAB"
                   }
                 }
               }
