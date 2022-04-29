@@ -49,17 +49,18 @@ def write_to_dynamo(rows):
             )
             labels = slicedict(row, 'LABEL-')
             for key, value in labels.items():
-                batch.put_item(
-                    Item={
-                        'PartitionKey': key,
-                        'SortKey': 'ARTICLE-' + row['petalID'],
-                        'title': row['title_full'],
-                        'abstract': row['abstract_full'],
-                        'doi': row['doi'],
-                        'venue': row['venue'],
-                        'url': row['url'],
-                        'score': value
-                    }
-                )
+                if float(value) > .3:
+                    batch.put_item(
+                        Item={
+                            'PartitionKey': key,
+                            'SortKey': 'ARTICLE-' + row['petalID'],
+                            'title': row['title_full'],
+                            'abstract': row['abstract_full'],
+                            'doi': row['doi'],
+                            'venue': row['venue'],
+                            'url': row['url'],
+                            'score': value
+                        }
+                    )
 
 main()
