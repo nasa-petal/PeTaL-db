@@ -354,6 +354,7 @@ Resources:
             method.response.header.Access-Control-Allow-Origin: false
       RequestParameters:
         method.request.querystring.level3: true
+        method.request.querystring.nameprefix: false
         method.request.querystring.sortkey: false
         method.request.querystring.partkey: false
       RequestValidatorId:
@@ -366,6 +367,7 @@ Resources:
         Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
         RequestParameters:
           integration.request.querystring.level3: method.request.querystring.level3
+          integration.request.querystring.nameprefix: method.request.querystring.nameprefix
           integration.request.querystring.sortkey: method.request.querystring.sortkey
           integration.request.querystring.partkey: method.request.querystring.partkey
         IntegrationResponses:
@@ -376,6 +378,7 @@ Resources:
           application/json: !Sub
             - |
               #set($sanitizedLevel3 = $util.escapeJavaScript($input.params('level3')))
+              #set($sanitizedNamePrefix = $util.escapeJavaScript($input.params('nameprefix')))
               #set($sanitizedSortKey = $util.escapeJavaScript($input.params('sortkey')))
               #set($sanitizedPartKey = $util.escapeJavaScript($input.params('partkey')))
 
@@ -388,7 +391,7 @@ Resources:
                     "S": "LAB$sanitizedLevel3"
                   },
                   ":v1sortkeyval": {
-                    "S": "SPE"
+                    "S": "SPE$sanitizedNamePrefix"
                   }
                 }
               }
@@ -401,7 +404,7 @@ Resources:
                     "S": "LAB$sanitizedLevel3"
                   },
                   ":v1sortkeyval": {
-                    "S": "SPE"
+                    "S": "SPE$sanitizedNamePrefix"
                   }
                 },
                 "ExclusiveStartKey": {
@@ -466,7 +469,7 @@ Resources:
 
 
 # Species API Endpoints
-  getSpeciesResource:
+  getallspeciesResource:
     Type: AWS::ApiGateway::Resource
     Properties:
       RestApiId:
@@ -476,13 +479,13 @@ Resources:
         - myRestApi
         - RootResourceId
       PathPart: getallspecies
-  getSpecies:
+  getallspecies:
     Type: AWS::ApiGateway::Method
     Properties:
       AuthorizationType: NONE
       HttpMethod: GET
       ResourceId:
-        Ref: getSpeciesResource
+        Ref: getallspeciesResource
       RestApiId:
         Ref: myRestApi
       MethodResponses:
@@ -491,12 +494,18 @@ Resources:
         StatusCode: 200
         ResponseParameters:
             method.response.header.Access-Control-Allow-Origin: false
+      RequestParameters:
+        method.request.querystring.nameprefix: false
+      RequestValidatorId:
+        Ref: myRequestValidator
       Integration:
         Type: AWS
         IntegrationHttpMethod: POST
         Credentials: !GetAtt myRole.Arn
         PassthroughBehavior: WHEN_NO_TEMPLATES
         Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
+        RequestParameters:
+          integration.request.querystring.nameprefix: method.request.querystring.nameprefix
         IntegrationResponses:
         - StatusCode: 200
           ResponseParameters:
@@ -504,17 +513,21 @@ Resources:
         RequestTemplates:
           application/json: !Sub
             - |
+              #set($sanitizedNamePrefix = $util.escapeJavaScript($input.params('nameprefix')))
               {
                 "TableName": "${myDynamoDBTable}",
-                "KeyConditionExpression": "PartitionKey = :v1",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
                 "ExpressionAttributeValues": {
-                  ":v1": {
+                  ":v1partkeyval": {
                     "S": "SPE"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "$sanitizedNamePrefix"
                   }
                 }
               }
             - { myDynamoDBTable: !Ref myDynamoDBTable }
-  getSpeciesDocumentationPart:
+  getallspeciesDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
       Location:
@@ -522,7 +535,7 @@ Resources:
         Path: /getallspecies
       RestApiId: !Ref myRestApi
       Properties: '{"summary": "Get all species","tags":["API methods"]}'
-  getSpeciesResponseDocumentationPart:
+  getallspeciesResponseDocumentationPart:
     Type: AWS::ApiGateway::DocumentationPart
     Properties:
       Location:
@@ -532,7 +545,7 @@ Resources:
         StatusCode: 200
       RestApiId: !Ref myRestApi
       Properties: '{"description": "successful operation"}'
-  getSpeciesRestApiDocumentationVersion:
+  getallspeciesRestApiDocumentationVersion:
     Type: AWS::ApiGateway::DocumentationVersion
     Properties:
       DocumentationVersion: !Ref APIDocVersion
