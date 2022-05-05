@@ -165,20 +165,26 @@ Resources:
               #if( $sanitizedSortKey == "" && $sanitizedPartKey == "")
               {
                 "TableName": "${myDynamoDBTable}",
-                "KeyConditionExpression": "PartitionKey = :v1",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
                 "ExpressionAttributeValues": {
-                  ":v1": {
+                  ":v1partkeyval": {
                     "S": "LAB$sanitizedLevel3"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "ART"
                   }
                 }
               }
               #else
               {
                 "TableName": "${myDynamoDBTable}",
-                "KeyConditionExpression": "PartitionKey = :v1",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
                 "ExpressionAttributeValues": {
-                  ":v1": {
+                  ":v1partkeyval": {
                     "S": "LAB$sanitizedLevel3"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "ART"
                   }
                 },
                 "ExclusiveStartKey": {
@@ -312,6 +318,517 @@ Resources:
       DocumentationVersion: !Ref APIDocVersion
       RestApiId: !Ref myRestApi
     DependsOn: myRestApiDocumentationPart
+
+## Get species by labels
+  getSpeByLabResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId:
+        Ref: myRestApi
+      ParentId:
+        Fn::GetAtt:
+        - myRestApi
+        - RootResourceId
+      PathPart: getSpeByLab
+  getSpeByLabRequestValidator:
+    Type: AWS::ApiGateway::RequestValidator
+    Properties: 
+      RestApiId:
+        Ref: myRestApi
+      ValidateRequestBody: false
+      ValidateRequestParameters: true
+  getSpeByLab:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: GET
+      ResourceId:
+        Ref: myResource
+      RestApiId:
+        Ref: myRestApi
+      MethodResponses:
+      - ResponseModels:
+          application/json: Empty
+        StatusCode: 200
+        ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: false
+      RequestParameters:
+        method.request.querystring.level3: true
+        method.request.querystring.sortkey: false
+        method.request.querystring.partkey: false
+      RequestValidatorId:
+        Ref: myRequestValidator
+      Integration:
+        Type: AWS
+        IntegrationHttpMethod: POST
+        Credentials: !GetAtt myRole.Arn
+        PassthroughBehavior: WHEN_NO_TEMPLATES
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
+        RequestParameters:
+          integration.request.querystring.level3: method.request.querystring.level3
+          integration.request.querystring.sortkey: method.request.querystring.sortkey
+          integration.request.querystring.partkey: method.request.querystring.partkey
+        IntegrationResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: "'*'"
+        RequestTemplates:
+          application/json: !Sub
+            - |
+              #set($sanitizedLevel3 = $util.escapeJavaScript($input.params('level3')))
+              #set($sanitizedSortKey = $util.escapeJavaScript($input.params('sortkey')))
+              #set($sanitizedPartKey = $util.escapeJavaScript($input.params('partkey')))
+
+              #if( $sanitizedSortKey == "" && $sanitizedPartKey == "")
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
+                "ExpressionAttributeValues": {
+                  ":v1partkeyval": {
+                    "S": "LAB$sanitizedLevel3"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "SPE"
+                  }
+                }
+              }
+              #else
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
+                "ExpressionAttributeValues": {
+                  ":v1partkeyval": {
+                    "S": "LAB$sanitizedLevel3"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "SPE"
+                  }
+                },
+                "ExclusiveStartKey": {
+                  "SortKey": {
+                      "S": "$sanitizedSortKey"
+                  },
+                  "PartitionKey": {
+                      "S": "$sanitizedPartKey"
+                  }
+                }
+              }
+              #end
+            - { myDynamoDBTable: !Ref myDynamoDBTable }
+  getSpeByLabDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: METHOD
+        Path: /getSpeByLab
+      RestApiId: !Ref myRestApi
+      Properties: '{"summary": "Finds species by level3 labels","description": "Find species associated with the level3 label supplied.","tags":["API methods"]}'
+  getSpeByLabQPDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getSpeByLab
+        Method: GET
+        Name: level3
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "Label ID (integer). For example, 1, will return articles with the level3 label, Attach Permanently."}'
+  getSpeByLabQP2DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getSpeByLab
+        Method: GET
+        Name: sortkey
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "SortKey from LastEvaluatedKey returned from the previous DynamoDB Query"}'
+  getSpeByLabQP3DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getSpeByLab
+        Method: GET
+        Name: partkey
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "PartitionKey from LastEvaluatedKey returned from the previous DynamoDB Query"}'
+  getSpeByLabResponseDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: RESPONSE
+        Path: /getSpeByLab
+        Method: GET
+        StatusCode: 200
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "successful operation"}'
+
+
+# Species API Endpoints
+  getSpeciesResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId:
+        Ref: myRestApi
+      ParentId:
+        Fn::GetAtt:
+        - myRestApi
+        - RootResourceId
+      PathPart: getallspecies
+  getSpecies:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: GET
+      ResourceId:
+        Ref: getSpeciesResource
+      RestApiId:
+        Ref: myRestApi
+      MethodResponses:
+      - ResponseModels:
+          application/json: Empty
+        StatusCode: 200
+        ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: false
+      Integration:
+        Type: AWS
+        IntegrationHttpMethod: POST
+        Credentials: !GetAtt myRole.Arn
+        PassthroughBehavior: WHEN_NO_TEMPLATES
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
+        IntegrationResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: "'*'"
+        RequestTemplates:
+          application/json: !Sub
+            - |
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1",
+                "ExpressionAttributeValues": {
+                  ":v1": {
+                    "S": "SPE"
+                  }
+                }
+              }
+            - { myDynamoDBTable: !Ref myDynamoDBTable }
+  getSpeciesDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: METHOD
+        Path: /getallspecies
+      RestApiId: !Ref myRestApi
+      Properties: '{"summary": "Get all species","tags":["API methods"]}'
+  getSpeciesResponseDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: RESPONSE
+        Path: /getallspecies
+        Method: GET
+        StatusCode: 200
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "successful operation"}'
+  getSpeciesRestApiDocumentationVersion:
+    Type: AWS::ApiGateway::DocumentationVersion
+    Properties:
+      DocumentationVersion: !Ref APIDocVersion
+      RestApiId: !Ref myRestApi
+    DependsOn: myRestApiDocumentationPart
+
+## Get articles by species
+  getArtBySpeResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId:
+        Ref: myRestApi
+      ParentId:
+        Fn::GetAtt:
+        - myRestApi
+        - RootResourceId
+      PathPart: getArtBySpe
+  getArtBySpeRequestValidator:
+    Type: AWS::ApiGateway::RequestValidator
+    Properties: 
+      RestApiId:
+        Ref: myRestApi
+      ValidateRequestBody: false
+      ValidateRequestParameters: true
+  getArtBySpe:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: GET
+      ResourceId:
+        Ref: myResource
+      RestApiId:
+        Ref: myRestApi
+      MethodResponses:
+      - ResponseModels:
+          application/json: Empty
+        StatusCode: 200
+        ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: false
+      RequestParameters:
+        method.request.querystring.speciesname: true
+        method.request.querystring.sortkey: false
+        method.request.querystring.partkey: false
+      RequestValidatorId:
+        Ref: myRequestValidator
+      Integration:
+        Type: AWS
+        IntegrationHttpMethod: POST
+        Credentials: !GetAtt myRole.Arn
+        PassthroughBehavior: WHEN_NO_TEMPLATES
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
+        RequestParameters:
+          integration.request.querystring.speciesname: method.request.querystring.speciesname
+          integration.request.querystring.sortkey: method.request.querystring.sortkey
+          integration.request.querystring.partkey: method.request.querystring.partkey
+        IntegrationResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: "'*'"
+        RequestTemplates:
+          application/json: !Sub
+            - |
+              #set($sanitizedSpeciesName = $util.escapeJavaScript($input.params('speciesname')))
+              #set($sanitizedSortKey = $util.escapeJavaScript($input.params('sortkey')))
+              #set($sanitizedPartKey = $util.escapeJavaScript($input.params('partkey')))
+
+              #if( $sanitizedSortKey == "" && $sanitizedPartKey == "")
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
+                "ExpressionAttributeValues": {
+                  ":v1partkeyval": {
+                    "S": "SPE$sanitizedSpeciesName"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "ART"
+                  }
+                }
+              }
+              #else
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
+                "ExpressionAttributeValues": {
+                  ":v1partkeyval": {
+                    "S": "SPE$sanitizedSpeciesName"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "ART"
+                  }
+                },
+                "ExclusiveStartKey": {
+                  "SortKey": {
+                      "S": "$sanitizedSortKey"
+                  },
+                  "PartitionKey": {
+                      "S": "$sanitizedPartKey"
+                  }
+                }
+              }
+              #end
+            - { myDynamoDBTable: !Ref myDynamoDBTable }
+  getArtBySpeDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: METHOD
+        Path: /getArtBySpe
+      RestApiId: !Ref myRestApi
+      Properties: '{"summary": "Finds articles by species","description": "Find articles with the species name supplied.","tags":["API methods"]}'
+  getArtBySpeQPDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getArtBySpe
+        Method: GET
+        Name: speciesname
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "Label ID (integer). For example, 1, will return articles with the species name at index 1."}'
+  getArtBySpeQP2DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getArtBySpe
+        Method: GET
+        Name: sortkey
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "SortKey from LastEvaluatedKey returned from the previous DynamoDB Query"}'
+  getArtBySpeQP3DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getArtBySpe
+        Method: GET
+        Name: partkey
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "PartitionKey from LastEvaluatedKey returned from the previous DynamoDB Query"}'
+  getArtBySpeResponseDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: RESPONSE
+        Path: /getArtBySpe
+        Method: GET
+        StatusCode: 200
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "successful operation"}'
+
+## Get labels by species
+  getLabBySpeResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId:
+        Ref: myRestApi
+      ParentId:
+        Fn::GetAtt:
+        - myRestApi
+        - RootResourceId
+      PathPart: getLabBySpe
+  getLabBySpeRequestValidator:
+    Type: AWS::ApiGateway::RequestValidator
+    Properties: 
+      RestApiId:
+        Ref: myRestApi
+      ValidateRequestBody: false
+      ValidateRequestParameters: true
+  getLabBySpe:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      AuthorizationType: NONE
+      HttpMethod: GET
+      ResourceId:
+        Ref: myResource
+      RestApiId:
+        Ref: myRestApi
+      MethodResponses:
+      - ResponseModels:
+          application/json: Empty
+        StatusCode: 200
+        ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: false
+      RequestParameters:
+        method.request.querystring.speciesname: true
+        method.request.querystring.sortkey: false
+        method.request.querystring.partkey: false
+      RequestValidatorId:
+        Ref: myRequestValidator
+      Integration:
+        Type: AWS
+        IntegrationHttpMethod: POST
+        Credentials: !GetAtt myRole.Arn
+        PassthroughBehavior: WHEN_NO_TEMPLATES
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:dynamodb:action/Query"
+        RequestParameters:
+          integration.request.querystring.speciesname: method.request.querystring.speciesname
+          integration.request.querystring.sortkey: method.request.querystring.sortkey
+          integration.request.querystring.partkey: method.request.querystring.partkey
+        IntegrationResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Origin: "'*'"
+        RequestTemplates:
+          application/json: !Sub
+            - |
+              #set($sanitizedSpeciesName = $util.escapeJavaScript($input.params('speciesname')))
+              #set($sanitizedSortKey = $util.escapeJavaScript($input.params('sortkey')))
+              #set($sanitizedPartKey = $util.escapeJavaScript($input.params('partkey')))
+
+              #if( $sanitizedSortKey == "" && $sanitizedPartKey == "")
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
+                "ExpressionAttributeValues": {
+                  ":v1partkeyval": {
+                    "S": "SPE$sanitizedSpeciesName"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "LAB"
+                  }
+                }
+              }
+              #else
+              {
+                "TableName": "${myDynamoDBTable}",
+                "KeyConditionExpression": "PartitionKey = :v1partkeyval AND begins_with(SortKey, :v1sortkeyval)",
+                "ExpressionAttributeValues": {
+                  ":v1partkeyval": {
+                    "S": "SPE$sanitizedSpeciesName"
+                  },
+                  ":v1sortkeyval": {
+                    "S": "LAB"
+                  }
+                },
+                "ExclusiveStartKey": {
+                  "SortKey": {
+                      "S": "$sanitizedSortKey"
+                  },
+                  "PartitionKey": {
+                      "S": "$sanitizedPartKey"
+                  }
+                }
+              }
+              #end
+            - { myDynamoDBTable: !Ref myDynamoDBTable }
+  getLabBySpeDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: METHOD
+        Path: /getLabBySpe
+      RestApiId: !Ref myRestApi
+      Properties: '{"summary": "Finds labels by species","description": "Find labels with the species name supplied.","tags":["API methods"]}'
+  getLabBySpeQPDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getLabBySpe
+        Method: GET
+        Name: speciesname
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "Label ID (integer). For example, 1, will labels with the species name at index 1."}'
+  getLabBySpeQP2DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getLabBySpe
+        Method: GET
+        Name: sortkey
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "SortKey from LastEvaluatedKey returned from the previous DynamoDB Query"}'
+  getLabBySpeQP3DocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: QUERY_PARAMETER
+        Path: /getLabBySpe
+        Method: GET
+        Name: partkey
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "PartitionKey from LastEvaluatedKey returned from the previous DynamoDB Query"}'
+  getLabBySpeResponseDocumentationPart:
+    Type: AWS::ApiGateway::DocumentationPart
+    Properties:
+      Location:
+        Type: RESPONSE
+        Path: /getLabBySpe
+        Method: GET
+        StatusCode: 200
+      RestApiId: !Ref myRestApi
+      Properties: '{"description": "successful operation"}'
+
 
   #############
   #    S3     #
