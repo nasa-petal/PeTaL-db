@@ -708,16 +708,17 @@ Resources:
 # Resources for BITARA chatbot 
 ########################################################
 
-  #SSHSecurityGroup:
-  #  Type: AWS::EC2::SecurityGroup
-  #  Properties:
-  #    VpcId: !Ref VPCId
-  #    GroupDescription: Enable SSH access via port 22
-  #    SecurityGroupIngress:
-  #    - CidrIp: 0.0.0.0/0
-  #      FromPort: 22
-  #      IpProtocol: tcp
-  #      ToPort: 22
+  SSHSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: !Ref VPCId
+      GroupDescription: Attach EC2 instance to VPC.
+      #GroupDescription: Enable SSH access via port 22
+      #SecurityGroupIngress:
+      #- CidrIp: 0.0.0.0/0
+      #  FromPort: 22
+      #  IpProtocol: tcp
+      #  ToPort: 22
   BITARAEC2Instance:
     Type: "AWS::EC2::Instance"
     Properties:
@@ -725,8 +726,8 @@ Resources:
         Fn::Base64: |
           #!/bin/bash
           cd ~/
-          yum update &&  yum install -y python3-pip &&  yum install -y git
-          amazon-linux-extras install python3.8
+          yum update -y && yum install -y python3-pip && yum install -y git
+          amazon-linux-extras install -y python3.8
           git clone https://github.com/nasa-petal/discord_bot.git
           cd discord_bot
           cat > .env <<EOF
@@ -739,9 +740,17 @@ Resources:
           screen -d discord
       ImageId: !Ref BaseImage #"ami-08333bccc35d71140" # Amazon Linux 2023 AMI Free tier eligible
       InstanceType: t2.micro
-      #KeyName: "paht-ec2-ml"
       SubnetId: !Ref EC2SubnetId
-      #SecurityGroupIds: [!Ref 'SSHSecurityGroup']
+      SecurityGroupIds: [!Ref 'SSHSecurityGroup']
+      Tags:
+        -
+          Key: Name
+          Value: BITARA
+      BlockDeviceMappings: 
+      - DeviceName: "/dev/xvda"
+        Ebs: 
+          DeleteOnTermination: "true"
+    
 
   #######################################################
   #  EC2 Development Instances for Data Science/ML work #
