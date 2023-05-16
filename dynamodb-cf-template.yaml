@@ -24,9 +24,13 @@ Parameters:
   SageMakerSubnetIds:
     Type: List<AWS::EC2::Subnet::Id>
     Description: Subnet Ids within the VPC to deploy Sagemaker Studio to. Select only the private subnets in all availability zones.
-  #EC2SubnetId:
-  #  Type: AWS::EC2::Subnet::Id
-  #  Description: Subnet Ids within the VPC to deploy EC2 instances to. If SSH access outside of AWS is required select a public subnet.
+  EC2SubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: Subnet Ids within the VPC to deploy EC2 instances to. If SSH access outside of AWS is required select a public subnet.
+  BaseImage:
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/mcp/amis/aml2'
+    Description: Select an EC2 AMI Image for BITARA from MCP authorized AMIs. Default is Amazon Linux 2. Valid choices available here - https://jaas.gsfc.nasa.gov/servicedesk/customer/kb/view/19041164
 
 Resources:
 
@@ -700,9 +704,9 @@ Resources:
         - { lambdaModelDeployArn: !GetAtt lambdaModelDeploy.Arn, lambdaModelAwaitArn: !GetAtt lambdaModelAwait.Arn, lambdaModelPredictArn: !GetAtt lambdaModelPredict.Arn }
       RoleArn: !GetAtt 'RoleOnboardingInstall.Arn'
 
-  #######################################################
-  #  EC2 Development Instances for Data Science/ML work #
-  #######################################################
+########################################################
+# Resources for BITARA chatbot 
+########################################################
 
   #SSHSecurityGroup:
   #  Type: AWS::EC2::SecurityGroup
@@ -714,6 +718,35 @@ Resources:
   #      FromPort: 22
   #      IpProtocol: tcp
   #      ToPort: 22
+  BITARAEC2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          cd ~/
+          yum update &&  yum install -y python3-pip &&  yum install -y git
+          amazon-linux-extras install python3.8
+          git clone https://github.com/nasa-petal/discord_bot.git
+          cd discord_bot
+          cat > .env <<EOF
+          OPENAI_API_KEY = xxx
+          DISCORD_TOKEN = xxx
+          EOF
+          python3.8 -m pip install -r requirements.txt
+          screen -S discord
+          python3.8 bot.py
+          screen -d discord
+      ImageId: !Ref BaseImage #"ami-08333bccc35d71140" # Amazon Linux 2023 AMI Free tier eligible
+      InstanceType: t2.micro
+      #KeyName: "paht-ec2-ml"
+      SubnetId: !Ref EC2SubnetId
+      #SecurityGroupIds: [!Ref 'SSHSecurityGroup']
+
+  #######################################################
+  #  EC2 Development Instances for Data Science/ML work #
+  #######################################################
+
   #DataProcessingEC2Instance:
   #  Type: AWS::EC2::Instance
   #  Properties: 
