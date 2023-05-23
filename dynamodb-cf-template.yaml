@@ -705,7 +705,7 @@ Resources:
       RoleArn: !GetAtt 'RoleOnboardingInstall.Arn'
 
 ########################################################
-# Resources for BITARA chatbot 
+# Resources for BIDARA chatbot 
 ########################################################
 
   SSHSecurityGroup:
@@ -719,7 +719,7 @@ Resources:
       #  FromPort: 22
       #  IpProtocol: tcp
       #  ToPort: 22
-  BITARAEC2Instance:
+  BIDARAEC2Instance:
     Type: "AWS::EC2::Instance"
     Properties:
       UserData:
@@ -739,13 +739,13 @@ Resources:
           python3.8 bot.py
           screen -d discord
       ImageId: !Ref BaseImage #"ami-08333bccc35d71140" # Amazon Linux 2023 AMI Free tier eligible
-      InstanceType: t2.micro
+      InstanceType: t3a.nano
       SubnetId: !Ref EC2SubnetId
       SecurityGroupIds: [!Ref 'SSHSecurityGroup']
       Tags:
         -
           Key: Name
-          Value: BITARA
+          Value: BIDARA
       BlockDeviceMappings: 
       - DeviceName: "/dev/xvda"
         Ebs: 
