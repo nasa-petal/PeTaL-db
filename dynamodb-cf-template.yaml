@@ -6,7 +6,7 @@ Description: PeTal DynamoDB table and REST API
 Parameters:
   mcpTenantOperatorArn:
     Type: String
-    Description: ARN for mcp-tenantOperator Policy
+    Description: ARN for mcp-tenantOperator-APIG Policy
   APIDocVersion:
     Type: Number
     MinValue: 1
@@ -316,6 +316,82 @@ Resources:
       DocumentationVersion: !Ref APIDocVersion
       RestApiId: !Ref myRestApi
     DependsOn: myRestApiDocumentationPart
+
+  # myRestApiDeployment:
+  #   Type: AWS::ApiGateway::Deployment
+  #   DependsOn:
+  #   - myGet
+  #   - myGet2
+  #   Properties:
+  #     RestApiId: !Ref myRestApi
+
+  # myRestApiStage:
+  #   Type: AWS::ApiGateway::Stage
+  #   Properties:
+  #     StageName: v1
+  #     RestApiId: !Ref myRestApi
+  #     DeploymentId: !Ref myRestApiDeployment
+  #     DocumentationVersion: !Ref myRestApiDocumentationVersion
+
+  myAPIWaf:
+    Type: AWS::WAFv2::WebACL
+    Properties:
+      DefaultAction:
+        Allow: {}
+      Scope: REGIONAL
+      VisibilityConfig:
+        SampledRequestsEnabled: true
+        CloudWatchMetricsEnabled: true
+        MetricName: !Sub '${Environment}PetalApi-waf-metric'
+      Rules:
+        - Name: IPReputation
+          Priority: 0
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesAmazonIpReputationList
+              ExcludedRules: []
+          OverrideAction:
+            None: {}
+          VisibilityConfig:
+            SampledRequestsEnabled: true
+            CloudWatchMetricsEnabled: true
+            MetricName: !Sub '${Environment}PetalApi-waf-ip-rep-metric'
+        - Name: AWSCRS
+          Priority: 1
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesCommonRuleSet
+              ExcludedRules: []
+          OverrideAction:
+            None: {}
+          VisibilityConfig:
+            SampledRequestsEnabled: true
+            CloudWatchMetricsEnabled: true
+            MetricName: !Sub '${Environment}PetalApi-waf-aws-crs-metric'
+        - Name: KnownBadInputs
+          Priority: 2
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesKnownBadInputsRuleSet
+              ExcludedRules: []
+          OverrideAction:
+            None: {}
+          VisibilityConfig:
+            SampledRequestsEnabled: true
+            CloudWatchMetricsEnabled: true
+            MetricName: !Sub '${Environment}PetalApi-waf-bad-inputs-metric'
+
+  # TODO: After deploying the stack, manually associate the WAF with the API Gateway deployed stage in AWS console.
+  # myAPIWafAssoc:
+  #   Type: AWS::WAFv2::WebACLAssociation
+  #   Properties:
+  #     ResourceArn: !Sub
+  #       - 'arn:${AWS::Partition}:apigateway:${AWS::Region}::/restapis/${MyRestApi}/stages/${Stage}'
+  #       - { MyRestApi: !Ref myRestApi, Stage: v1 } #!Ref myRestApiStage
+  #     WebACLArn: !GetAtt myAPIWaf.Arn
 
   #############
   #    S3     #
@@ -708,48 +784,43 @@ Resources:
 # Resources for BIDARA chatbot 
 ########################################################
 
-  SSHSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      VpcId: !Ref VPCId
-      GroupDescription: Attach EC2 instance to VPC.
-      #GroupDescription: Enable SSH access via port 22
-      #SecurityGroupIngress:
-      #- CidrIp: 0.0.0.0/0
-      #  FromPort: 22
-      #  IpProtocol: tcp
-      #  ToPort: 22
-  BIDARAEC2Instance:
-    Type: "AWS::EC2::Instance"
-    Properties:
-      UserData:
-        Fn::Base64: |
-          #!/bin/bash
-          cd ~/
-          yum update -y && yum install -y python3-pip && yum install -y git
-          amazon-linux-extras install -y python3.8
-          git clone https://github.com/nasa-petal/discord_bot.git
-          cd discord_bot
-          cat > .env <<EOF
-          OPENAI_API_KEY = xxx
-          DISCORD_TOKEN = xxx
-          EOF
-          python3.8 -m pip install -r requirements.txt
-          screen -S discord
-          python3.8 bot.py
-          screen -d discord
-      ImageId: !Ref BaseImage #"ami-08333bccc35d71140" # Amazon Linux 2023 AMI Free tier eligible
-      InstanceType: t3a.nano
-      SubnetId: !Ref EC2SubnetId
-      SecurityGroupIds: [!Ref 'SSHSecurityGroup']
-      Tags:
-        -
-          Key: Name
-          Value: BIDARA
-      BlockDeviceMappings: 
-      - DeviceName: "/dev/xvda"
-        Ebs: 
-          DeleteOnTermination: "true"
+  # SSHSecurityGroup:
+  #   Type: AWS::EC2::SecurityGroup
+  #   Properties:
+  #     VpcId: !Ref VPCId
+  #     GroupDescription: Attach EC2 instance to VPC.
+  # BIDARAEC2Instance:
+  #   Type: "AWS::EC2::Instance"
+  #   Properties:
+  #     UserData:
+  #       Fn::Base64: |
+  #         #!/bin/bash
+  #         cd ~/
+  #         yum update -y && yum install -y python3-pip && yum install -y git
+  #         amazon-linux-extras install -y python3.8
+  #         git clone https://github.com/nasa-petal/discord_bot.git
+  #         cd discord_bot
+  #         cat > .env <<EOF
+  #         OPENAI_API_KEY = xxx
+  #         DISCORD_TOKEN = xxx
+  #         EOF
+  #         python3.8 -m pip install -r requirements.txt
+  #         screen -S discord
+  #         python3.8 bot.py
+  #         screen -d discord
+  #     ImageId: !Ref BaseImage
+  #     InstanceType: t3a.nano
+  #     SubnetId: !Ref EC2SubnetId
+  #     SecurityGroupIds: [!Ref 'SSHSecurityGroup']
+  #     Tags:
+  #       -
+  #         Key: Name
+  #         Value: BIDARA
+  #     BlockDeviceMappings: 
+  #     - DeviceName: /dev/xvda
+  #       Ebs: 
+  #         DeleteOnTermination: true
+  #         Encrypted: true
     
 
   #######################################################
